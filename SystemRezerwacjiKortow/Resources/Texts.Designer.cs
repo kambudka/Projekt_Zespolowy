@@ -898,24 +898,6 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Helpline.
-        /// </summary>
-        public static string HelplineNumber {
-            get {
-                return ResourceManager.GetString("HelplineNumber", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Monday-Friday 8.00-22.00.
-        /// </summary>
-        public static string HelplineOpeningHours {
-            get {
-                return ResourceManager.GetString("HelplineOpeningHours", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu CALENDAR.
         /// </summary>
         public static string HomeCalendar {

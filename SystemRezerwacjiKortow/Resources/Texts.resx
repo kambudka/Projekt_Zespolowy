@@ -396,12 +396,6 @@
   <data name="General" xml:space="preserve">
     <value>General</value>
   </data>
-  <data name="HelplineNumber" xml:space="preserve">
-    <value>Helpline</value>
-  </data>
-  <data name="HelplineOpeningHours" xml:space="preserve">
-    <value>Monday-Friday 8.00-22.00</value>
-  </data>
   <data name="HomeCalendar" xml:space="preserve">
     <value>CALENDAR</value>
   </data>

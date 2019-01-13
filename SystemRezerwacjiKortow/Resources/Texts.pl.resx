@@ -618,12 +618,6 @@
   <data name="CallCourtManagerNote" xml:space="preserve">
     <value>W przypadku pytań odnośnie konkretnego kortu, prosimy w pierwszej kolejności kontaktować się z jego nadzorcą (dostępne na stronie &lt;a href="#"&gt;Korty&lt;/a&gt;).</value>
   </data>
-  <data name="HelplineNumber" xml:space="preserve">
-    <value>Infolinia</value>
-  </data>
-  <data name="HelplineOpeningHours" xml:space="preserve">
-    <value>Poniedziałek-Piątek 8:00 - 22:00</value>
-  </data>
   <data name="WinterSeasonBeginning" xml:space="preserve">
     <value>Początek sezonu zimowego</value>
   </data>
