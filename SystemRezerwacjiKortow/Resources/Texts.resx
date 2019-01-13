@@ -123,6 +123,9 @@
   <data name="AddingGear" xml:space="preserve">
     <value>Adding gear</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
   <data name="AdminPanel" xml:space="preserve">
     <value>Admin panel</value>
   </data>
@@ -137,6 +140,9 @@
   </data>
   <data name="Amount" xml:space="preserve">
     <value>Amount</value>
+  </data>
+  <data name="CallCourtManagerNote" xml:space="preserve">
+    <value>In case of any questions about specific tennis court, please contact court's manager first (available at &lt;a href="#"&gt;Courts&lt;/a&gt; page).</value>
   </data>
   <data name="CanReserver" xml:space="preserve">
     <value>Can reserve</value>
@@ -389,6 +395,12 @@
   </data>
   <data name="General" xml:space="preserve">
     <value>General</value>
+  </data>
+  <data name="HelplineNumber" xml:space="preserve">
+    <value>Helpline</value>
+  </data>
+  <data name="HelplineOpeningHours" xml:space="preserve">
+    <value>Monday-Friday 8.00-22.00</value>
   </data>
   <data name="HomeCalendar" xml:space="preserve">
     <value>CALENDAR</value>

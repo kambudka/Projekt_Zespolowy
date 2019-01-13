@@ -79,6 +79,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Admin panel.
         /// </summary>
         public static string AdminPanel {
@@ -120,6 +129,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string Amount {
             get {
                 return ResourceManager.GetString("Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu In case of any questions about specific tennis court, please contact court&apos;s manager first (available at &lt;a href=&quot;#&quot;&gt;Courts&lt;/a&gt; page)..
+        /// </summary>
+        public static string CallCourtManagerNote {
+            get {
+                return ResourceManager.GetString("CallCourtManagerNote", resourceCulture);
             }
         }
         
@@ -876,6 +894,24 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string General {
             get {
                 return ResourceManager.GetString("General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Helpline.
+        /// </summary>
+        public static string HelplineNumber {
+            get {
+                return ResourceManager.GetString("HelplineNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Monday-Friday 8.00-22.00.
+        /// </summary>
+        public static string HelplineOpeningHours {
+            get {
+                return ResourceManager.GetString("HelplineOpeningHours", resourceCulture);
             }
         }
         
