@@ -624,4 +624,10 @@
   <data name="HelplineOpeningHours" xml:space="preserve">
     <value>Poniedziałek-Piątek 8:00 - 22:00</value>
   </data>
+  <data name="WinterSeasonBeginning" xml:space="preserve">
+    <value>Początek sezonu zimowego</value>
+  </data>
+  <data name="WinterSeasonEnding" xml:space="preserve">
+    <value>Zakończenie sezonu zimowego</value>
+  </data>
 </root>

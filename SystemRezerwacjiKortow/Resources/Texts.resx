@@ -609,6 +609,12 @@
   <data name="WinterSeason" xml:space="preserve">
     <value>Winter season 2019</value>
   </data>
+  <data name="WinterSeasonBeginning" xml:space="preserve">
+    <value>Winter Season Beginning</value>
+  </data>
+  <data name="WinterSeasonEnding" xml:space="preserve">
+    <value>Winter Season Ending</value>
+  </data>
   <data name="WorkingDays" xml:space="preserve">
     <value>Monday - Friday</value>
   </data>

@@ -39,6 +39,8 @@ namespace SystemRezerwacjiKortow.Controllers
 
         public ActionResult Contact()
         {
+            ViewBag.Complex = SqlCompany.GetComplex();
+
             ViewBag.ContactEmail = ConfigurationManager.AppSettings["EmailAddress"];
             return View();
         }

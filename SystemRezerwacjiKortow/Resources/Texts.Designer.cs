@@ -1537,6 +1537,24 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Winter Season Beginning.
+        /// </summary>
+        public static string WinterSeasonBeginning {
+            get {
+                return ResourceManager.GetString("WinterSeasonBeginning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Winter Season Ending.
+        /// </summary>
+        public static string WinterSeasonEnding {
+            get {
+                return ResourceManager.GetString("WinterSeasonEnding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Monday - Friday.
         /// </summary>
         public static string WorkingDays {
