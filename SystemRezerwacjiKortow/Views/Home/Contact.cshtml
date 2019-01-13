@@ -16,6 +16,16 @@
     </p>
 
     <p>
+        <strong>@SystemRezerwacjiKortow.Resources.Texts.OpeningHours:</strong><br/>
+        <ul>
+            @foreach(var weekday in ViewBag.OpeningHours)
+            {
+                <li> @SystemRezerwacjiKortow.Resources.Texts.DayOfWeek @weekday.DayOfWeek - @weekday.TimeFrom-@weekday.TimeTo</li>
+            }
+        </ul>
+    </p>
+
+    <p>
         <strong>@SystemRezerwacjiKortow.Resources.Texts.WinterSeasonBeginning: </strong> 1-@ViewBag.Complex.FirstWinterSeasonMonth-2018<br />
         <strong>@SystemRezerwacjiKortow.Resources.Texts.WinterSeasonEnding: </strong> 30-@ViewBag.Complex.LastWinterSeasonMonth-2019
     </p>

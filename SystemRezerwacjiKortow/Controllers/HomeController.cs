@@ -40,8 +40,8 @@ namespace SystemRezerwacjiKortow.Controllers
         public ActionResult Contact()
         {
             ViewBag.Complex = SqlCompany.GetComplex();
-
             ViewBag.ContactEmail = ConfigurationManager.AppSettings["EmailAddress"];
+            ViewBag.OpeningHours = SqlCompany.GetOpeningHours();
             return View();
         }
       
