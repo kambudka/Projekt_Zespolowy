@@ -25,6 +25,16 @@ namespace SystemRezerwacjiKortow
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/fullcalendarjs").Include(
+                      "~/Scripts/lib/moment.min.js",
+                      "~/Scripts/fullcalendar.min.js",
+                      "~/Scripts/jquery-ui-{version}.min.js"));
+
+            bundles.Add(new StyleBundle("~/Content/fullcalendarcss").Include(
+                      "~/Content/fullcalendar.css",
+                      "~/Content/themes/jquery.ui.css"));
+
         }
     }
 }

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            $('#calendar').fullCalendar({
+                themeSystem: 'standard',
+                defaultView: 'agendaWeek',
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+            });
+
+        });</script>
+}
+
+
+<div id="calendar"></div>
