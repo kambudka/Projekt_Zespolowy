@@ -202,7 +202,7 @@ namespace SystemRezerwacjiKortow.Database
                     command.Parameters.AddWithValue("@UserID", GetUser(email).UserID);
                     command.Parameters.AddWithValue("@CustomerID", customer.CustomerID);
                     command.Parameters.AddWithValue("@CanReserve", customer.CanReserve);
-                    command.Parameters["@CustomerID"].Direction = ParameterDirection.Output;
+                    command.Parameters["@CustomerID"].Direction = ParameterDirection.InputOutput;
 
                     command.CommandTimeout = SqlDatabase.Timeout;
 

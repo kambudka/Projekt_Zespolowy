@@ -26,7 +26,7 @@ namespace SystemRezerwacjiKortow.Database
                     command.Parameters.AddWithValue("@Name", gear.Name);
                     command.Parameters.AddWithValue("@Amount", gear.Amount);
                     command.Parameters.AddWithValue("@GearID", gear.GearID);
-                    command.Parameters["@GearID"].Direction = ParameterDirection.Output;  // żeby móc wyciągać dane
+                    command.Parameters["@GearID"].Direction = ParameterDirection.InputOutput;  // żeby móc wyciągać dane
 
                     command.CommandTimeout = SqlDatabase.Timeout;
 

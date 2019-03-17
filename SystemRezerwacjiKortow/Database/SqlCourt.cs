@@ -31,7 +31,7 @@ namespace SystemRezerwacjiKortow.Database
                     command.Parameters.AddWithValue("@PriceWinterRatio", court.PriceWinterRatio);
                     command.Parameters.AddWithValue("@PriceWeekendRatio", court.PriceWeekendRatio);
                     command.Parameters.AddWithValue("@CourtID", court.CourtID);
-                    command.Parameters["@CourtID"].Direction = ParameterDirection.Output;  // żeby móc wyciągać dane
+                    command.Parameters["@CourtID"].Direction = ParameterDirection.InputOutput;  // żeby móc wyciągać dane           
 
                     command.CommandTimeout = SqlDatabase.Timeout;
 
