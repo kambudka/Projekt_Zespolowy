@@ -183,6 +183,7 @@
     <Compile Include="Models\Court.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CyclicReservation.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Gear.cs" />
     <Compile Include="Models\Hire.cs" />
     <Compile Include="Models\OpeningHours.cs" />
