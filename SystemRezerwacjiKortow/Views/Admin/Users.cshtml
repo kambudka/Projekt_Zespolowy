@@ -9,7 +9,9 @@
 @Html.Partial("_AdminPartial")
 <p>
     @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.CreateNew, "UserRegistration")
+     
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -67,10 +69,14 @@
             @Html.DisplayFor(modelItem => item.RoleName)
         </td>
         <td>
-            @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Edit, "EditUser", new { id = item.UserID })
-            
+            @if (item.RoleID != 1)
+            {
+            @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "DeleteUser", new { id = item.UserID })
+            }
+
         </td>
     </tr>
     }
 
 </table>
+<p style="color:red">@ViewBag.deleteMessage</p>

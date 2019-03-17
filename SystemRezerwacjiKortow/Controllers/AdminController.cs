@@ -25,6 +25,7 @@ namespace SystemRezerwacjiKortow.Controllers
         public ActionResult Users()
         {
             List<User> list = SqlUser.GetUsers();
+            
             return View(list);
 
         }
@@ -74,9 +75,13 @@ namespace SystemRezerwacjiKortow.Controllers
 
         public ActionResult DeleteUser(int id)
         {
-           // User user=SqlUser.GetUser(email);
-
-            return View();
+            User user=SqlUser.GetUserByID(id);
+            if (SqlUser.DeleteUser(user))
+                ViewBag.deleteMessage = "Usunięto pomyślnie";
+            else
+                ViewBag.deleteMessage = "Nie udało się usunąć użytkownika";
+            List<User> list = SqlUser.GetUsers();
+            return View("Users",list);
         }
 
     }
