@@ -348,6 +348,38 @@ namespace SystemRezerwacjiKortow.Database
             return user;
         }
 
+        public static User GetUserByID(int userID)
+        {
+            User user = null;
+            using (SqlConnection connection = SqlDatabase.NewConnection())
+            {
+                if (SqlDatabase.OpenConnection(connection))
+                {
+                    var command = new SqlCommand("SELECT * FROM VUser WHERE UserID = @UserID", connection);
+                    command.Parameters.AddWithValue("@UserID", userID);
+
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        user = new User()
+                        {
+                            UserID = (int)reader["UserID"],
+                            FirstName = (string)reader["FirstName"],
+                            Surname = (string)reader["Surname"],
+                            Email = (string)reader["Email"],
+                            DateOfBirth = (DateTime)reader["DateOfBirth"],
+                            IsEmailVeryfied = (bool)reader["IsEmailVeryfied"],
+                            RoleID = (int)reader["RoleID"],
+                            CustomerID = (int)reader["CustomerID"],
+                            RoleName = (string)reader["RoleName"]
+                        };
+                    }
+                    SqlDatabase.CloseConnection(connection);
+                }
+            }
+            return user;
+        }
+
         public static Customer GetCustomer(User user)
         {
             Customer customer=null;
