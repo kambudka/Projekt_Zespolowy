@@ -17,6 +17,11 @@ namespace SystemRezerwacjiKortow.Controllers
 
         }
 
+        public ActionResult UserRegistration()
+        {
+            return RedirectToAction("Registration", "User");
+        }
+
         public ActionResult Users()
         {
             List<User> list = SqlUser.GetUsers();
@@ -65,6 +70,13 @@ namespace SystemRezerwacjiKortow.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult DeleteUser(int id)
+        {
+           // User user=SqlUser.GetUser(email);
+
+            return View();
         }
 
     }

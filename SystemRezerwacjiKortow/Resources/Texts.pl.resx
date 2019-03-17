@@ -690,4 +690,10 @@
   <data name="ReservationName" xml:space="preserve">
     <value>Rezerwowany przedmiot</value>
   </data>
+  <data name="PriceWeekendRatio" xml:space="preserve">
+    <value>Współczynnik ceny w weekend</value>
+  </data>
+  <data name="PriceWinterRatio" xml:space="preserve">
+    <value>Współczynnik ceny w zimę</value>
+  </data>
 </root>

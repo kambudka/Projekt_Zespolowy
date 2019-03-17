@@ -35,12 +35,12 @@ namespace SystemRezerwacjiKortow.Models
         [StringLength(50)]
         public string Name { get; set; }
 
-       // [Display(Name = "Price", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+        [Display(Name = "PriceWinterRatio", ResourceType = typeof(Texts))]
+       // [DataType(DataType.Currency)]
         public decimal PriceWinterRatio { get; set; }
 
-        //[Display(Name = "Price", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+        [Display(Name = "PriceWeekendRatio", ResourceType = typeof(Texts))]
+       // [DataType(DataType.Currency)]
         public decimal PriceWeekendRatio { get; set; }
 
         //[Display(Name = "Price", ResourceType = typeof(Texts))]
