@@ -32,6 +32,26 @@ namespace SystemRezerwacjiKortow.Database
             //SqlPost.GetPosts();
             //SqlPost.GetPost(1);
             //SqlPost.DeletePost(2);
+
+            // testy rezerwacji
+            //SqlReservation.GetReservationStateCourt(2, DateTime.Now, 0);
+            //SqlReservation.SetReservationCourt(1, DateTime.Now.AddMinutes(5), DateTime.Now.AddHours(2), 4);
+            //SqlReservation.GetReservations(4);
+            //SqlReservation.AcceptReservation(1, false);
+            //SqlReservation.CancelReservation(7, 4);
+            //SqlReservation.GetReservation(7);
+            //DateTime date;
+            //date = new DateTime(2019, 3, 11, 16, 49, 0);
+            //SqlReservation.GetReservationIDCourt(2, DateTime.Now.AddDays(2));
+            //SqlReservation.GetReservationIDCourt(2, date);
+
+            // testy rezerwacji cyklicznych
+            //DateTime dateStart = new DateTime(2019, 3, 12, 16, 49, 0);
+            //DateTime dateStop = new DateTime(2019, 5, 12, 16, 49, 0);
+            //SqlCyclicReservation.SetReservationCourtCyclic(1, "Rezerwacja tygodniowa kort 1", dateStart, dateStop, 4, 2, 0, 0);
+            //SqlCyclicReservation.GetReservationsCyclic(13);
+            //SqlCyclicReservation.CancelReservationCyclic(9, 13);
+            //SqlCyclicReservation.GetReservationCyclic(9);
         }
         #region User
         private static void testInsertUser()
@@ -150,5 +170,6 @@ namespace SystemRezerwacjiKortow.Database
         }
 
         #endregion
+
     }
 }

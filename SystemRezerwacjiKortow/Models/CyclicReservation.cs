@@ -29,7 +29,7 @@ namespace SystemRezerwacjiKortow.Models
         [Display(Name = "Hour", ResourceType = typeof(Texts))]
         [DataType(DataType.Time)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime Time { get; set; }
+        public TimeSpan Time { get; set; }
 
         [Display(Name = "DateStart", ResourceType = typeof(Texts))]
         [DataType(DataType.Date)]
@@ -56,7 +56,16 @@ namespace SystemRezerwacjiKortow.Models
         [Display(Name = "DateCancel", ResourceType = typeof(Texts))]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime DateCancel { get; set; }
+        public DateTime? DateCancel { get; set; }
 
+        // potrzebne do widoku
+        [Display(Name = "ReservationName", ResourceType = typeof(Texts))]
+        public string ReservationName { get; set; }  // odpowiednio albo nazwa rezerwowanego kortu albo sprzetu
+
+        [Display(Name = "UserName", ResourceType = typeof(Texts))]
+        public string UserName { get; set; }
+
+        [Display(Name = "Amount", ResourceType = typeof(Texts))]
+        public int Amount { get; set; }
     }
 }

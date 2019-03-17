@@ -45,9 +45,10 @@ namespace SystemRezerwacjiKortow.Controllers
             return View(list);
 
         }
-        public ActionResult EditHours(int id)
+        public ActionResult EditHours(int dayOfWeek)
         {
-            return View();
+            OpeningHours op = SqlCompany.GetOpeningHour(dayOfWeek);
+            return View(op);
         }
 
         // POST: Gear/Edit/5

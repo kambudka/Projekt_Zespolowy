@@ -10,7 +10,7 @@ namespace SystemRezerwacjiKortow.Database
 {
     public static class SqlUser
     {
-        // dodanie użytkownika - rejestracja
+        // dodanie użytkownika albo aktualizacja jego imienia, nazwiska, daty urodzenia, jezli ten uzytkownik juz istnieje
         // przy wywolywaniu funckji w rejestracji 
         // pod user.RoleID trzeba podstawić SqlDatabase.UserRoleID
         // pod user.CustomerID trzeba podstawić SqlDatabase.CustomerAtr
@@ -20,29 +20,44 @@ namespace SystemRezerwacjiKortow.Database
             {
                 if (SqlDatabase.OpenConnection(connection))
                 {
-                    var command = new SqlCommand
+                    if (user.UserID == 0)
+                    {
+                        var command = new SqlCommand
                         ("INSERT INTO [User] (FirstName, Surname, Email, DateOfBirth, Password, IsEmailVeryfied, RoleID, CustomerID, ActivationCode) " +
                         "VALUES (@name, @surname, @email, @birth, @password, @veryfied, @role, @customer, @code) " +
                         "SELECT @@IDENTITY as UserID"
                         , connection);
-                    command.Parameters.AddWithValue("@name", user.FirstName);
-                    command.Parameters.AddWithValue("@surname", user.Surname);
-                    command.Parameters.AddWithValue("@email", user.Email);
-                    command.Parameters.AddWithValue("@birth", user.DateOfBirth);
-                    command.Parameters.AddWithValue("@password", user.Password);
-                    command.Parameters.AddWithValue("@veryfied", user.IsEmailVeryfied);
-                    command.Parameters.AddWithValue("@role", user.RoleID);
-                    command.Parameters.AddWithValue("@customer", user.CustomerID);
-                    command.Parameters.AddWithValue("@code", user.ActivationCode);
-
-                    command.CommandTimeout = SqlDatabase.Timeout;
-                    var result = command.ExecuteReader();
-                    if (result.Read())
+                        command.Parameters.AddWithValue("@name", user.FirstName);
+                        command.Parameters.AddWithValue("@surname", user.Surname);
+                        command.Parameters.AddWithValue("@email", user.Email);
+                        command.Parameters.AddWithValue("@birth", user.DateOfBirth);
+                        command.Parameters.AddWithValue("@password", user.Password);
+                        command.Parameters.AddWithValue("@veryfied", user.IsEmailVeryfied);
+                        command.Parameters.AddWithValue("@role", user.RoleID);
+                        command.Parameters.AddWithValue("@customer", user.CustomerID);
+                        command.Parameters.AddWithValue("@code", user.ActivationCode);
+                        command.CommandTimeout = SqlDatabase.Timeout;
+                        var result = command.ExecuteReader();
+                        if (result.Read())
+                        {
+                            var tmp = result["UserID"];
+                            user.UserID = int.Parse(tmp.ToString());
+                            //var tmp = reader.GetValue(0);
+                            // position = int.Parse(tmp.ToString()) + 1;
+                        }
+                    }
+                    else
                     {
-                        var tmp = result["UserID"];
-                        user.UserID = int.Parse(tmp.ToString());
-                        //var tmp = reader.GetValue(0);
-                        // position = int.Parse(tmp.ToString()) + 1;
+                        var command = new SqlCommand
+                        ("UPDATE [User] SET FirstName = @name, Surname = @surname, DateOfBirth = @birth " +
+                        "WHERE UserID = @UserID"
+                        , connection);
+                        command.Parameters.AddWithValue("@name", user.FirstName);
+                        command.Parameters.AddWithValue("@surname", user.Surname);
+                        command.Parameters.AddWithValue("@birth", user.DateOfBirth);
+                        command.Parameters.AddWithValue("@UserID", user.UserID);
+                        command.CommandTimeout = SqlDatabase.Timeout;
+                        var result = command.ExecuteReader();
                     }
                     SqlDatabase.CloseConnection(connection);
                 }
@@ -186,6 +201,7 @@ namespace SystemRezerwacjiKortow.Database
                     command.Parameters.AddWithValue("@DiscountValue", customer.DiscountValue);
                     command.Parameters.AddWithValue("@UserID", GetUser(email).UserID);
                     command.Parameters.AddWithValue("@CustomerID", customer.CustomerID);
+                    command.Parameters.AddWithValue("@CanReserve", customer.CanReserve);
                     command.Parameters["@CustomerID"].Direction = ParameterDirection.Output;
 
                     command.CommandTimeout = SqlDatabase.Timeout;
@@ -352,7 +368,8 @@ namespace SystemRezerwacjiKortow.Database
                             City = (string)reader["City"],
                             Street = (string)reader["Street"],
                             ZipCode = (string)reader["ZipCode"],
-                            DiscountValue = (decimal)reader["DiscountValue"]
+                            DiscountValue = (decimal)reader["DiscountValue"],
+                            CanReserve = (bool)reader["CanReserve"],
                         };
                     }
                     SqlDatabase.CloseConnection(connection);

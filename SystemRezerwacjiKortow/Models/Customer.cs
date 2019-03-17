@@ -32,5 +32,8 @@ namespace SystemRezerwacjiKortow.Models
         [Display(Name = "Discount", ResourceType = typeof(Texts))]
         [DataType(DataType.Currency)]
         public decimal DiscountValue { get; set; }
+
+        [Display(Name = "CanReserve", ResourceType = typeof(Texts))]
+        public bool CanReserve { get; set; }
     }
 }

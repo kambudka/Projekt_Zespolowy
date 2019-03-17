@@ -45,16 +45,33 @@ namespace SystemRezerwacjiKortow.Models
         [Display(Name = "DateCancel", ResourceType = typeof(Texts))]
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime DateOfCancel { get; set; }
+        public DateTime? DateOfCancel { get; set; }
 
         [Display(Name = "IsExecuted", ResourceType = typeof(Texts))]
-        [Range(0, 1)]
-        public int IsExecuted { get; set; }
+        //[Range(0, 1)]
+        public bool IsExecuted { get; set; }
 
         [Display(Name = "CyclicReservationID", ResourceType = typeof(Texts))]
         public int CyclicReservationID { get; set; }
 
         [Display(Name = "ContestID", ResourceType = typeof(Texts))]
         public int ContestID { get; set; }
+
+        [Display(Name = "IsAccepted", ResourceType = typeof(Texts))]
+        //[Range(0, 1)]
+        public bool IsAccepted { get; set; }
+
+        // // potrzebne do widoku
+        [Display(Name = "ReservationName", ResourceType = typeof(Texts))]
+        public string ReservationName { get; set; }  // odpowiednio albo nazwa rezerwowanego kortu albo sprzetu
+
+        [Display(Name = "UserName", ResourceType = typeof(Texts))]
+        public string UserName { get; set; }
+
+        [Display(Name = "Amount", ResourceType = typeof(Texts))]
+        public int Amount { get; set; }
+
+        [Display(Name = "ContestName", ResourceType = typeof(Texts))]
+        public string ContestName { get; set; }
     }
 }
