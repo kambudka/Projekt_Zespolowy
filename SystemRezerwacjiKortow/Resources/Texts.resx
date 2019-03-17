@@ -678,4 +678,10 @@
   <data name="ReservationName" xml:space="preserve">
     <value>Reservated item</value>
   </data>
+  <data name="PriceWeekendRatio" xml:space="preserve">
+    <value>Price weekend ratio</value>
+  </data>
+  <data name="PriceWinterRatio" xml:space="preserve">
+    <value>Price winter ratio</value>
+  </data>
 </root>

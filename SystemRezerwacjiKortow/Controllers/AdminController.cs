@@ -17,9 +17,15 @@ namespace SystemRezerwacjiKortow.Controllers
 
         }
 
+        public ActionResult UserRegistration()
+        {
+            return RedirectToAction("Registration", "User");
+        }
+
         public ActionResult Users()
         {
             List<User> list = SqlUser.GetUsers();
+            
             return View(list);
 
         }
@@ -65,6 +71,17 @@ namespace SystemRezerwacjiKortow.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult DeleteUser(int id)
+        {
+            User user=SqlUser.GetUserByID(id);
+            if (SqlUser.DeleteUser(user))
+                ViewBag.deleteMessage = "Usunięto pomyślnie";
+            else
+                ViewBag.deleteMessage = "Nie udało się usunąć użytkownika";
+            List<User> list = SqlUser.GetUsers();
+            return View("Users",list);
         }
 
     }
