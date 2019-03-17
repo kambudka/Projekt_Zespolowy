@@ -28,8 +28,8 @@ namespace SystemRezerwacjiKortow.Database
                     command.Parameters.AddWithValue("@IsCovered", court.IsCovered);
                     command.Parameters.AddWithValue("@PriceH", court.PriceH);
                     command.Parameters.AddWithValue("@Name", court.Name);
-                   // command.Parameters.AddWithValue("@PriceWinterRatio", court.PriceWinterRatio);
-                   // command.Parameters.AddWithValue("@PriceWeekendRation", court.PriceWinterWeekend);
+                    command.Parameters.AddWithValue("@PriceWinterRatio", court.PriceWinterRatio);
+                    command.Parameters.AddWithValue("@PriceWeekendRatio", court.PriceWeekendRatio);
                     command.Parameters.AddWithValue("@CourtID", court.CourtID);
                     command.Parameters["@CourtID"].Direction = ParameterDirection.Output;  // żeby móc wyciągać dane
 
