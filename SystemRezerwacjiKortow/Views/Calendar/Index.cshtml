@@ -49,41 +49,31 @@
                     },
                     aspectRatio: 2,
                     timeFormat: 'H(:mm)',
-                    businessHours: [ // specify an array instead
+                    monthNames: ['Styczen', 'Luty', 'Marzec', 'Kwiecien', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpien', 'Wrzesien', 'Październik', 'Listopad', 'Grudzien'],
+                    monthNamesShort: ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru'],
+                    dayNames: ['Niedziela', 'Poniedzialek', 'Wtorek', 'środa', 'Czwartek', 'Piątek', 'Sobota'],
+                    dayNamesShort: ['Nie', 'Pon', 'Wto', 'śro', 'Czw', 'Pią', 'Sob'],
+                    businessHours: [
                         {
-                            dow: [0], // Niedziela
-                            start: '12:00', // 8am
-                            end: '15:00' // 6pm
+                            dow: [0], start: '12:00', end: '15:00'// Niedziela 
                         },
                         {
-                            dow: [1], // Poniedziałek
-                            start: '10:00', // 10am
-                            end: '18:00' // 4pm
+                            dow: [1], start: '10:00', end: '18:00' // Poniedziałek
                         },
                         {
-                            dow: [2], // Wtorek
-                            start: '07:00', // 10am
-                            end: '20:00' // 4pm
+                            dow: [2], start: '07:00', end: '20:00' // Wtorek
                         },
                         {
-                            dow: [3], // Sroda
-                            start: '06:00', // 10am
-                            end: '18:00' // 4pm
+                            dow: [3], start: '06:00', end: '18:00' // Sroda
                         },
                         {
-                            dow: [4], // Czwartek
-                            start: '08:00', // 10am
-                            end: '22:00' // 4pm
+                            dow: [4],  start: '08:00', end: '22:00' // Czwartek
                         },
                         {
-                            dow: [5], // Piątek
-                            start: '09:00', // 10am
-                            end: '23:00' // 4pm
+                            dow: [5], start: '09:00',  end: '23:00' // Piątek
                         },
                         {
-                            dow: [6], //  Sobota
-                            start: '10:00',
-                            end: '22:00'
+                            dow: [6], start: '10:00', end: '22:00' //  Sobota
                         },
                     ],
                     selectConstraint: "businessHours",
@@ -91,6 +81,11 @@
                     slotLabelFormat: ['H:mm'],
                     minTime: "06:00:00",
                     maxTime: "23:00:00",
+                    navLinks: true,
+                    selectable: true,
+                    selectHelper: true,
+                    eventOverlap: false,
+                    selectOverlap: false,
                     dayClick: function (date, jsEvent, view) {
                         var view2 = $('#calendar').fullCalendar('getView');
                         if (view2.name == "month") {
@@ -100,12 +95,6 @@
                             
                         }
                     },
-
-                    navLinks: true, // can click day/week names to navigate views
-                    selectable: true,
-                    selectHelper: true,
-                    eventOverlap: false,
-                    selectOverlap: false,
                     eventClick: function (calEvent, jsEvent, view) {
                         var view2 = $('#calendar').fullCalendar('getView');
                         if (view2.name == "agendaWeek" ){
@@ -150,9 +139,28 @@
                     },
 
                     //Wygląd dni w monthview
-                   // dayRender: function (date, cell) {
-                    //    cell.css("background-color", "gray");
-                    //},
+                    @*dayRender: function (date, cell) {
+                        $.ajax({
+                        type: "GET",
+                        url: '@Url.Action("GetDayColor", "Calendar")',
+                        data: { 'datetoconvert': date },
+                        success: function (data) {
+                            if (data.status) {
+                                switch (data) {
+                                    case 0: cell.css("background-color", "green");
+                                    case 1: cell.css("background-color", "red");
+                                    case 2: cell.css("background-color", "orange");
+                                    case 3: cell.css("background-color", "yellow");
+                                    case 4: cell.css("background-color", "black");
+                                }
+                            }
+                        },
+                        error: function () {
+                            window.alert("Nieudało się pobrać kalendarza");
+                        }
+                    })
+                        
+                    },*@
                     
                     //pobieranie wyświetlanych eventów
                     events: {
@@ -186,7 +194,7 @@
                     $('#myModalSave #pDetails').empty().html($description);
                 } else {
 
-                    var title = prompt('Event Titleerror:');
+                    window.alert("Nieudało się dodać rezerwacji");
                 }
 
                 $('#infoModal').modal('hide');
@@ -238,12 +246,9 @@
                     data: data,
                     success: function (data) {
                         if (data.status) {
-                            //Refresh the calender
-                            //FetchEventAndRenderCalendar();
                             window.alert("Pomyślnie dodano rezerwacje");
                             $('#myModalSave').modal('hide');
                             $('#calendar').fullCalendar('renderEvent', selectedEvent, true);
-                            
                             GenerateCalender();
                             
                         }

@@ -52,6 +52,30 @@ namespace SystemRezerwacjiKortow.Controllers
             return new JsonResult { Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
 
+        public JsonResult GetDayColor(string datetoconvert)
+        {
+            int color = 4;
+            DateTime day = new DateTime();
+            string format = "ddd MMM dd yyyy HH:mm:ss 'GMT'K";
+            try
+            {
+                day = DateTime.ParseExact(datetoconvert, format, CultureInfo.InvariantCulture);
+            }
+            catch (FormatException)
+            {
+            }
+            try
+            {
+                color = SqlReservation.GetReservationStateCourt(1, day, 0);
+            }
+            catch
+            {
+
+            }
+
+            return new JsonResult { Data = color, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
+
         [HttpPost]
         public JsonResult SaveEvent(Event e)
         {
