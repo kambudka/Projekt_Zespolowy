@@ -77,7 +77,7 @@ namespace SystemRezerwacjiKortow.Database
                     command.Parameters.AddWithValue("@DateTo", dateTimeTo);
                     command.Parameters.AddWithValue("@UserID", userID);
                     command.Parameters.AddWithValue("@ReservationID", reservationID);
-                    command.Parameters["@ReservationID"].Direction = ParameterDirection.Output;  // żeby móc wyciągać dane
+                    command.Parameters["@ReservationID"].Direction = ParameterDirection.InputOutput;  // żeby móc wyciągać dane
                     command.CommandTimeout = SqlDatabase.Timeout;
 
                     // użyć jeżeli chcemy wykorzystać wartość return z procedury

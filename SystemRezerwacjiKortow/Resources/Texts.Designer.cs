@@ -1348,6 +1348,24 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Price weekend ratio.
+        /// </summary>
+        public static string PriceWeekendRatio {
+            get {
+                return ResourceManager.GetString("PriceWeekendRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price winter ratio.
+        /// </summary>
+        public static string PriceWinterRatio {
+            get {
+                return ResourceManager.GetString("PriceWinterRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Profile configuration - general.
         /// </summary>
         public static string ProfileConfigurationGeneral {

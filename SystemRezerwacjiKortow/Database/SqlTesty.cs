@@ -16,9 +16,11 @@ namespace SystemRezerwacjiKortow.Database
             //SqlUser.CheckUserExists("alamakota@onet.pl");
             //SqlUser.CheckUserExists("admin@wp.pl");
             //testCheckEmailVeryfied();
+            //SqlUser.GetUserByID(4);
 
             // testy kortu
             //testAddModyfyCourt();
+            //SqlCourt.GetCourts();
 
             // testy reklamy
             //testGetAdvertisement();
@@ -97,14 +99,16 @@ namespace SystemRezerwacjiKortow.Database
         private static void testAddModyfyCourt()
         {
             Court court = new Court();
-            court.CourtID = 0;
+            court.CourtID = 16;
 
-            court.CourtNumber = 2;
-            court.SurfaceType = "ceglasty";
+            court.CourtNumber = 10;
+            court.SurfaceType = "kort 10";
             court.IsForDoubles = true;
             court.IsCovered = false;
-            court.PriceH = 99;
-            court.Name = "kort 2";
+            court.PriceH = 1000;
+            court.PriceWeekendRatio = 2M;
+            court.PriceWinterRatio = 3;
+            court.Name = "kort";
             
 
             SqlCourt.AddModifyCourt(court);

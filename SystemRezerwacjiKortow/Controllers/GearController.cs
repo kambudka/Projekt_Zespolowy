@@ -65,9 +65,9 @@ namespace SystemRezerwacjiKortow.Controllers
 
         // POST: Gear/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, [Bind(Include = "PriceH, Name, Amount")] Gear gear)
         {
-            try
+            /*try
             {
                 SqlGear.GetGear(id);
 
@@ -78,6 +78,18 @@ namespace SystemRezerwacjiKortow.Controllers
             catch
             {
                 return View();
+            }*/
+            try
+            {
+                gear.GearID = id;
+                SqlGear.AddModifyGear(gear);
+                // TODO: Add update logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(gear);
             }
         }
 

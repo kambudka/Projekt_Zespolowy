@@ -29,6 +29,12 @@
             @Html.DisplayNameFor(model => model.PriceH)
         </th>
         <th>
+            @Html.DisplayNameFor(Model => Model.PriceWinterRatio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Model => Model.PriceWeekendRatio)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th></th>
@@ -36,30 +42,36 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CourtNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SurfaceType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsForDoubles)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsCovered)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PriceH)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Edit, "Edit", new { id = item.CourtID }) |
-                @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "Delete", new { id = item.CourtID })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourtNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SurfaceType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsForDoubles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsCovered)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceWinterRatio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceWeekendRatio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Edit, "Edit", new { id = item.CourtID }) |
+            @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "Delete", new { id = item.CourtID })
+        </td>
+    </tr>
     }
 
 </table>

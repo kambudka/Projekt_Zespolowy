@@ -7,6 +7,10 @@
 <h2>@SystemRezerwacjiKortow.Resources.Texts.Users</h2>
 
 @Html.Partial("_AdminPartial")
+<p>
+    @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.CreateNew, "UserRegistration")
+     
+</p>
 
 <table class="table">
     <tr>
@@ -39,32 +43,40 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateOfBirth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsEmailVeryfied)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RoleID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RoleName)
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsEmailVeryfied)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleName)
+        </td>
+        <td>
+            @if (item.RoleID != 1)
+            {
+            @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "DeleteUser", new { id = item.UserID })
+            }
+
+        </td>
+    </tr>
     }
 
 </table>
+<p style="color:red">@ViewBag.deleteMessage</p>

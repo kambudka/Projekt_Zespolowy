@@ -71,10 +71,11 @@ namespace SystemRezerwacjiKortow.Controllers
 
         // POST: Court/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, [Bind(Include = "CourtNumber, SurfaceType, IsForDoubles, IsCovered, PriceH, Name")] Court court)
+        public ActionResult Edit(int id, [Bind(Include = "CourtNumber, SurfaceType, IsForDoubles, IsCovered, PriceH, Name, PriceWinterRatio, PriceWeekendRatio")] Court court)
         {
             try
             {
+                court.CourtID = id;
                 SqlCourt.AddModifyCourt(court);
                 // TODO: Add update logic here
 
