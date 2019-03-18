@@ -47,7 +47,46 @@
                         center: 'title',
                         right: 'month,agendaWeek'
                     },
-
+                    aspectRatio: 2,
+                    timeFormat: 'H(:mm)',
+                    businessHours: [ // specify an array instead
+                        {
+                            dow: [0], // Niedziela
+                            start: '12:00', // 8am
+                            end: '15:00' // 6pm
+                        },
+                        {
+                            dow: [1], // Poniedziałek
+                            start: '10:00', // 10am
+                            end: '18:00' // 4pm
+                        },
+                        {
+                            dow: [2], // Wtorek
+                            start: '07:00', // 10am
+                            end: '20:00' // 4pm
+                        },
+                        {
+                            dow: [3], // Sroda
+                            start: '06:00', // 10am
+                            end: '18:00' // 4pm
+                        },
+                        {
+                            dow: [4], // Czwartek
+                            start: '08:00', // 10am
+                            end: '22:00' // 4pm
+                        },
+                        {
+                            dow: [5], // Piątek
+                            start: '09:00', // 10am
+                            end: '23:00' // 4pm
+                        },
+                        {
+                            dow: [6], //  Sobota
+                            start: '10:00',
+                            end: '22:00'
+                        },
+                    ],
+                    selectConstraint: "businessHours",
                     defaultDate: $('#calendar').fullCalendar('today'),
                     slotLabelFormat: ['H:mm'],
                     minTime: "06:00:00",
@@ -84,15 +123,6 @@
                 }
                     },
                     select: function (start, end) {
-                        // var title = prompt('Event Title:');
-                        //var eventData;
-                        //if (title) {
-                        //    eventData = {
-                        //        title: title,
-                        //        start: start,
-                        //        end: end
-                        //    };
-                        //}
                         selectedEvent = {
                             eventID: 0,
                             title: 'Placeholder tytułu',
@@ -103,12 +133,14 @@
                         var view2 = $('#calendar').fullCalendar('getView');
                         if (view2.name == "agendaWeek") {
                             openAddEditForm();
-                            $('#calendar').fullCalendar('renderEvent', selectedEvent, true);
+                            
                         }
                         $('#calendar').fullCalendar('unselect');
                     },
+
                     editable: true,
                     eventLimit: true, // allow "more" link when too many events
+
                     eventRender: function (event, element, view) {
                         if (view.type == 'month') {
                             $(element).css("display", "none");
@@ -122,14 +154,14 @@
                     //    cell.css("background-color", "gray");
                     //},
                     
-                    //events: events,
+                    //pobieranie wyświetlanych eventów
                     events: {
                         url: '/Calendar/GetEvents/',
                         error: function () {
                             $('#script-warning').show();
                         },
                     },
-                    timeFormat: 'H(:mm)',
+                    
 
                     
 
@@ -210,6 +242,7 @@
                             //FetchEventAndRenderCalendar();
                             window.alert("Pomyślnie dodano rezerwacje");
                             $('#myModalSave').modal('hide');
+                            $('#calendar').fullCalendar('renderEvent', selectedEvent, true);
                             
                             GenerateCalender();
                             
