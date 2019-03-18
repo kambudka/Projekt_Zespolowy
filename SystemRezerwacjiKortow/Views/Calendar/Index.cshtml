@@ -1,0 +1,314 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+@section Scripts{
+
+    <script>
+
+        $(document).ready(function () {
+
+            var events = [];
+            var selectedEvent = null;
+            GenerateCalender();
+            //FetchEventAndRenderCalendar();
+            function FetchEventAndRenderCalendar() {
+                events = [];
+                $.ajax({
+                    type: "GET",
+                    url: "/Calendar/GetEvents",
+                    success: function (data) {
+                        $.each(data, function (i, v) {
+                            events.push({
+                                eventID: 0,
+                                title: v.Title,
+                                description: "s",
+                                start: moment(v.Start),
+                                end: v.End != null ? moment(v.End) : null
+                            });
+                        })
+
+                        GenerateCalender();
+                    },
+                    error: function (error) {
+                        alert('failed');
+                    }
+                })
+            }
+
+            function GenerateCalender() {
+                $('#calender').fullCalendar('destroy');
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,agendaWeek'
+                    },
+                    aspectRatio: 2,
+                    timeFormat: 'H(:mm)',
+                    monthNames: ['Styczen', 'Luty', 'Marzec', 'Kwiecien', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpien', 'Wrzesien', 'Październik', 'Listopad', 'Grudzien'],
+                    monthNamesShort: ['Sty', 'Lut', 'Mar', 'Kwi', 'Maj', 'Cze', 'Lip', 'Sie', 'Wrz', 'Paź', 'Lis', 'Gru'],
+                    dayNames: ['Niedziela', 'Poniedzialek', 'Wtorek', 'środa', 'Czwartek', 'Piątek', 'Sobota'],
+                    dayNamesShort: ['Nie', 'Pon', 'Wto', 'śro', 'Czw', 'Pią', 'Sob'],
+                    businessHours: [
+                        {
+                            dow: [0], start: '12:00', end: '15:00'// Niedziela 
+                        },
+                        {
+                            dow: [1], start: '10:00', end: '18:00' // Poniedziałek
+                        },
+                        {
+                            dow: [2], start: '07:00', end: '20:00' // Wtorek
+                        },
+                        {
+                            dow: [3], start: '06:00', end: '18:00' // Sroda
+                        },
+                        {
+                            dow: [4],  start: '08:00', end: '22:00' // Czwartek
+                        },
+                        {
+                            dow: [5], start: '09:00',  end: '23:00' // Piątek
+                        },
+                        {
+                            dow: [6], start: '10:00', end: '22:00' //  Sobota
+                        },
+                    ],
+                    selectConstraint: "businessHours",
+                    defaultDate: $('#calendar').fullCalendar('today'),
+                    slotLabelFormat: ['H:mm'],
+                    minTime: "06:00:00",
+                    maxTime: "23:00:00",
+                    navLinks: true,
+                    selectable: true,
+                    selectHelper: true,
+                    eventOverlap: false,
+                    selectOverlap: false,
+                    dayClick: function (date, jsEvent, view) {
+                        var view2 = $('#calendar').fullCalendar('getView');
+                        if (view2.name == "month") {
+                            $(this).css('background-color', 'red');
+                            $('#calendar').fullCalendar('changeView', 'agendaWeek');
+                            $("#calendar").fullCalendar('gotoDate', date);
+                            
+                        }
+                    },
+                    eventClick: function (calEvent, jsEvent, view) {
+                        var view2 = $('#calendar').fullCalendar('getView');
+                        if (view2.name == "agendaWeek" ){
+                            selectedEvent = calEvent;
+                            $('#infoModal #eventTitle').text(calEvent.title);
+                            var $description = $('<div/>');
+                            $description.append($('<p/>').html('<b>Start:</b>' + calEvent.start.format("DD-MMM-YYYY HH:mm:ss")));
+                            if (calEvent.end != null) {
+                                $description.append($('<p/>').html('<b>End:</b>' + calEvent.end.format("DD-MMM-YYYY HH:mm:ss")));
+                            }
+                            $description.append($('<p/>').html('<b>Description:</b>' + calEvent.description));
+                            $description.append($('<p/>').html('<b>ID:</b>' + calEvent.id));
+                            $('#infoModal #pDetails').empty().html($description);
+                            $('#infoModal').modal();
+                }
+                    },
+                    select: function (start, end) {
+                        selectedEvent = {
+                            eventID: 0,
+                            title: 'Placeholder tytułu',
+                            description: 'Twoj opis',
+                            start: start,
+                            end: end,
+                        };
+                        var view2 = $('#calendar').fullCalendar('getView');
+                        if (view2.name == "agendaWeek") {
+                            openAddEditForm();
+                            
+                        }
+                        $('#calendar').fullCalendar('unselect');
+                    },
+
+                    editable: true,
+                    eventLimit: true, // allow "more" link when too many events
+
+                    eventRender: function (event, element, view) {
+                        if (view.type == 'month') {
+                            $(element).css("display", "none");
+                        } else {
+                            // Do nothing
+                        }
+                    },
+
+                    //Wygląd dni w monthview
+                    @*dayRender: function (date, cell) {
+                        $.ajax({
+                        type: "GET",
+                        url: '@Url.Action("GetDayColor", "Calendar")',
+                        data: { 'datetoconvert': date },
+                        success: function (data) {
+                            if (data.status) {
+                                switch (data) {
+                                    case 0: cell.css("background-color", "green");
+                                    case 1: cell.css("background-color", "red");
+                                    case 2: cell.css("background-color", "orange");
+                                    case 3: cell.css("background-color", "yellow");
+                                    case 4: cell.css("background-color", "black");
+                                }
+                            }
+                        },
+                        error: function () {
+                            window.alert("Nieudało się pobrać kalendarza");
+                        }
+                    })
+                        
+                    },*@
+                    
+                    //pobieranie wyświetlanych eventów
+                    events: {
+                        url: '/Calendar/GetEvents/',
+                        error: function () {
+                            $('#script-warning').show();
+                        },
+                    },
+                    
+
+                    
+
+                });
+            }
+
+            function openAddEditForm() {
+                if (selectedEvent != null) {
+                    $('#hdEventID').val(selectedEvent.eventID);
+                    $('#hdstart').val(selectedEvent.start);
+                    $('#hdend').val(selectedEvent.end);
+                    $('#txtSubject').val(selectedEvent.title);
+                    $('#chkIsFullDay').prop("checked", selectedEvent.allDay || false);
+                    $('#chkIsFullDay').change();
+                    $('#txtDescription').val(selectedEvent.description);
+                    var $description = $('<div/>');
+                    $description.append($('<p/>').html('<b>Start:</b>' + selectedEvent.start.format("DD-MMM-YYYY HH:mm:ss")));
+                    if (selectedEvent.end != null) {
+                        $description.append($('<p/>').html('<b>End:</b>' + selectedEvent.end.format("DD-MMM-YYYY HH:mm:ss")));
+                    }
+                    $description.append($('<p/>').html('<b>Description:</b>' + selectedEvent.description));
+                    $('#myModalSave #pDetails').empty().html($description);
+                } else {
+
+                    window.alert("Nieudało się dodać rezerwacji");
+                }
+
+                $('#infoModal').modal('hide');
+                $('#myModalSave').modal();
+            }
+
+            $('#btnDelete').click(function () {
+                if (selectedEvent != null && confirm('Are you sure?')) {
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("DeleteEvent", "Calendar")',
+                        data: { 'eventID': selectedEvent.id },
+                        success: function (data) {
+                            if (data.status) {
+                                //Refresh the calender
+                                $('#infoModal').modal('hide');
+                                window.alert("Pomyślnie usunięto rezerwacje");
+                                GenerateCalender();
+                                
+                            }
+                        },
+                        error: function () {
+                            window.alert("Nieudało się dodać rezerwacji");
+                        }
+                    })
+                }
+            })
+
+            $('#btnSave').click(function () {
+                //Validation/
+                //if ($('#txtSubject').val().trim() == "") {
+                 //   alert('Subject required');
+                 //   return;
+                //}
+                var data = {
+                    id: $('#hdEventID').val(),
+                    start: $('#hdstart').val(),
+                    end: $('#hdend').val(),
+                    //description: $('#txtDescription').val(),
+                }
+                SaveEvent(data);
+                // call function for submit data to the server 
+            })
+
+            function SaveEvent(data) {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("SaveEvent", "Calendar")',
+                    data: data,
+                    success: function (data) {
+                        if (data.status) {
+                            window.alert("Pomyślnie dodano rezerwacje");
+                            $('#myModalSave').modal('hide');
+                            $('#calendar').fullCalendar('renderEvent', selectedEvent, true);
+                            GenerateCalender();
+                            
+                        }
+                    },
+                    error: function () {
+                        window.alert("Nieudało się dodać rezerwacji");
+                        alert('Failed');
+                    }
+                })
+            }s
+        });
+
+
+
+    </script>
+}
+
+<div id="calendar"></div>
+
+<div id="myModalSave" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Save Event</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <input type="hidden" id="hdEventID" value="0" />
+                    <input type="hidden" id="hdstart" class="form-control"  />
+                    <input type="hidden" id="hdend" class="form-control" />
+                    <p id="pDetails"></p>
+                    <button type="button" id="btnSave" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="infoModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><span id="eventTitle"></span></h4>
+            </div>
+            <div class="modal-body">
+                <p id="pDetails"></p>
+                <button id="btnDelete" class="btn btn-default btn-sm pull-right">
+                    <span class="glyphicon glyphicon-remove"></span> Remove
+                </button>
+                <button id="btnEdit" class="btn btn-default btn-sm pull-right" style="margin-right:5px;">
+                    <span class="glyphicon glyphicon-pencil"></span> Edit
+                </button>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
