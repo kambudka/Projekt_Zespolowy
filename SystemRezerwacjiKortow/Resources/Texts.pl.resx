@@ -696,4 +696,7 @@
   <data name="PriceWinterRatio" xml:space="preserve">
     <value>Współczynnik ceny w zimę</value>
   </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Usuń konto</value>
+  </data>
 </root>

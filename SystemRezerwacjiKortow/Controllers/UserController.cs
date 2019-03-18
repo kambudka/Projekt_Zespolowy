@@ -358,5 +358,13 @@ namespace SystemRezerwacjiKortow.Controllers
             return RedirectToAction("Profile", "User");
         }
 
+        public ActionResult DeleteAccount(User user)
+        {
+            SqlUser.DeleteUser(SqlUser.GetUser(User.Identity.Name));
+            FormsAuthentication.SignOut();
+            TempData["Logout"] = Resources.Texts.LogoutSuccessful;
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

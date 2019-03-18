@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using SystemRezerwacjiKortow.Attributes;
 using SystemRezerwacjiKortow.Resources;
 
-namespace SystemRezerwacjiKortow.Models
+namespace SystemRezerwacjiKortow.ViewModels
 {
-    public class Customer
+    public class UserCustomerViewModel
     {
-        public int CustomerID { get; set; }
+
+        public int UserID { get; set; }
 
         [Display(Name = "CompanyName", ResourceType = typeof(Texts))]
         public string CompanyName { get; set; }
@@ -36,5 +36,24 @@ namespace SystemRezerwacjiKortow.Models
 
         [Display(Name = "CanReserve", ResourceType = typeof(Texts))]
         public bool CanReserve { get; set; }
+
+
+        [Display(Name = "Name", ResourceType = typeof(Texts))]
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(Texts), ErrorMessageResourceName = "EnterYourName")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Surname", ResourceType = typeof(Texts))]
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(Texts), ErrorMessageResourceName = "EnterYourSurname")]
+        public string Surname { get; set; }
+
+        [Display(Name = "DateOfBirth", ResourceType = typeof(Texts))]
+        [Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(Texts), ErrorMessageResourceName = "EnterYourDateOfBirth")]
+        [DataType(DataType.Date)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime DateOfBirth { get; set; }
+
+
+
+
     }
 }
