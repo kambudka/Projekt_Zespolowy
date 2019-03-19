@@ -51,7 +51,7 @@ namespace SystemRezerwacjiKortow.Controllers
             var events = list.ToArray();
             return new JsonResult { Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
-
+        [HttpPost]
         public JsonResult GetDayColor(string datetoconvert)
         {
             int color = 4;

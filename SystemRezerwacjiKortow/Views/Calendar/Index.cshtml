@@ -137,29 +137,31 @@
                             // Do nothing
                         }
                     },
+                    //dayRender: function (date, cell) {cell.css("background-color", "green"); },
 
                     //Wygląd dni w monthview
                     @*dayRender: function (date, cell) {
+                        window.alert("Alert 1");
                         $.ajax({
-                        type: "GET",
-                        url: '@Url.Action("GetDayColor", "Calendar")',
-                        data: { 'datetoconvert': date },
-                        success: function (data) {
-                            if (data.status) {
-                                switch (data) {
-                                    case 0: cell.css("background-color", "green");
-                                    case 1: cell.css("background-color", "red");
-                                    case 2: cell.css("background-color", "orange");
-                                    case 3: cell.css("background-color", "yellow");
-                                    case 4: cell.css("background-color", "black");
-                                }
+                            type: "POST",
+                            url: '@Url.Action("GetDayColor", "Calendar")',
+                            data: { 'datetoconvert': date },
+                            success: function (data) {
+                                if (data.status) {
+                                    switch (data) {
+                                        case 0: cell.css("background-color", "green");
+                                        case 1: cell.css("background-color", "red");
+                                        case 2: cell.css("background-color", "orange");
+                                        case 3: cell.css("background-color", "yellow");
+                                        case 4: cell.css("background-color", "black");
+                                    }
+                                }   
+                            },
+                            error: function () {
+                                window.alert("Nieudało się pobrać kalendarza");
                             }
-                        },
-                        error: function () {
-                            window.alert("Nieudało się pobrać kalendarza");
-                        }
-                    })
-                        
+                        })
+                        window.alert("Alert2");
                     },*@
                     
                     //pobieranie wyświetlanych eventów

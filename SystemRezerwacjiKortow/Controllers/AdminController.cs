@@ -45,6 +45,14 @@ namespace SystemRezerwacjiKortow.Controllers
 
         }
 
+        public ActionResult WaitingReservations()
+        {
+
+            var list = new List<Reservation>();
+            return View(list);
+
+        }
+
         public ActionResult Complex()
         {
             List<OpeningHours> list = SqlCompany.GetOpeningHours();

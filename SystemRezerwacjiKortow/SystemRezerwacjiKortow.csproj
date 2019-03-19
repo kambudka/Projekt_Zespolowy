@@ -459,6 +459,7 @@
     <Content Include="Views\Advertisement\ErrorDelete.cshtml" />
     <Content Include="Views\Advertisement\AdsForUsers.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
+    <Content Include="Views\Admin\WaitingReservations.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
