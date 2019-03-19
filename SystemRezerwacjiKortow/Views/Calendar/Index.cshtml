@@ -106,6 +106,7 @@
                     selectHelper: true,
                     eventOverlap: false,
                     selectOverlap: false,
+                    timeZone: 'local',
                     eventClick: function (calEvent, jsEvent, view) {
                         var view2 = $('#calendar').fullCalendar('getView');
                         if (view2.name == "agendaWeek" ){
@@ -129,6 +130,7 @@
                             description: 'Twoj opis',
                             start: start,
                             end: end,
+
                         };
                         var view2 = $('#calendar').fullCalendar('getView');
                         if (view2.name == "agendaWeek") {
@@ -205,7 +207,7 @@
                                 $('#infoModal').modal('hide');
                                 window.alert("Pomyślnie usunięto rezerwacje");
                                 GenerateCalender();
-                                
+
                             }
                         },
                         error: function () {
@@ -213,23 +215,24 @@
                         }
                     })
                 }
-            })
+            });
 
             $('#btnSave').click(function () {
                 //Validation/
                 //if ($('#txtSubject').val().trim() == "") {
-                 //   alert('Subject required');
-                 //   return;
+                //   alert('Subject required');
+                //   return;
                 //}
-                var data = {
+                var data = null;
+                data = {
                     id: $('#hdEventID').val(),
                     start: $('#hdstart').val(),
                     end: $('#hdend').val(),
-                    //description: $('#txtDescription').val(),
+                    description: $('#txtDescription').val(),
                 }
                 SaveEvent(data);
                 // call function for submit data to the server 
-            })
+            });
 
             function SaveEvent(data) {
                 $.ajax({
@@ -240,20 +243,25 @@
                         if (data.status) {
                             //Refresh the calender
                             //FetchEventAndRenderCalendar();
-                            window.alert("Pomyślnie dodano rezerwacje");
                             $('#myModalSave').modal('hide');
+                            window.alert("Pomyślnie dodano");
                             $('#calendar').fullCalendar('renderEvent', selectedEvent, true);
                             
                             GenerateCalender();
                             
                         }
+                        if (!data.status) {
+                            
+                            window.alert("Nie udało się dodac");
+                            $('#myModalSave').modal('hide');
+                        }
                     },
                     error: function () {
-                        window.alert("Nieudało się dodać rezerwacji");
-                        alert('Failed');
+                        confirm('Are you sure?')
+                        $('#myModalSave').modal('hide');
                     }
                 })
-            }s
+            }
         });
 
 

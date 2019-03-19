@@ -7,7 +7,6 @@ using SystemRezerwacjiKortow.Models;
 using SystemRezerwacjiKortow.Database;
 using System.Runtime;
 using System.Globalization;
-using System.Reflection;
 
 namespace SystemRezerwacjiKortow.Controllers
 {
@@ -58,23 +57,25 @@ namespace SystemRezerwacjiKortow.Controllers
             var status = false;
             //Wed Mar 13 2019 07:30:00 GMT+0000
             string format = "ddd MMM dd yyyy HH:mm:ss 'GMT'K";
+
+
             DateTime start = new DateTime();
             DateTime end = new DateTime();
-            try
-            {
-                start = DateTime.ParseExact(e.start, format, CultureInfo.InvariantCulture);
-            }
-            catch (FormatException)
-            {
-            }
-            try
-            {
-                end = DateTime.ParseExact(e.end, format, CultureInfo.InvariantCulture);
-            }
-            catch (FormatException)
-            {
-            }
-            if(SqlReservation.SetReservationCourt(2, start, end, 13))
+            DateTime startnow = new DateTime();
+            DateTime endnow = new DateTime();
+            startnow = DateTime.Now;
+            endnow = DateTime.Now.AddHours(-6);
+            string startstr = e.start.Substring(0,e.start.Length - 5);
+            string strend = e.end.Substring(0,e.end.Length - 5);
+            //start = DateTime.Now.AddMinutes(5);
+            //end = DateTime.Now.AddMinutes(5);
+            start = DateTime.ParseExact(e.start, format, CultureInfo.InvariantCulture);
+            end = DateTime.ParseExact(e.end, format, CultureInfo.InvariantCulture);
+            //string startdate = start.ToString("yyyy-MM-dd HH:mm:ss");
+            //string enddate = start.ToString("yyyy-MM-dd HH:mm:ss");
+            //start = Convert.ToDateTime(startdate);
+            //end = Convert.ToDateTime(enddate);
+            if (SqlReservation.SetReservationCourt(1, start, end, 13))
                 status = true;
             return new JsonResult { Data = new { status = status } };
         }
