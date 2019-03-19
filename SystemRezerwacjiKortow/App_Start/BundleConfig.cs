@@ -28,7 +28,7 @@ namespace SystemRezerwacjiKortow
 
             bundles.Add(new ScriptBundle("~/bundles/fullcalendarjs").Include(
                       "~/Scripts/lib/moment.min.js",
-                      "~/Scripts/fullcalendar.js",
+                      "~/Scripts/fullcalendar.min.js",
                       "~/Scripts/jquery-ui-{version}.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/fullcalendarcss").Include(
