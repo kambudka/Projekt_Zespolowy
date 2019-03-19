@@ -71,8 +71,9 @@
         <td>
             @if (item.RoleID != 1)
             {
-            @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "DeleteUser", new { id = item.UserID })
+                @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "DeleteUser", new { id = item.UserID }) 
             }
+            | @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Edit, "EditUser", new { id = item.UserID })
 
         </td>
     </tr>

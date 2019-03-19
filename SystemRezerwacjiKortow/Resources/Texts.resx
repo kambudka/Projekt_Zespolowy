@@ -684,4 +684,7 @@
   <data name="PriceWinterRatio" xml:space="preserve">
     <value>Price winter ratio</value>
   </data>
+  <data name="DeleteAccount" xml:space="preserve">
+    <value>Delete Account</value>
+  </data>
 </root>

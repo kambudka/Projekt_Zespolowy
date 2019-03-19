@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using SystemRezerwacjiKortow.Attributes;
 using SystemRezerwacjiKortow.Resources;
 
 namespace SystemRezerwacjiKortow.Models
