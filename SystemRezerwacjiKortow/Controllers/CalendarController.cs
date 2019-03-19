@@ -74,7 +74,7 @@ namespace SystemRezerwacjiKortow.Controllers
             catch (FormatException)
             {
             }
-            if(SqlReservation.SetReservationCourt(1, start.AddHours(-1), end.AddHours(-1), 13))
+            if(SqlReservation.SetReservationCourt(2, start, end, 13))
                 status = true;
             return new JsonResult { Data = new { status = status } };
         }

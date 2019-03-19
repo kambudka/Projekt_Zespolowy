@@ -61,7 +61,7 @@ namespace SystemRezerwacjiKortow.Database
         // dateTimeTo - data i godzina zakonczenia rezerwacji
         // userID - id uzytkownika skladajacego rezerwacje
         // rezerwacja jest mozliwa tylko, gdy w tym czasie nie ma innych rezerwacji (sprawdzane na poziomie bazy)
-        //    oraz gdy rozpoczyna sie i konczy w czasie godzin otwarcia kompleksu
+        // oraz gdy rozpoczyna sie i konczy w czasie godzin otwarcia kompleksu
         public static bool SetReservationCourt(int courtID, DateTime dateTimeFrom, DateTime dateTimeTo, int userID)
         {
             bool result = false;
