@@ -45,7 +45,7 @@
                     </td>
                     <td>
                         @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Edit, "EditHours", new { dayOfWeek = item.DayOfWeek }) |
-                        @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "Delete", new { /* id=item.PrimaryKey */ })
+                        @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "DeleteHours",  item )
                     </td>
                 </tr>
             }

@@ -14,13 +14,13 @@ namespace SystemRezerwacjiKortow.Models
 
         [Display(Name = "TimeFrom", ResourceType = typeof(Texts))]
         [Required]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Time)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh\\:mm}")]
         public TimeSpan TimeFrom { get; set; }
 
         [Display(Name = "TimeTo", ResourceType = typeof(Texts))]
         [Required]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Time)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:hh\\:mm}")]
         public TimeSpan TimeTo { get; set; }
 

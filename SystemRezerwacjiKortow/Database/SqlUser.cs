@@ -380,6 +380,9 @@ namespace SystemRezerwacjiKortow.Database
             return user;
         }
 
+        
+
+
         public static Customer GetCustomer(User user)
         {
             Customer customer=null;

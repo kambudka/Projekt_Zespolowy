@@ -1,5 +1,4 @@
-﻿
-@model SystemRezerwacjiKortow.ViewModels.UserCustomerViewModel
+﻿@model SystemRezerwacjiKortow.ViewModels.UserCustomerViewModel
 
 @{
     ViewBag.Title = "Profile";
@@ -61,7 +60,7 @@ else
             <div class="form-group">
                 @Html.LabelFor(model => model.DiscountValue, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.DiscountValue, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.EditorFor(model => model.DiscountValue, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.DiscountValue, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -69,11 +68,10 @@ else
             <div class="form-group">
                 @Html.LabelFor(model => model.CanReserve, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.CanReserve, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.EditorFor(model => model.CanReserve, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.CanReserve, "", new { @class = "text-danger" })
                 </div>
             </div>
-
             <div class="form-group">
                 @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">

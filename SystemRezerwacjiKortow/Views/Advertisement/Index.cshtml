@@ -24,14 +24,14 @@
             @Html.DisplayNameFor(model => model.DateTo)
         </th>
         @* <th>
-                @Html.DisplayNameFor(model => model.CourtID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Payment)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserID)
-            </th>*@
+            @Html.DisplayNameFor(model => model.CourtID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Payment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.CourtNumber)
         </th>
@@ -44,48 +44,54 @@
         <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Payment)
+        </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateFrom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTo)
-            </td>
-            @*<td>
-                    @Html.DisplayFor(modelItem => item.CourtID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Payment)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserID)
-                </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.CourtNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CourtName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { from = item.DateFrom, to = item.DateTo, idCourt = item.CourtID }) |
-                @* @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
-                @Html.ActionLink("Delete", "Delete", new { from = item.DateFrom, to = item.DateTo, idCourt = item.CourtID })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateFrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTo)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CourtID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.CourtNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourtName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { from = item.DateFrom, to = item.DateTo, idCourt = item.CourtID }) |
+            @* @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+            @Html.ActionLink("Delete", "Delete", new { from = item.DateFrom, to = item.DateTo, idCourt = item.CourtID })
+        </td>
+    </tr>
     }
 
 </table>
