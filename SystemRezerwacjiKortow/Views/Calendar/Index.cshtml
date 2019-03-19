@@ -173,9 +173,6 @@
                     $('#hdEventID').val(selectedEvent.eventID);
                     $('#hdstart').val(selectedEvent.start);
                     $('#hdend').val(selectedEvent.end);
-                    $('#txtSubject').val(selectedEvent.title);
-                    $('#chkIsFullDay').prop("checked", selectedEvent.allDay || false);
-                    $('#chkIsFullDay').change();
                     $('#txtDescription').val(selectedEvent.description);
                     var $description = $('<div/>');
                     $description.append($('<p/>').html('<b>Start:</b>' + selectedEvent.start.format("DD-MMM-YYYY HH:mm:ss")));
