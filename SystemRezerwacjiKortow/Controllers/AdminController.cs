@@ -104,18 +104,20 @@ namespace SystemRezerwacjiKortow.Controllers
         {
             User user = SqlUser.GetUserByID(id);
             Customer customer = SqlUser.GetCustomer(user);
-
-            user.FirstName = model.FirstName;
-            user.Surname = model.Surname;
-            user.DateOfBirth = model.DateOfBirth;
-            customer.CompanyName = model.CompanyName;
-            customer.City = model.City;
-            customer.Street = model.Street;
-            customer.ZipCode = model.ZipCode;
-            customer.DiscountValue = model.DiscountValue;
-            customer.CanReserve = model.CanReserve;
-            SqlUser.AddModyfyAddress(customer,user.Email);
-            SqlUser.InsertUser(user);
+            if (ModelState.IsValid)
+            {
+                user.FirstName = model.FirstName;
+                user.Surname = model.Surname;
+                user.DateOfBirth = model.DateOfBirth;
+                customer.CompanyName = model.CompanyName;
+                customer.City = model.City;
+                customer.Street = model.Street;
+                customer.ZipCode = model.ZipCode;
+                customer.DiscountValue = model.DiscountValue;
+                customer.CanReserve = model.CanReserve;
+                SqlUser.AddModyfyAddress(customer, user.Email);
+                SqlUser.InsertUser(user);
+            }
             return RedirectToAction("Users");
         }
 

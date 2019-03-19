@@ -7,6 +7,8 @@ using System.Web.Security;
 using SystemRezerwacjiKortow.Database;
 using SystemRezerwacjiKortow.Models;
 using Microsoft.AspNet;
+using SystemRezerwacjiKortow.ViewModels;
+using AutoMapper;
 
 namespace SystemRezerwacjiKortow.Controllers
 {
@@ -336,19 +338,39 @@ namespace SystemRezerwacjiKortow.Controllers
         [HttpGet]
         public ActionResult EditProfile()
         {
+            
             Customer customer = SqlUser.GetCustomer(SqlUser.GetUser(User.Identity.Name));
-            return View(customer);
+            User user = SqlUser.GetUser(User.Identity.Name);
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Customer, UserCustomerViewModel>());
+            var config2 = new MapperConfiguration(cfg => cfg.CreateMap<User, UserCustomerViewModel>());
+            var mapper = config.CreateMapper();
+
+            UserCustomerViewModel model = mapper.Map<Customer, UserCustomerViewModel>(customer);
+            mapper = config2.CreateMapper();
+            mapper.Map<User, UserCustomerViewModel>(user, model);
+            return View(model);
         }
 
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditProfile(Customer customer)
+        public ActionResult EditProfile(UserCustomerViewModel model)
         {
-            
+            User user = SqlUser.GetUser(User.Identity.Name);
+            Customer customer = SqlUser.GetCustomer(user);
+
             if (ModelState.IsValid)
             {
-                SqlUser.AddModyfyAddress(customer, User.Identity.Name);
+                user.FirstName = model.FirstName;
+                user.Surname = model.Surname;
+                user.DateOfBirth = model.DateOfBirth;
+                customer.CompanyName = model.CompanyName;
+                customer.City = model.City;
+                customer.Street = model.Street;
+                customer.ZipCode = model.ZipCode;
+                SqlUser.AddModyfyAddress(customer, user.Email);
+                SqlUser.InsertUser(user);
+
             }
             else
             {
