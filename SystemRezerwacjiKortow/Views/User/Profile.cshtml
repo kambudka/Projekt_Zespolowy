@@ -22,7 +22,7 @@
                     <a href="#"><font color="black"> @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.ChangePassword,"ChangePassword")</font></a><br /><br />
 <a href="#"><font color="black">@SystemRezerwacjiKortow.Resources.Texts.SetUpPayments</font></a><br /><br />
 <a href="#"><font color="black">@SystemRezerwacjiKortow.Resources.Texts.PaymentsHistory</font></a><br /><br />
-<a href="#"><font color="black"> @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.DeleteAccount, "DeleteAccount")</font></a>
+<a href="#" onclick="javascript:return ShowMessage();">@SystemRezerwacjiKortow.Resources.Texts.DeleteAccount<font color="black"></font></a>
 </center>
 </td>
 <td width="60%">
@@ -90,3 +90,15 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+<script>
+    function ShowMessage() {
+        var result = confirm("Na pewno chcesz usuąć konto?");
+        if (result) {
+            window.location.href = '@Url.Action("DeleteAccount", "User")';
+            
+        } else {
+            return false;
+        }
+    }
+</script>

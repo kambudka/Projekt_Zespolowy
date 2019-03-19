@@ -32,7 +32,7 @@ namespace SystemRezerwacjiKortow.ViewModels
         public string ZipCode { get; set; }
 
         [Display(Name = "Discount", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+        //[DataType(DataType.Currency)]
         public decimal DiscountValue { get; set; }
 
         [Display(Name = "CanReserve", ResourceType = typeof(Texts))]

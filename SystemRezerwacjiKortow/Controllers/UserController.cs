@@ -380,7 +380,7 @@ namespace SystemRezerwacjiKortow.Controllers
             return RedirectToAction("Profile", "User");
         }
 
-        public ActionResult DeleteAccount(User user)
+        public ActionResult DeleteAccount()
         {
             SqlUser.DeleteUser(SqlUser.GetUser(User.Identity.Name));
             FormsAuthentication.SignOut();
