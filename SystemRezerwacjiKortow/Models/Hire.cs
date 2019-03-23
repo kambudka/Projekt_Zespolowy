@@ -22,10 +22,10 @@ namespace SystemRezerwacjiKortow.Models
         public DateTime DateTo { get; set; }
 
         [Display(Name = "GearID", ResourceType = typeof(Texts))]
-        public int GearID { get; set; }
+        public int? GearID { get; set; }
 
         [Display(Name = "GearAmount", ResourceType = typeof(Texts))]
-        public int GearAmount { get; set; }
+        public int? GearAmount { get; set; }
 
         [Display(Name = "CourtID", ResourceType = typeof(Texts))]
         public int CourtID { get; set; }
@@ -41,5 +41,21 @@ namespace SystemRezerwacjiKortow.Models
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DatePayment{ get; set; }
+
+        // potrzebne do widoku - data poczatkowa (DateFrom) rozbita na czesci
+        // sama data bez godzin - dzien, miesiac i rok
+        public DateTime DateFromAsDate { get; set; }
+
+        // sama godzina
+        public TimeSpan DateFromAsTime { get; set; }
+
+        // sam miesiac
+        public int DateFromAsMonth { get; set; }
+
+        // sam dzien miesiaca
+        public int DateFromAsDayOfMonth { get; set; }
+        
+        // sam numer dnia tygodnia
+       public int DateFromAsDayOfWeek { get; set; }
     }
 }

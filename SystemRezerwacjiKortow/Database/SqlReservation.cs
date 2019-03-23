@@ -310,5 +310,42 @@ namespace SystemRezerwacjiKortow.Database
             }
             return result;
         }
+
+
+        // zaplata rezerwacji - wykonanie rezerwacji (do archiwum)
+        // zwraca true, jeśli zaplata się powiodła lub false w przypadku niepowodzenia
+        // reservationID - rezerwacja, ktora ma byc zaplacona/wykonana
+        // rezerwacje mozna zaplacic tylko w momencie gdy nie jest wykonana (IsExecuted jest false) i nie jest anulowana - sprawdzane na poziomie bazy
+        // nie mozna anulowac wykonania/zaplacenia rezerwacji
+        public static bool MakePayment(int reservationID)
+        {
+            bool result = false;
+            using (SqlConnection connection = SqlDatabase.NewConnection())
+            {
+                if (SqlDatabase.OpenConnection(connection))
+                {
+                    var command = new SqlCommand("dbo.MakePayment", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@ReservationID", reservationID);
+                    command.CommandTimeout = SqlDatabase.Timeout;
+
+                    // użyć jeżeli chcemy wykorzystać wartość return z procedury
+                    command.Parameters.Add("@ReturnValue", SqlDbType.Int, 4).Direction = ParameterDirection.ReturnValue;
+
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        // użyć jeżeli chcemy wykorzystać wartość return z procedury
+                        result = int.Parse(command.Parameters["@ReturnValue"].Value.ToString()) == 1;
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+
+                    SqlDatabase.CloseConnection(connection);
+                }
+            }
+            return result;
+        }
     }
 }
