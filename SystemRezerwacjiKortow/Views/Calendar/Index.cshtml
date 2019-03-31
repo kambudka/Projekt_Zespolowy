@@ -14,8 +14,10 @@
             var events = [];
             var selectedEvent = null;
             var g_BusinessHours = [];
+            var court;
             FetchBusinessHours();
          //   ShowHours();
+            Setnumber();
             GenerateCalender();
             //FetchEventAndRenderCalendar();
 
@@ -24,7 +26,10 @@
            //     $.each(g_BusinessHours, function (index, value) {
            //         window.alert(index + ":" + value.daynumber +":" + value.start.Hours);
            //     })
-           // }
+            // }
+            function Setnumber(){
+                court = 1;
+            }
             function FetchBusinessHours() {
                 $.ajax({
                     type: "GET",
@@ -61,11 +66,37 @@
                 })
             }
 
+
             function GenerateCalender() {
                 $('#calender').fullCalendar('destroy');
                 $('#calendar').fullCalendar({
+                    customButtons: {
+                        addcourt: {
+                            text: 'Next',
+                            click: function () {
+                                if (court != 2)
+                                    court = court + 1;
+                                alert(court);
+                                $('#calender').fullCalendar('refetchEvents');
+                            }
+                        },
+                        subcourt: {
+                            text: 'Prev',
+                            click: function () {
+                                if (court > 1)
+                                    court = court - 1;
+                                alert(court);
+                                $('#calender').fullCalendar('refetchEvents');
+                            }
+                        },
+                        courtnumber: {
+                            text: court,
+                            click: function () {
+                            }
+                        }
+                    },
                     header: {
-                        left: 'prev,next today',
+                        left: 'prev,next today subcourt courtnumber addcourt',
                         center: 'title',
                         right: 'month,agendaWeek'
                     },
@@ -182,6 +213,11 @@
                     //pobieranie wyświetlanych eventów
                     events: {
                         url: '/Calendar/GetEvents/',
+                        data: function () { // a function that returns an object
+                            return {
+                                court
+                            };
+                        },
                         error: function () {
                             $('#script-warning').show();
                         },

@@ -27,19 +27,20 @@ namespace SystemRezerwacjiKortow.Controllers
             return 0;
         }
 
-        public JsonResult GetEvents(string paramstart, string paramend)
+        public JsonResult GetEvents(string paramstart, string paramend, int court)
         {
             ReservationList = new List<Reservation>();
             ReservationList = SqlReservation.GetReservations(13);
             //list = new List<Event>();
             Event newevent;
             DateTime datetime = DateTime.Now;
+            int id = court;
 
             foreach (Reservation reservation in ReservationList)
             {
                 newevent = new Event();
                 //Nie pobiera rezerwacji które są anulowane
-                if (reservation.DateOfCancel == null) {
+                if (reservation.DateOfCancel == null && reservation.CourtID == id) {
                 newevent.id = reservation.ReservationID;
                 newevent.title = reservation.CourtID.ToString();
                 newevent.start = ConvertFromDateToString(reservation.DateFrom);
@@ -87,9 +88,13 @@ namespace SystemRezerwacjiKortow.Controllers
             catch (FormatException)
             {
             }
+
+            string email = User.Identity.Name;
+
+            int id = SqlUser.GetUser(email).UserID;
             //SqlReservation.SetReservationCourt(1, DateTime.Now.AddMinutes(5), DateTime.Now.AddHours(1), 4);
             //SqlReservation.SetReservationCourt(1, new DateTime(2019, 3, 22, 16, 00, 0), new DateTime(2019, 3, 22, 17, 00, 0), 13);
-            if (SqlReservation.SetReservationCourt(1, start.AddHours(-2), end.AddHours(-2), 13))
+            if (SqlReservation.SetReservationCourt(id, start.AddHours(-2), end.AddHours(-2), id))
                 status = true;
             return new JsonResult { Data = new { status = status } };
         }
@@ -98,12 +103,16 @@ namespace SystemRezerwacjiKortow.Controllers
         public JsonResult DeleteEvent(int eventID)
         {
             var status = false;
+            string email = User.Identity.Name;
 
-            if(SqlReservation.CancelReservation(eventID, 13))
+            int id = SqlUser.GetUser(email).UserID;
+
+            if (SqlReservation.CancelReservation(eventID, id))
                 status = true;
 
             return new JsonResult { Data = new { status = status } };
         }
+
 
 
         public static string ConvertFromDateToString(DateTime timestamp)
