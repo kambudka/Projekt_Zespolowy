@@ -13,23 +13,45 @@
 
             var events = [];
             var selectedEvent = null;
+            var g_BusinessHours = [];
+            FetchBusinessHours();
+         //   ShowHours();
             GenerateCalender();
             //FetchEventAndRenderCalendar();
+
+           // function ShowHours() {
+           //     window.alert("Pokazuje");
+           //     $.each(g_BusinessHours, function (index, value) {
+           //         window.alert(index + ":" + value.daynumber +":" + value.start.Hours);
+           //     })
+           // }
+            function FetchBusinessHours() {
+                $.ajax({
+                    type: "GET",
+                    url: '@Url.Action("GetHours", "Calendar")',
+                    success: function (data) {
+                        $.each(data, function (i, v) {
+                            g_BusinessHours.push({
+                                daynumber: v.DayOfWeek,
+                                start: v.TimeFrom,
+                                end: v.TimeTo
+                            });
+                        })
+                   //     window.alert("Pomyślnie pobrano godziny");
+                    },
+                    error: function (error) {
+                        alert('Nie udało się pobrać godzin otwarcia');
+                    }
+                })
+            }
             function FetchEventAndRenderCalendar() {
                 events = [];
                 $.ajax({
                     type: "GET",
                     url: "/Calendar/GetEvents",
                     success: function (data) {
-                        $.each(data, function (i, v) {
-                            events.push({
-                                eventID: 0,
-                                title: v.Title,
-                                description: "s",
-                                start: moment(v.Start),
-                                end: v.End != null ? moment(v.End) : null
-                            });
-                        })
+                        //Refresh the calender
+                        g_BusinessHours = data;
 
                         GenerateCalender();
                     },
@@ -49,20 +71,21 @@
                     },
                     aspectRatio: 2,
                     timeFormat: 'H(:mm)',
-                    businessHours: [ // specify an array instead
-                        {
-                            dow: [0], // Niedziela
-                            start: '12:00', // 8am
-                            end: '15:00' // 6pm
-                        },
-                        {
-                            dow: [1], // Poniedziałek
-                            start: '10:00', // 10am
-                            end: '18:00' // 4pm
-                        },
+                    businessHours: 
+                        [ // specify an array instead
+                        //{
+                        //    dow: [0], // Niedziela
+                        //    start: '12:00', // 8am
+                        //    end: '15:00' // 6pm
+                        //},
+                        //{
+                        //    dow: [1], // Poniedziałek
+                        //    start: '10:00', // 10am
+                        //    end: '18:00' // 4pm
+                        //},
                         {
                             dow: [2], // Wtorek
-                            start: '07:00', // 10am
+                            start: '10:00', // 10am
                             end: '20:00' // 4pm
                         },
                         {
@@ -80,11 +103,11 @@
                             start: '09:00', // 10am
                             end: '23:00' // 4pm
                         },
-                        {
-                            dow: [6], //  Sobota
-                            start: '10:00',
-                            end: '22:00'
-                        },
+                       // {
+                        //    dow: [6], //  Sobota
+                        //    start: '09:00',
+                        //    end: '23:00'
+                       // },
                     ],
                     selectConstraint: "businessHours",
                     defaultDate: $('#calendar').fullCalendar('today'),
@@ -167,6 +190,48 @@
 
                     
 
+                });
+            }
+
+            function getBusinessHours() {
+                $('#calendar').fullCalendar('option', {
+                    businessHours: [
+                            {
+                            dow: [0], // Niedziela
+                            start: '12:00', // 8am
+                            end: '15:00' // 6pm
+                        },
+                        {
+                            dow: [1], // Poniedziałek
+                            start: '10:00', // 10am
+                            end: '18:00' // 4pm
+                        },
+                        {
+                            dow: [2], // Wtorek
+                            start: '10:00', // 10am
+                            end: '23:00' // 4pm
+                        },
+                        {
+                            dow: [3], // Sroda
+                            start: '06:00', // 10am
+                            end: '18:00' // 4pm
+                        },
+                        {
+                            dow: [4], // Czwartek
+                            start: '08:00', // 10am
+                            end: '22:00' // 4pm
+                        },
+                        {
+                            dow: [5], // Piątek
+                            start: '09:00', // 10am
+                            end: '23:00' // 4pm
+                        },
+                       // {
+                       //     dow: [6], //  Sobota
+                       //     start: '10:00',
+                       //     end: '22:00'
+                       // }
+                    ]
                 });
             }
 

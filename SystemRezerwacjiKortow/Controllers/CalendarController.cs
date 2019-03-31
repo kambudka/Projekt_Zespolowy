@@ -13,6 +13,7 @@ namespace SystemRezerwacjiKortow.Controllers
     public class CalendarController : Controller
     {
         public List<Reservation> ReservationList;
+        public List<OpeningHours> HoursList;
         public List<Event> list = new List<Event>();
         // GET: Calendar
         public ActionResult Index()
@@ -25,6 +26,7 @@ namespace SystemRezerwacjiKortow.Controllers
         {
             return 0;
         }
+
         public JsonResult GetEvents(string paramstart, string paramend)
         {
             ReservationList = new List<Reservation>();
@@ -50,32 +52,44 @@ namespace SystemRezerwacjiKortow.Controllers
             var events = list.ToArray();
             return new JsonResult { Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
+        [HttpGet]
+        public JsonResult GetHours(string paramstart, string paramend)
+        {
+            HoursList = new List<OpeningHours>();
+            HoursList = SqlCompany.GetOpeningHours();
+            //list = new List<Event>();
+
+            var hours = HoursList.ToArray();
+            return new JsonResult { Data = hours, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
 
         [HttpPost]
         public JsonResult SaveEvent(Event e)
         {
             var status = false;
-            //Wed Mar 13 2019 07:30:00 GMT+0000
+                           //Wed Mar 19 2019 07:30:00 GMT+0000
             string format = "ddd MMM dd yyyy HH:mm:ss 'GMT'K";
-
-
             DateTime start = new DateTime();
             DateTime end = new DateTime();
-            DateTime startnow = new DateTime();
-            DateTime endnow = new DateTime();
-            startnow = DateTime.Now;
-            endnow = DateTime.Now.AddHours(-6);
-            string startstr = e.start.Substring(0,e.start.Length - 5);
-            string strend = e.end.Substring(0,e.end.Length - 5);
-            //start = DateTime.Now.AddMinutes(5);
-            //end = DateTime.Now.AddMinutes(5);
-            start = DateTime.ParseExact(e.start, format, CultureInfo.InvariantCulture);
-            end = DateTime.ParseExact(e.end, format, CultureInfo.InvariantCulture);
-            //string startdate = start.ToString("yyyy-MM-dd HH:mm:ss");
-            //string enddate = start.ToString("yyyy-MM-dd HH:mm:ss");
-            //start = Convert.ToDateTime(startdate);
-            //end = Convert.ToDateTime(enddate);
-            if (SqlReservation.SetReservationCourt(1, start, end, 13))
+            DateTime startnow = DateTime.Now;
+            DateTime endnow = DateTime.Now.AddHours(1);
+            try
+            {
+                start = DateTime.ParseExact(e.start, format, CultureInfo.InvariantCulture);
+            }
+            catch (FormatException)
+            {
+            }
+            try
+            {
+                end = DateTime.ParseExact(e.end, format, CultureInfo.InvariantCulture);
+            }
+            catch (FormatException)
+            {
+            }
+            //SqlReservation.SetReservationCourt(1, DateTime.Now.AddMinutes(5), DateTime.Now.AddHours(1), 4);
+            //SqlReservation.SetReservationCourt(1, new DateTime(2019, 3, 22, 16, 00, 0), new DateTime(2019, 3, 22, 17, 00, 0), 13);
+            if (SqlReservation.SetReservationCourt(1, start.AddHours(-2), end.AddHours(-2), 13))
                 status = true;
             return new JsonResult { Data = new { status = status } };
         }
