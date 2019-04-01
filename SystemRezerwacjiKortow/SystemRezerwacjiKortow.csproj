@@ -169,6 +169,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Crypto.cs" />
     <Compile Include="Database\SqlAdvertisement.cs" />
@@ -510,6 +511,7 @@
     <Content Include="Views\Admin\EditUser.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
     <Content Include="Views\Admin\WaitingReservations.cshtml" />
+    <Content Include="Views\Statistics\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

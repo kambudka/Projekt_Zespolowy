@@ -12,9 +12,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.UserID)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.DateFrom)
         </th>
         <th>
@@ -30,26 +27,15 @@
             @Html.DisplayNameFor(model => model.GearAmount)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CourtID)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.DateOfInsert)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateOfCancel)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsExecuted)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CyclicReservationID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ContestID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsAccepted)
-        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.CyclicReservationID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContestID)
+            </th>
+        *@
         <th>
             @Html.DisplayNameFor(model => model.ReservationName)
         </th>
@@ -65,65 +51,85 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateFrom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateTo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Payment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GearID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GearAmount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CourtID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateOfInsert)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateOfCancel)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsExecuted)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CyclicReservationID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContestID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsAccepted)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReservationName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Amount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContestName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReservationID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReservationID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReservationID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.DateFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Payment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GearID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GearAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfInsert)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.CyclicReservationID)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContestID)
+                </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContestName)
+            </td>
+            <td>
+                @Html.ActionLink("AcceptReservation", "AcceptReservation", new { id = item.ReservationID })
+            </td>
+        </tr>
+    }
 
 </table>
+
+@if (ViewBag.MyErrorMessage == true)
+{
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            $('#acceptionstatus').modal('show');
+        });
+    </script>
+}
+else if (ViewBag.MyErrorMessage == false)
+{
+    <script type='text/javascript'>
+        $(document).ready(function(){
+            $('#acceptionstatus').modal('show');
+        });
+    </script>
+}
+
+
+
+<div id="acceptionstatus" class="modal fade" role="dialog">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Pomyślnie zaakceptowano rezerwacje</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

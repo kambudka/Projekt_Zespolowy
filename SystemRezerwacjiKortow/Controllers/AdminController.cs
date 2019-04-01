@@ -12,6 +12,7 @@ namespace SystemRezerwacjiKortow.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
+        public List<Reservation> ReservationList;
         public ActionResult Index()
         {
             return View();
@@ -46,10 +47,39 @@ namespace SystemRezerwacjiKortow.Controllers
 
         }
 
+        //[HttpPost]
+        public ActionResult AcceptReservation(int id)
+        {
+            ViewBag.MyErrorMessage = false;
+            try
+            {
+                SqlReservation.AcceptReservation(id, true);
+                SqlReservation.MakePayment(id);
+                ViewBag.MyErrorMessage = true;
+                return RedirectToAction("WaitingReservations");
+            }
+            catch
+            {
+                return RedirectToAction("WaitingReservations");
+            }
+
+            
+        }
+
         public ActionResult WaitingReservations()
         {
-
+            ReservationList = new List<Reservation>();
+            ReservationList = SqlReservation.GetReservations(13);
             var list = new List<Reservation>();
+            foreach (Reservation reservation in ReservationList)
+            {
+                //Nie pobiera rezerwacji które są anulowane i zaakceptowane
+                if (reservation.DateOfCancel == null && reservation.IsAccepted == false && reservation.IsExecuted == false)
+                {
+                    list.Add(reservation);
+                }
+            }
+            
             return View(list);
 
         }

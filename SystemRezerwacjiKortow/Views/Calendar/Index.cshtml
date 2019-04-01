@@ -273,48 +273,6 @@
                 });
             }
 
-            function getBusinessHours() {
-                $('#calendar').fullCalendar('option', {
-                    businessHours: [
-                            {
-                            dow: [0], // Niedziela
-                            start: '12:00', // 8am
-                            end: '15:00' // 6pm
-                        },
-                        {
-                            dow: [1], // Poniedziałek
-                            start: '10:00', // 10am
-                            end: '18:00' // 4pm
-                        },
-                        {
-                            dow: [2], // Wtorek
-                            start: '10:00', // 10am
-                            end: '23:00' // 4pm
-                        },
-                        {
-                            dow: [3], // Sroda
-                            start: '06:00', // 10am
-                            end: '18:00' // 4pm
-                        },
-                        {
-                            dow: [4], // Czwartek
-                            start: '08:00', // 10am
-                            end: '22:00' // 4pm
-                        },
-                        {
-                            dow: [5], // Piątek
-                            start: '09:00', // 10am
-                            end: '23:00' // 4pm
-                        },
-                       // {
-                       //     dow: [6], //  Sobota
-                       //     start: '10:00',
-                       //     end: '22:00'
-                       // }
-                    ]
-                });
-            }
-
             function openAddEditForm() {
                 if (selectedEvent != null) {
                     $('#hdEventID').val(selectedEvent.eventID);

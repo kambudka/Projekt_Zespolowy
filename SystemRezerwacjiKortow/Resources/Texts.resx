@@ -687,4 +687,7 @@
   <data name="DeleteAccount" xml:space="preserve">
     <value>Delete Account</value>
   </data>
+  <data name="DateInsert" xml:space="preserve">
+    <value>Date</value>
+  </data>
 </root>
