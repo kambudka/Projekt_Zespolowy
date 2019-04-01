@@ -64,6 +64,22 @@ namespace SystemRezerwacjiKortow.Controllers
             return new JsonResult { Data = hours, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
 
+        [HttpGet]
+        public JsonResult GetColor(int courtid, string datejs)
+        {
+            string format = "ddd MMM dd yyyy HH:mm:ss 'GMT'K";
+            DateTime date = new DateTime();
+            try
+            {
+                date = DateTime.ParseExact(datejs, format, CultureInfo.InvariantCulture);
+            }
+            catch (FormatException)
+            {
+            }
+            int color = SqlReservation.GetReservationStateCourt(courtid, date, 0);
+            return new JsonResult { Data = color, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
+
         [HttpPost]
         public JsonResult SaveEvent(Event e)
         {

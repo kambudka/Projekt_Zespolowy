@@ -30,6 +30,7 @@
             function Setnumber(){
                 court = 1;
             }
+
             function FetchBusinessHours() {
                 $.ajax({
                     type: "GET",
@@ -49,6 +50,7 @@
                     }
                 })
             }
+
             function FetchEventAndRenderCalendar() {
                 events = [];
                 $.ajax({
@@ -67,26 +69,32 @@
             }
 
 
+            function Refech() {
+                $('#calendar').fullCalendar('destroy');
+                $('#calender').fullCalendar('refetchEvents');
+                $('#calender').fullCalendar('rerenderEvents');
+                GenerateCalender();
+               // GenerateCalender()
+            }
+
             function GenerateCalender() {
                 $('#calender').fullCalendar('destroy');
                 $('#calendar').fullCalendar({
                     customButtons: {
                         addcourt: {
-                            text: 'Next',
+                            text: 'Nastepny',
                             click: function () {
                                 if (court != 2)
                                     court = court + 1;
-                                alert(court);
-                                $('#calender').fullCalendar('refetchEvents');
+                                Refech();
                             }
                         },
                         subcourt: {
-                            text: 'Prev',
+                            text: 'Poprzedni',
                             click: function () {
                                 if (court > 1)
                                     court = court - 1;
-                                alert(court);
-                                $('#calender').fullCalendar('refetchEvents');
+                                Refech();
                             }
                         },
                         courtnumber: {
@@ -100,9 +108,10 @@
                         center: 'title',
                         right: 'month,agendaWeek'
                     },
+                    themeSystem: 'bootstrap3',
                     aspectRatio: 2,
                     timeFormat: 'H(:mm)',
-                    businessHours: 
+                    businessHours:
                         [ // specify an array instead
                         //{
                         //    dow: [0], // Niedziela
@@ -151,7 +160,7 @@
                             $(this).css('background-color', 'red');
                             $('#calendar').fullCalendar('changeView', 'agendaWeek');
                             $("#calendar").fullCalendar('gotoDate', date);
-                            
+
                         }
                     },
 
@@ -189,7 +198,7 @@
                         var view2 = $('#calendar').fullCalendar('getView');
                         if (view2.name == "agendaWeek") {
                             openAddEditForm();
-                            
+
                         }
                         $('#calendar').fullCalendar('unselect');
                     },
@@ -206,10 +215,52 @@
                     },
 
                     //Wygląd dni w monthview
-                   // dayRender: function (date, cell) {
-                    //    cell.css("background-color", "gray");
-                    //},
-                    
+                    dayRender: function (date, cell) {
+                        var color;
+                        var string = date.toString();
+                        //getColor(date, cell);
+                        cell.css("background-color", "#gray");
+                        if(date.isAfter())
+                         $.ajax({
+                    type: "GET",
+                    data: { 'courtid': court, 'datejs': string },
+                    url: '@Url.Action("GetColor", "Calendar")',
+                    success: function (data) {
+                        color = data;
+
+                                switch (color) {
+                                    case 0:
+                                        cell.css("background-color", "#7FFFD4");
+                                        break;
+                                    case 1:
+                                        cell.css("background-color", "#DC143C");
+                                        break;
+                                    case 2:
+                                        cell.css("background-color", "#FF8C00");
+                                        break;
+                                    case 3:
+                                        cell.css("background-color", "#87CEFA");
+                                        break;
+                                    case 4:
+                                        cell.css("background-color", "gray");
+                                        break;
+                                    default:
+                                        cell.css("background-color", "gray");
+                        };
+                        var fcEl = $('#calendar');
+                            view = fcEl.fullCalendar('getView');
+                        view.unrenderDates();
+                        view.renderDates();
+                        fcEl.fullCalendar('refetchEvents');
+
+                    },
+                    error: function (error) {
+                        alert('Nie udalo się pobrac dostepnosci dnia');
+                    }
+                });
+
+                    },
+
                     //pobieranie wyświetlanych eventów
                     events: {
                         url: '/Calendar/GetEvents/',
@@ -222,9 +273,9 @@
                             $('#script-warning').show();
                         },
                     },
-                    
 
-                    
+
+
 
                 });
             }
@@ -332,7 +383,7 @@
                     description: $('#txtDescription').val(),
                 }
                 SaveEvent(data);
-                // call function for submit data to the server 
+                // call function for submit data to the server
             });
 
             function SaveEvent(data) {
@@ -347,12 +398,12 @@
                             $('#myModalSave').modal('hide');
                             window.alert("Pomyślnie dodano");
                             $('#calendar').fullCalendar('renderEvent', selectedEvent, true);
-                            
+
                             GenerateCalender();
-                            
+
                         }
                         if (!data.status) {
-                            
+
                             window.alert("Nie udało się dodac");
                             $('#myModalSave').modal('hide');
                         }
@@ -373,46 +424,84 @@
 <div id="calendar"></div>
 
 <div id="myModalSave" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Save Event</h4>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <input type="hidden" id="hdEventID" value="0" />
-                    <input type="hidden" id="hdstart" class="form-control"  />
-                    <input type="hidden" id="hdend" class="form-control" />
-                    <p id="pDetails"></p>
-                    <button type="button" id="btnSave" class="btn btn-success">Save</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </form>
+    @if (Request.IsAuthenticated)
+    {
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Save Event</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <input type="hidden" id="hdEventID" value="0" />
+                        <input type="hidden" id="hdstart" class="form-control" />
+                        <input type="hidden" id="hdend" class="form-control" />
+                        <p id="pDetails"></p>
+                        <button type="button" id="btnSave" class="btn btn-success">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    }
+    else
+    {
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Musisz być zalogowany aby dodawać rezerwacje</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    }
+
 </div>
 
 <div id="infoModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><span id="eventTitle"></span></h4>
-            </div>
-            <div class="modal-body">
-                <p id="pDetails"></p>
-                <button id="btnDelete" class="btn btn-default btn-sm pull-right">
-                    <span class="glyphicon glyphicon-remove"></span> Remove
-                </button>
-                <button id="btnEdit" class="btn btn-default btn-sm pull-right" style="margin-right:5px;">
-                    <span class="glyphicon glyphicon-pencil"></span> Edit
-                </button>
 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    @if (Request.IsAuthenticated)
+    {
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><span id="eventTitle"></span></h4>
+                </div>
+                <div class="modal-body">
+                    <p id="pDetails"></p>
+                    <button id="btnDelete" class="btn btn-default btn-sm pull-right">
+                        <span class="glyphicon glyphicon-remove"></span> Remove
+                    </button>
+                    <button id="btnEdit" class="btn btn-default btn-sm pull-right" style="margin-right:5px;">
+                        <span class="glyphicon glyphicon-pencil"></span> Edit
+                    </button>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
-    </div>
+    }
+    else
+    {
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Musisz być zalogowany aby zobaczyć szczegóły</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    }
 </div>
+
+
