@@ -108,7 +108,6 @@
                         center: 'title',
                         right: 'month,agendaWeek'
                     },
-                    themeSystem: 'bootstrap3',
                     aspectRatio: 2,
                     timeFormat: 'H(:mm)',
                     businessHours:
@@ -189,7 +188,7 @@
                     select: function (start, end) {
                         selectedEvent = {
                             eventID: 0,
-                            title: 'Placeholder tytułu',
+                            title: ' ',
                             description: 'Twoj opis',
                             start: start,
                             end: end,
@@ -214,52 +213,7 @@
                         }
                     },
 
-                    //Wygląd dni w monthview
-                    dayRender: function (date, cell) {
-                        var color;
-                        var string = date.toString();
-                        //getColor(date, cell);
-                        cell.css("background-color", "#gray");
-                        if(date.isAfter())
-                         $.ajax({
-                    type: "GET",
-                    data: { 'courtid': court, 'datejs': string },
-                    url: '@Url.Action("GetColor", "Calendar")',
-                    success: function (data) {
-                        color = data;
 
-                                switch (color) {
-                                    case 0:
-                                        cell.css("background-color", "#7FFFD4");
-                                        break;
-                                    case 1:
-                                        cell.css("background-color", "#DC143C");
-                                        break;
-                                    case 2:
-                                        cell.css("background-color", "#FF8C00");
-                                        break;
-                                    case 3:
-                                        cell.css("background-color", "#87CEFA");
-                                        break;
-                                    case 4:
-                                        cell.css("background-color", "gray");
-                                        break;
-                                    default:
-                                        cell.css("background-color", "gray");
-                        };
-                        var fcEl = $('#calendar');
-                            view = fcEl.fullCalendar('getView');
-                        view.unrenderDates();
-                        view.renderDates();
-                        fcEl.fullCalendar('refetchEvents');
-
-                    },
-                    error: function (error) {
-                        alert('Nie udalo się pobrac dostepnosci dnia');
-                    }
-                });
-
-                    },
 
                     //pobieranie wyświetlanych eventów
                     events: {
@@ -272,11 +226,50 @@
                         error: function () {
                             $('#script-warning').show();
                         },
+                    },                    //Wygląd dni w monthview
+                    dayRender: function (date, cell) {
+                        var color;
+                        var string = date.toString();
+                        cell.css("background-color", "#gray");
+                        if(date.isAfter())
+                         $.ajax({
+                            type: "GET",
+                            data: { 'courtid': court, 'datejs': string },
+                            url: '@Url.Action("GetColor", "Calendar")',
+                            success: function (data) {
+                                color = data;
+                                switch (color) {
+                                            case 0:
+                                                cell.css("background-color", "#7FFFD4");
+                                                break;
+                                            case 1:
+                                                cell.css("background-color", "#DC143C");
+                                                break;
+                                            case 2:
+                                                cell.css("background-color", "#FF8C00");
+                                                break;
+                                            case 3:
+                                                cell.css("background-color", "#87CEFA");
+                                                break;
+                                            case 4:
+                                                cell.css("background-color", "gray");
+                                                break;
+                                            default:
+                                                cell.css("background-color", "gray");
+                                };
+                                var fcEl = $('#calendar');
+                                    view = fcEl.fullCalendar('getView');
+                                view.unrenderDates();
+                                view.renderDates();
+                                fcEl.fullCalendar('refetchEvents');
+
+                            },
+                            error: function (error) {
+                                alert('Nie udalo się pobrac dostepnosci dnia');
+                            }
+                        });
+
                     },
-
-
-
-
                 });
             }
 
@@ -390,7 +383,7 @@
                 $.ajax({
                     type: "POST",
                     url: '@Url.Action("SaveEvent", "Calendar")',
-                    data: data,
+                    data: { 'e': data, 'court': court },
                     success: function (data) {
                         if (data.status) {
                             //Refresh the calender

@@ -81,7 +81,7 @@ namespace SystemRezerwacjiKortow.Controllers
         }
 
         [HttpPost]
-        public JsonResult SaveEvent(Event e)
+        public JsonResult SaveEvent(Event e, int court)
         {
             var status = false;
                            //Wed Mar 19 2019 07:30:00 GMT+0000
@@ -110,7 +110,7 @@ namespace SystemRezerwacjiKortow.Controllers
             int id = SqlUser.GetUser(email).UserID;
             //SqlReservation.SetReservationCourt(1, DateTime.Now.AddMinutes(5), DateTime.Now.AddHours(1), 4);
             //SqlReservation.SetReservationCourt(1, new DateTime(2019, 3, 22, 16, 00, 0), new DateTime(2019, 3, 22, 17, 00, 0), 13);
-            if (SqlReservation.SetReservationCourt(id, start.AddHours(-2), end.AddHours(-2), id))
+            if (SqlReservation.SetReservationCourt(court, start.AddHours(-2), end.AddHours(-2), id))
                 status = true;
             return new JsonResult { Data = new { status = status } };
         }
