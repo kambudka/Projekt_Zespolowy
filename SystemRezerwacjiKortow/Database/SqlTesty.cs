@@ -57,8 +57,21 @@ namespace SystemRezerwacjiKortow.Database
             //SqlCyclicReservation.GetReservationCyclic(9);
 
             // testy rezerwacji wykonanych
-            //SqlHire.GetHires(0, DateTime.Now.AddDays(-22), DateTime.Now.AddDays(-20));
-            //SqlHire.GetHire(3);
+            //DateTime dateStart = new DateTime(2019, 3, 1, 16, 49, 0);
+            //DateTime dateStop = new DateTime(2019, 3, 5, 16, 49, 0);
+            //SqlHire.GetHires(0, dateStart, dateStop);
+            //SqlHire.GetHire(37);
+
+            // testy rezerwacji turniejowych
+            //DateTime dateStart = new DateTime(2019, 12, 1, 16, 49, 0);
+            //DateTime dateStop = new DateTime(2019, 12, 15, 16, 49, 0);
+            //SqlContest.SetReservationContest("Turniej grudniowy", "Jakis organizator", "Jakis opis", dateStart, dateStop, 4);
+            //SqlContest.GetContests(4);
+            //SqlContest.CancelContest(16, 4);
+            //SqlContest.GetContest(16);
+            //SqlReservation.AcceptReservation(290, true);
+            //SqlContest.MakePaymentContest(17);
+
         }
         #region User
         private static void testInsertUser()

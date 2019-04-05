@@ -13,7 +13,7 @@ namespace SystemRezerwacjiKortow.Database
         // składanie rezerwacji cyklicznej na kort
         // zwraca true, jeśli rezerwacja się powiodła lub false w przypadku niepowodzenia
         // courtID - id kortu, ktory ma byc zarezerwowany
-        // descrpiton - opis rezerwacji, max 50znaków
+        // description - opis rezerwacji, max 50znaków
         // dateTimeFrom - data i godzina pierwszej rezerwacji
         // dateTimeTo - data i godzina ostatniej rezerwacji
         // userID - id uzytkownika skladajacego rezerwacje

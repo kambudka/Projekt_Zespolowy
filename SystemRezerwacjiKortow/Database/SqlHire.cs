@@ -61,11 +61,13 @@ namespace SystemRezerwacjiKortow.Database
                             Payment = (decimal)reader["Payment"],
                             UserID = (int)reader["UserID"],
                             DatePayment = (DateTime)reader["DatePayment"],
+                            ReservationID = (int)reader["ReservationID"],
                             DateFromAsDate = (DateTime)reader["DateFromAsDate"],
                             DateFromAsTime = (TimeSpan)reader["DateFromAsTime"],
                             DateFromAsMonth = (int)reader["DateFromAsMonth"],
                             DateFromAsDayOfMonth = (int)reader["DateFromAsDayOfMonth"],
-                            DateFromAsDayOfWeek = (int)reader["DateFromAsDayOfWeek"]
+                            DateFromAsDayOfWeek = (int)reader["DateFromAsDayOfWeek"],
+                            Type = (int)reader["Type"]
                         });
                     }
                     SqlDatabase.CloseConnection(connection);
@@ -100,11 +102,13 @@ namespace SystemRezerwacjiKortow.Database
                             Payment = (decimal)reader["Payment"],
                             UserID = (int)reader["UserID"],
                             DatePayment = (DateTime)reader["DatePayment"],
+                            ReservationID = (int)reader["ReservationID"],
                             DateFromAsDate = (DateTime)reader["DateFromAsDate"],
                             DateFromAsTime = (TimeSpan)reader["DateFromAsTime"],
                             DateFromAsMonth = (int)reader["DateFromAsMonth"],
                             DateFromAsDayOfMonth = (int)reader["DateFromAsDayOfMonth"],
-                            DateFromAsDayOfWeek = (int)reader["DateFromAsDayOfWeek"]
+                            DateFromAsDayOfWeek = (int)reader["DateFromAsDayOfWeek"],
+                            Type = (int)reader["Type"]
                         };
                     }
                     SqlDatabase.CloseConnection(connection);

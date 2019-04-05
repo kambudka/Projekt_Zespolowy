@@ -174,6 +174,7 @@
     <Compile Include="Crypto.cs" />
     <Compile Include="Database\SqlAdvertisement.cs" />
     <Compile Include="Database\SqlCompany.cs" />
+    <Compile Include="Database\SqlContest.cs" />
     <Compile Include="Database\SqlCourt.cs" />
     <Compile Include="Database\SqlCyclicReservation.cs" />
     <Compile Include="Database\SqlDatabase.cs" />

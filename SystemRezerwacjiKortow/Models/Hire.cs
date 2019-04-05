@@ -42,6 +42,8 @@ namespace SystemRezerwacjiKortow.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DatePayment{ get; set; }
 
+        public int ReservationID { get; set; }
+
         // potrzebne do widoku - data poczatkowa (DateFrom) rozbita na czesci
         // sama data bez godzin - dzien, miesiac i rok
         public DateTime DateFromAsDate { get; set; }
@@ -57,5 +59,12 @@ namespace SystemRezerwacjiKortow.Models
         
         // sam numer dnia tygodnia
        public int DateFromAsDayOfWeek { get; set; }
+
+        // typ rezerwacji
+        // 0 - zwykla
+        // 1 - turniejowa
+        // 2 - cykliczna
+        // 3 - cos wybuchlo w bazie
+        public int Type { get; set; }
     }
 }

@@ -690,4 +690,10 @@
   <data name="DateInsert" xml:space="preserve">
     <value>Date</value>
   </data>
+  <data name="Organizer" xml:space="preserve">
+    <value>Organizer</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
 </root>

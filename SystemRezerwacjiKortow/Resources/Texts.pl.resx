@@ -699,4 +699,10 @@
   <data name="DeleteAccount" xml:space="preserve">
     <value>Usuń konto</value>
   </data>
+  <data name="Organizer" xml:space="preserve">
+    <value>Organizator</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Koszt</value>
+  </data>
 </root>
