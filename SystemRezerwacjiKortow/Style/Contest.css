@@ -1,9 +1,9 @@
 ﻿@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 
-body{
-
+body {
 }
+
 
 
 .line1 {
@@ -15,10 +15,10 @@ body{
 }
 
 .truncate_2_rows {
-    overflow: hidden; display: -webkit-box;
+    overflow: hidden;
+    display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    
 }
 
 .truncate_1_row {
@@ -27,6 +27,7 @@ body{
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
+
 .event-list {
     list-style: none;
     font-family: 'Lato', sans-serif;
@@ -73,6 +74,7 @@ body{
             font-weight: 900;
             line-height: 1;
         }
+
         .event-list > li time > .year {
             display: block;
             font-size: 13pt;
@@ -87,15 +89,13 @@ body{
         .event-list > li > .info {
             padding-top: 5px;
             text-align: center;
-            
-            
         }
 
             .event-list > li > .info > .title {
                 font-size: 18pt;
                 font-weight: 700;
                 margin: 0px;
-                vertical-align:middle;
+                vertical-align: middle;
             }
 
             .event-list > li > .info > .desc {
@@ -111,7 +111,7 @@ body{
                 margin: 10px 0px 0px;
                 padding: 0px;
                 width: 100%;
-                text-align:left;
+                text-align: left;
             }
 
         .event-list > li > .social > ul {
@@ -120,12 +120,11 @@ body{
 
             .event-list > li > .info > ul > li,
             .event-list > li > .social > ul > li {
-                display: table-cell;  
+                display: table-cell;
                 color: rgb(30, 30, 30);
                 font-size: 11pt;
                 font-weight: 300;
                 padding: 3px 3px;
-               
             }
 
                 .event-list > li > .info > ul > li > a {
@@ -143,7 +142,7 @@ body{
                     padding: 3px 0px;
                 }
 
-                
+
                 .event-list > li > .social > ul > li:hover {
                     color: rgb(30, 30, 30);
                     background-color: rgb(200, 200, 200);
@@ -185,7 +184,7 @@ body{
         position: relative;
         display: block;
         width: 100%;
-        height: 250px;
+        height: 120px;
         padding: 0px;
     }
 
@@ -197,11 +196,12 @@ body{
         .event-list > li > img {
             width: auto;
             float: left;
-            height: 250px;
-            max-width:280px;
+            height: 120px;
+            max-width: 180px;
         }
+
         .event-list > li > time {
-            width: 200px;
+            width: 100px;
             float: left;
         }
 
@@ -210,17 +210,17 @@ body{
             overflow: hidden;
         }
 
-   
+
         .event-list > li > time {
-            width: 250px;
-            height: 250px;
+            width: 120px;
+            height: 120px;
             padding: 0px;
             margin: 0px;
         }
 
         .event-list > li > .info {
             position: relative;
-            height: 250px;
+            height: 120px;
             text-align: left;
             padding-right: 40px;
         }
