@@ -388,5 +388,34 @@ namespace SystemRezerwacjiKortow.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public ActionResult GetMyCourtsReservations()
+        {
+            List<Reservation> myAllReservations = SqlReservation.GetReservations(SqlUser.GetUser(User.Identity.Name).UserID);
+            List<Reservation> myReservations=new List<Reservation>();
+            foreach(Reservation r in myAllReservations)
+            {
+                if(r.DateOfCancel==null)
+                {
+                    myReservations.Add(r);
+                }
+            }
+            return View(myReservations);
+        }
+
+        public ActionResult CancelReservation(int id)
+        {
+            Reservation reservation = SqlReservation.GetReservation(id);
+            return View(reservation);
+        }
+
+        [HttpPost, ActionName("CancelReservation")]
+        public ActionResult CancelConfirmed(int id)
+        {
+            bool check = SqlReservation.CancelReservation(id, SqlUser.GetUser(User.Identity.Name).UserID);
+
+
+            return RedirectToAction("GetMyCourtsReservations");
+        }
+
     }
 }
