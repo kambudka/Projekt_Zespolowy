@@ -24,7 +24,7 @@ namespace SystemRezerwacjiKortow.Models
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DateTo { get; set; }
 
-        [Display(Name = "DuePayment", ResourceType = typeof(Texts))]
+        [Display(Name = "Payment", ResourceType = typeof(Texts))]
         [DataType(DataType.Currency)]
         public decimal Payment { get; set; }
 

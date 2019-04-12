@@ -690,4 +690,28 @@
   <data name="DateInsert" xml:space="preserve">
     <value>Date</value>
   </data>
+  <data name="Organizer" xml:space="preserve">
+    <value>Organizer</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Back to list</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CancelReservation" xml:space="preserve">
+    <value>Cancel reservation</value>
+  </data>
+  <data name="ContestID" xml:space="preserve">
+    <value>Event ID</value>
+  </data>
+  <data name="CyclicReservationID" xml:space="preserve">
+    <value>Cyclic Reservation ID</value>
+  </data>
+  <data name="MyCourtsReservations" xml:space="preserve">
+    <value>My courts reservations</value>
+  </data>
 </root>

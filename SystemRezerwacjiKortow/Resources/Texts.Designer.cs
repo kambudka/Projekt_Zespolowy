@@ -151,11 +151,38 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Back to list.
+        /// </summary>
+        public static string BackToList {
+            get {
+                return ResourceManager.GetString("BackToList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu In case of any questions about specific tennis court, please contact court&apos;s manager first (available at &lt;a href=&quot;#&quot;&gt;Courts&lt;/a&gt; page)..
         /// </summary>
         public static string CallCourtManagerNote {
             get {
                 return ResourceManager.GetString("CallCourtManagerNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Cancel reservation.
+        /// </summary>
+        public static string CancelReservation {
+            get {
+                return ResourceManager.GetString("CancelReservation", resourceCulture);
             }
         }
         
@@ -277,6 +304,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Event ID.
+        /// </summary>
+        public static string ContestID {
+            get {
+                return ResourceManager.GetString("ContestID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Contest name.
         /// </summary>
         public static string ContestName {
@@ -363,6 +399,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string CustomerID {
             get {
                 return ResourceManager.GetString("CustomerID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Cyclic Reservation ID.
+        /// </summary>
+        public static string CyclicReservationID {
+            get {
+                return ResourceManager.GetString("CyclicReservationID", resourceCulture);
             }
         }
         
@@ -1231,6 +1276,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu My courts reservations.
+        /// </summary>
+        public static string MyCourtsReservations {
+            get {
+                return ResourceManager.GetString("MyCourtsReservations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Name.
         /// </summary>
         public static string Name {
@@ -1258,6 +1312,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Organizer.
+        /// </summary>
+        public static string Organizer {
+            get {
+                return ResourceManager.GetString("Organizer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Tennis court system.
         /// </summary>
         public static string PageTitle {
@@ -1281,6 +1344,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Payment.
+        /// </summary>
+        public static string Payment {
+            get {
+                return ResourceManager.GetString("Payment", resourceCulture);
             }
         }
         

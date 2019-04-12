@@ -1,0 +1,134 @@
+﻿@model SystemRezerwacjiKortow.Models.Contest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Style/Index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2>@Html.DisplayFor(model => model.Name)</h2>
+        </div>
+
+        <hr class="line1">
+        <div class="row">
+            <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+                <ul class="event-list">                  
+                        <li>
+                            <time datetime="2014-07-20 2000">
+                               <br /> <br />
+                                <span class="month">  @Html.DisplayFor(model => model.DateFrom)</span>
+                                <span class="month">  - </span>                             
+                                <span class="month">  @Html.DisplayFor(model => model.DateTo)</span>                               
+                                <span class="time">ALL DAY</span>
+                            </time>
+                            <img src="https://nowe.glucholazy.pl/images/icagenda/thumbs/themes/ic_large_w900h600q100_plakat-os-singiel-2018.jpg" />
+                            <div class="info">
+                               
+                                <p class="desc"> @Html.DisplayFor(model => model.Description)</p>
+                                <ul>
+                                    <li><p style="float:left">Organizator: </p> <p style="float:left">@Html.DisplayFor(model => model.Organizer)</p> </li>
+                                    <li><p style="float:right; font-weight:bold"  class="month" > </p> <p style="float:left"> @Html.DisplayFor(model => model.PaymentToPay)</p> </li>
+
+                                </ul>
+                            </div>
+
+                        </li>
+
+                 
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+@*<dd>
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateFrom)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateFrom)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateTo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateTo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Organizer)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Organizer)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UserID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateCancel)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateCancel)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PaymentToPay)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PaymentToPay)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UserName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserName)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
