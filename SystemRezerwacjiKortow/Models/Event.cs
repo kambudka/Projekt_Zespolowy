@@ -13,6 +13,7 @@ namespace SystemRezerwacjiKortow.Models
         public string end { get; set; }
         public string payment { get; set; }
         public string description { get; set; }
+        public int type { get; set; }
 
 
     }

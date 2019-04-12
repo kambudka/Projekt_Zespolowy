@@ -19,7 +19,6 @@
          //   ShowHours();
             Setnumber();
             GenerateCalender();
-            //FetchEventAndRenderCalendar();
 
            // function ShowHours() {
            //     window.alert("Pokazuje");
@@ -51,22 +50,7 @@
                 })
             }
 
-            function FetchEventAndRenderCalendar() {
-                events = [];
-                $.ajax({
-                    type: "GET",
-                    url: "/Calendar/GetEvents",
-                    success: function (data) {
-                        //Refresh the calender
-                        g_BusinessHours = data;
 
-                        GenerateCalender();
-                    },
-                    error: function (error) {
-                        alert('failed');
-                    }
-                })
-            }
 
 
             function Refech() {
@@ -150,6 +134,7 @@
                     ],
                     selectConstraint: "businessHours",
                     defaultDate: $('#calendar').fullCalendar('today'),
+                    slotDuration: "01:00:00",
                     slotLabelFormat: ['H:mm'],
                     minTime: "06:00:00",
                     maxTime: "23:00:00",

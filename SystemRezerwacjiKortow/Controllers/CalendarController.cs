@@ -47,6 +47,7 @@ namespace SystemRezerwacjiKortow.Controllers
                 newevent.end = ConvertFromDateToString(reservation.DateTo);
                 newevent.description = reservation.ReservationID.ToString();
                 newevent.payment = reservation.Payment.ToString();
+                //newevent
                 list.Add(newevent);
                 }
             }
