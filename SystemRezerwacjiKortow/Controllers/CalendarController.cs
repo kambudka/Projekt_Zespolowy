@@ -44,10 +44,21 @@ namespace SystemRezerwacjiKortow.Controllers
                 newevent.id = reservation.ReservationID;
                 newevent.title = reservation.CourtID.ToString();
                 newevent.start = ConvertFromDateToString(reservation.DateFrom);
+                
                 newevent.end = ConvertFromDateToString(reservation.DateTo);
                 newevent.description = reservation.ReservationID.ToString();
                 newevent.payment = reservation.Payment.ToString();
-                //newevent
+                    newevent.color = "#47f441";
+                    if (reservation.ContestID != 0)
+                    {
+                        newevent.color = "#f4d142";
+                    }
+                    else if (reservation.CyclicReservationID != 0)
+                    {
+                        newevent.color = "#4265f4";
+                    }
+                        
+                    //newevent
                 list.Add(newevent);
                 }
             }
@@ -86,6 +97,75 @@ namespace SystemRezerwacjiKortow.Controllers
         {
             var status = false;
                            //Wed Mar 19 2019 07:30:00 GMT+0000
+            string format = "ddd MMM dd yyyy HH:mm:ss 'GMT'K";
+            DateTime start = new DateTime();
+            DateTime end = new DateTime();
+            try
+            {
+                start = DateTime.ParseExact(e.start, format, CultureInfo.InvariantCulture);
+            }
+            catch (FormatException)
+            {
+            }
+            try
+            {
+                end = DateTime.ParseExact(e.end, format, CultureInfo.InvariantCulture);
+            }
+            catch (FormatException)
+            {
+            }
+
+            string email = User.Identity.Name;
+
+            int id = SqlUser.GetUser(email).UserID;
+            //SqlReservation.SetReservationCourt(1, DateTime.Now.AddMinutes(5), DateTime.Now.AddHours(1), 4);
+            //SqlReservation.SetReservationCourt(1, new DateTime(2019, 3, 22, 16, 00, 0), new DateTime(2019, 3, 22, 17, 00, 0), 13);
+            if (SqlReservation.SetReservationCourt(court, start.AddHours(-2), end.AddHours(-2), id))
+                status = true;
+            return new JsonResult { Data = new { status = status } };
+        }
+
+        [HttpPost]
+        public JsonResult SaveTournament(Event e, int court)
+        {
+            var status = false;
+            //Wed Mar 19 2019 07:30:00 GMT+0000
+            string format = "ddd MMM dd yyyy HH:mm:ss 'GMT'K";
+            DateTime start = new DateTime();
+            DateTime end = new DateTime();
+            try
+            {
+                start = DateTime.ParseExact(e.start, format, CultureInfo.InvariantCulture);
+            }
+            catch (FormatException)
+            {
+            }
+            try
+            {
+                end = DateTime.ParseExact(e.end, format, CultureInfo.InvariantCulture);
+            }
+            catch (FormatException)
+            {
+            } 
+            if (e.length > 1)
+                end = start.AddDays(e.length - 1);
+            else
+                end = start;
+            string email = User.Identity.Name;
+
+            int id = SqlUser.GetUser(email).UserID;
+            //SqlReservation.SetReservationCourt(1, DateTime.Now.AddMinutes(5), DateTime.Now.AddHours(1), 4);
+            //SqlReservation.SetReservationCourt(1, new DateTime(2019, 3, 22, 16, 00, 0), new DateTime(2019, 3, 22, 17, 00, 0), 13);
+            if (SqlContest.SetReservationContest(e.name, e.organizer, e.description, start,end, id))
+                status = true;
+            return new JsonResult { Data = new { status = status } };
+        }
+
+        [HttpPost]
+        public JsonResult SaveCyclicEvent(Event e, int court)
+        {
+            var status = false;
+            //Wed Mar 19 2019 07:30:00 GMT+0000
             string format = "ddd MMM dd yyyy HH:mm:ss 'GMT'K";
             DateTime start = new DateTime();
             DateTime end = new DateTime();
