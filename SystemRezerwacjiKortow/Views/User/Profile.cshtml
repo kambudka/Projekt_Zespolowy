@@ -19,11 +19,12 @@
             <td width="20%">
                 <center>
                     <a href="#"><font color="black">@SystemRezerwacjiKortow.Resources.Texts.General</font></a><br /><br />
-                    <a href="#"><font color="black"> @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.ChangePassword,"ChangePassword")</font></a><br /><br />
-<a href="#"><font color="black">@SystemRezerwacjiKortow.Resources.Texts.SetUpPayments</font></a><br /><br />
-<a href="#"><font color="black">@SystemRezerwacjiKortow.Resources.Texts.PaymentsHistory</font></a><br /><br />
-<a href="#" onclick="javascript:return ShowMessage();">@SystemRezerwacjiKortow.Resources.Texts.DeleteAccount<font color="black"></font></a>
-</center>
+                    <a href="#"><font color="black"> @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.ChangePassword, "ChangePassword")</font></a><br /><br />
+                    <a href="#"><font color="black">@SystemRezerwacjiKortow.Resources.Texts.SetUpPayments</font></a><br /><br />
+                    <a href="#"><font color="black">@SystemRezerwacjiKortow.Resources.Texts.PaymentsHistory</font></a><br /><br />
+                    <a href="#"><font color="black"> @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.ShowMyCourtsReservations, "GetMyCourtsReservations")</font></a><br /><br />
+                    <a href="#" onclick="javascript:return ShowMessage();">@SystemRezerwacjiKortow.Resources.Texts.DeleteAccount<font color="black"></font></a>
+                </center>
 </td>
 <td width="60%">
 <center> @ViewBag.user.FirstName  @ViewBag.user.Surname</center><br />

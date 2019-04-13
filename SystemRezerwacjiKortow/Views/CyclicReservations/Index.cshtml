@@ -1,0 +1,219 @@
+﻿@model SystemRezerwacjiKortow.Models.CyclicReservation
+
+
+
+
+@ViewBag.Message
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>@SystemRezerwacjiKortow.Resources.Texts.CyclicReservationForm</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <!--<div class="form-group">
+     @*    @Html.LabelFor(model => model.DayOfWeek, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DayOfWeek, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DayOfWeek, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DayOfMonth, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DayOfMonth, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DayOfMonth, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+        -->
+
+
+    <div class="form-group">
+        @Html.Label("Rodzaj rezerwacji", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("YourDropDownValue", new SelectListItem[]{
+                        new SelectListItem(){ Text = "Rezerwacja na wybrany dzień tygodnia", Value = "0"},
+                        new SelectListItem(){ Text = "Rezerwacja na wybrany dzień miesiąca", Value = "1"},
+                        new SelectListItem(){ Text = "Rezerwacja interwał", Value = "2"}
+                        }, new { @class = "form-control", @onchange= "ne('o1', this.value)" })
+        </div>
+    </div>
+    <div class="form-group" id="o1" style="display:none;">
+        @Html.LabelFor(model => model.DayInterval, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DayInterval, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DayInterval, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <!--
+      @*   <div class="form-group">
+       @Html.LabelFor(model => model.Time, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+          //  @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })
+          //  @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+        -->
+    <table>
+        <tr>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateStart, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DateStart, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DateStart, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </td>
+            <td>
+            <div class="form-group">
+                @Html.LabelFor(model => model.DateStart.Hour, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input name="hourStart" id="hourStart" type="text" class="form-control" />
+                </div>
+            </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateStart.Minute, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input name="minuteStart" id="minuteStart" type="text" class="form-control" />
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateStop, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DateStop, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DateStop, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateStop.Hour, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input name="hourStop" id="hourStop" type="text" class="form-control" />
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateStop.Minute, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input name="minuteStop" id="minuteStop" type="text" class="form-control" />
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="form-group">
+        @Html.Label("Amount of hours", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+           @* @Html.Editor(model => model.DateStop.Minute, new { htmlAttributes = new { @class = "form-control" } })*@
+            <input name="howmany" id="howmany" type="text" class="form-control"/>
+        </div>
+    </div>
+
+    @Html.HiddenFor(model => model.UserID)
+    @* <!--
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UserID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+            -->*@
+    @*
+        <div class="form-group">
+            @Html.LabelFor(model => model.GearID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.GearID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.GearID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GearAmount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.GearAmount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.GearAmount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    *@
+    <div class="form-group">
+        @Html.LabelFor(model => model.CourtID, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.CourtID, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CourtID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    @*
+        <div class="form-group">
+            @Html.LabelFor(model => model.DateCancel, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateCancel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DateCancel, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReservationName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ReservationName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ReservationName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    *@
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+        }
+
+        <div>
+            @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.BackToList, "Index","Calendar")
+        </div>
+
+        <script type="text/javascript">
+            function ne(o, z) {
+                if (document.getElementById(o).style.display == '') document.getElementById(o).style.display = 'none';
+                else {
+                    if (z == 2) { document.getElementById(o).style.display = ''; }
+                }
+            }
+        </script>
+
+        

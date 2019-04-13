@@ -103,11 +103,16 @@
                             click: function () {
                             }
                         },
-                        
+                        cyclic: {
+                            text: 'Rezerwacja cykliczna',
+                            click: function () {
+                                location.href = "CyclicReservations/Index";
+                            }
+                        },
                     },
                    
                     header: {
-                        left: 'prev,next today subcourt courtnumber addcourt',
+                        left: 'prev,next today subcourt courtnumber addcourt cyclic',
                         center: 'title',
                         right: 'month,agendaWeek'
                     },

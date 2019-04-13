@@ -50,7 +50,7 @@ namespace SystemRezerwacjiKortow.Models
         [Display(Name = "GearAmount", ResourceType = typeof(Texts))]
         public int GearAmount { get; set; }
 
-        [Display(Name = "CourtID", ResourceType = typeof(Texts))]
+        [Display(Name = "CourtNumber", ResourceType = typeof(Texts))]
         public int CourtID { get; set; }
 
         [Display(Name = "DateCancel", ResourceType = typeof(Texts))]
