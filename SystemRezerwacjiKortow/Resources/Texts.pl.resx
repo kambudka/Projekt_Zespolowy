@@ -717,4 +717,13 @@
   <data name="MyCourtsReservations" xml:space="preserve">
     <value>Moje rezerwacje kortów</value>
   </data>
+  <data name="ShowMyCourtsReservations" xml:space="preserve">
+    <value>Pokaż moje rezerwacje kortów</value>
+  </data>
+  <data name="CyclicReservationError" xml:space="preserve">
+    <value>Ups! Wygląda na to, że ta data została już zajęta :(</value>
+  </data>
+  <data name="CyclicReservationForm" xml:space="preserve">
+    <value>Złóż cykliczną rezerwacje</value>
+  </data>
 </root>

@@ -714,4 +714,13 @@
   <data name="MyCourtsReservations" xml:space="preserve">
     <value>My courts reservations</value>
   </data>
+  <data name="ShowMyCourtsReservations" xml:space="preserve">
+    <value>Show my courts reservations</value>
+  </data>
+  <data name="CyclicReservationError" xml:space="preserve">
+    <value>Ups! Looks like this date has already been taken :(</value>
+  </data>
+  <data name="CyclicReservationForm" xml:space="preserve">
+    <value>Make a cyclic reservation order</value>
+  </data>
 </root>

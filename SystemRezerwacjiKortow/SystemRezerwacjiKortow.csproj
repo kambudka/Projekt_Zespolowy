@@ -165,6 +165,7 @@
     <Compile Include="Controllers\CalendarController.cs" />
     <Compile Include="Controllers\ContestsController.cs" />
     <Compile Include="Controllers\CourtController.cs" />
+    <Compile Include="Controllers\CyclicReservationsController.cs" />
     <Compile Include="Controllers\GearController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\SystemRezerwacjiKortowContext.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserLogin.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -517,6 +519,7 @@
     <Content Include="Views\Contests\Details.cshtml" />
     <Content Include="Views\User\GetMyCourtsReservations.cshtml" />
     <Content Include="Views\User\CancelReservation.cshtml" />
+    <Content Include="Views\CyclicReservations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

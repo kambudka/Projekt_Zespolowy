@@ -403,6 +403,24 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ups! Looks like this date has already been taken :(.
+        /// </summary>
+        public static string CyclicReservationError {
+            get {
+                return ResourceManager.GetString("CyclicReservationError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Make a cyclic reservation order.
+        /// </summary>
+        public static string CyclicReservationForm {
+            get {
+                return ResourceManager.GetString("CyclicReservationForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Cyclic Reservation ID.
         /// </summary>
         public static string CyclicReservationID {
@@ -1596,6 +1614,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string Show {
             get {
                 return ResourceManager.GetString("Show", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Show my courts reservations.
+        /// </summary>
+        public static string ShowMyCourtsReservations {
+            get {
+                return ResourceManager.GetString("ShowMyCourtsReservations", resourceCulture);
             }
         }
         
