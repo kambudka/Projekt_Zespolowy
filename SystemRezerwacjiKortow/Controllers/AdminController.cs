@@ -50,13 +50,12 @@ namespace SystemRezerwacjiKortow.Controllers
         }
 
         //[HttpPost]
-        public ActionResult AcceptReservation(int id)
+        public ActionResult ConfirmReservation(int id, bool accept=false)
         {
             ViewBag.MyErrorMessage = false;
             try
             {
-                SqlReservation.AcceptReservation(id, true);
-                SqlReservation.MakePayment(id);
+                SqlReservation.AcceptReservation(id, accept);
                 ViewBag.MyErrorMessage = true;
                 SendCourtReservationMail(SqlReservation.GetReservation(id));
                 return RedirectToAction("WaitingReservations");
@@ -65,6 +64,18 @@ namespace SystemRezerwacjiKortow.Controllers
             {
                 return RedirectToAction("WaitingReservations");
             }
+        }
+
+        public void CancelReservation(int id)
+        {
+            SqlReservation.CancelReservation(id, SqlUser.GetUser(User.Identity.Name).UserID);
+            //return RedirectToAction("WaitingReservations");
+        }
+
+        public ActionResult RedeemReservation(int id)
+        {
+            SqlReservation.MakePayment(id);
+            return RedirectToAction("WaitingReservations");
         }
 
         public void SendCourtReservationMail(Reservation reservation)
@@ -92,7 +103,7 @@ namespace SystemRezerwacjiKortow.Controllers
             foreach (Reservation reservation in ReservationList)
             {
                 //Nie pobiera rezerwacji które są anulowane i zaakceptowane
-                if (reservation.DateOfCancel == null && reservation.IsAccepted == false && reservation.IsExecuted == false)
+                if (reservation.DateOfCancel == null && reservation.IsExecuted == false)
                 {
                     list.Add(reservation);
                 }

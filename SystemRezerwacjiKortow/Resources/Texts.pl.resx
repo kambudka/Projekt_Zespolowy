@@ -726,4 +726,16 @@
   <data name="CyclicReservationForm" xml:space="preserve">
     <value>Złóż cykliczną rezerwacje</value>
   </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Potwierdź</value>
+  </data>
+  <data name="Redeem" xml:space="preserve">
+    <value>Zrealizuj</value>
+  </data>
+  <data name="WaitingReservations" xml:space="preserve">
+    <value>Rezerwacje oczekujące</value>
+  </data>
+  <data name="Withdraw" xml:space="preserve">
+    <value>Wycofaj</value>
+  </data>
 </root>
