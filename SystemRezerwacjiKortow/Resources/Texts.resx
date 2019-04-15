@@ -726,11 +726,23 @@
   <data name="Confirm" xml:space="preserve">
     <value>Confirm</value>
   </data>
+  <data name="IdTransaction" xml:space="preserve">
+    <value>ID transaction</value>
+  </data>
   <data name="Redeem" xml:space="preserve">
     <value>Redeem</value>
   </data>
+  <data name="Reminder" xml:space="preserve">
+    <value>The reservation must be paid at the cash desk no later than 10 minutes before the beginning of the booking. To cancel a reservation, contact</value>
+  </data>
+  <data name="ReservationConfirmation" xml:space="preserve">
+    <value>Confirmation of reservation nr</value>
+  </data>
+  <data name="ThanksForReservation" xml:space="preserve">
+    <value>ThanksForReservation	Thank you for using the services of the Tennis Club Website. Below we send a summary of your booking transaction.</value>
+  </data>
   <data name="WaitingReservations" xml:space="preserve">
-    <value>WaitingReservations</value>
+    <value>Waiting Reservations</value>
   </data>
   <data name="Withdraw" xml:space="preserve">
     <value>Withdraw</value>

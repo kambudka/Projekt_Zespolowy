@@ -1159,6 +1159,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ID transaction.
+        /// </summary>
+        public static string IdTransaction {
+            get {
+                return ResourceManager.GetString("IdTransaction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An incorrect password is provided.
         /// </summary>
         public static string InvalidPassword {
@@ -1546,6 +1555,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The reservation must be paid at the cash desk no later than 10 minutes before the beginning of the booking. To cancel a reservation, contact.
+        /// </summary>
+        public static string Reminder {
+            get {
+                return ResourceManager.GetString("Reminder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to I forgot my password.
         /// </summary>
         public static string RemindPassword {
@@ -1560,6 +1578,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string RepeatPassword {
             get {
                 return ResourceManager.GetString("RepeatPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirmation of reservation nr.
+        /// </summary>
+        public static string ReservationConfirmation {
+            get {
+                return ResourceManager.GetString("ReservationConfirmation", resourceCulture);
             }
         }
         
@@ -1708,6 +1735,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ThanksForReservation	Thank you for using the services of the Tennis Club Website. Below we send a summary of your booking transaction..
+        /// </summary>
+        public static string ThanksForReservation {
+            get {
+                return ResourceManager.GetString("ThanksForReservation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Time from.
         /// </summary>
         public static string TimeFrom {
@@ -1825,7 +1861,7 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to WaitingReservations.
+        ///   Looks up a localized string similar to Waiting Reservations.
         /// </summary>
         public static string WaitingReservations {
             get {
