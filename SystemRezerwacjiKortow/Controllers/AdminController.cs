@@ -56,7 +56,6 @@ namespace SystemRezerwacjiKortow.Controllers
             try
             {
                 SqlReservation.AcceptReservation(id, true);
-                SqlReservation.MakePayment(id);
                 ViewBag.MyErrorMessage = true;
                 SendCourtReservationMail(SqlReservation.GetReservation(id));
                 return RedirectToAction("WaitingReservations");
