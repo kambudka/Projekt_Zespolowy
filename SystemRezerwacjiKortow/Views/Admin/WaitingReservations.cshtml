@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<SystemRezerwacjiKortow.Models.Reservation>
 
 @{
-    ViewBag.Title = "WaitingReservations";
+    ViewBag.Title = SystemRezerwacjiKortow.Resources.Texts.WaitingReservations;
 }
 
-<h2>WaitingReservations</h2>
+<h2>@SystemRezerwacjiKortow.Resources.Texts.WaitingReservations</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -53,9 +53,14 @@
 
     @foreach (var item in Model)
     {
-        <tr>
 
-            <td>
+        var backgrounColor = item.IsAccepted ? "background-color:lightgreen" : "background-color:lightsalmon";
+
+
+        <tr style=@backgrounColor >
+            
+
+            <td >
                 @Html.DisplayFor(modelItem => item.DateFrom)
             </td>
             <td>
@@ -93,11 +98,23 @@
                 @Html.DisplayFor(modelItem => item.ContestName)
             </td>
             <td>
-                @Html.ActionLink("AcceptReservation", "AcceptReservation", new { id = item.ReservationID })
+
+                @if (item.IsAccepted)
+                {
+
+                <p> @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Redeem, "RedeemReservation", new { id = item.ReservationID}) | @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Withdraw, "ConfirmReservation", new { id = item.ReservationID, accept = false })</p>
+                }
+                else
+                {
+                    <p> @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Confirm, "ConfirmReservation", new { id = item.ReservationID, accept = true },new { id = "confirmButton" }) | @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Cancel, "CancelReservation", new { id = item.ReservationID }) </p> 
+                }
+
+
+
             </td>
         </tr>
-    }
 
+    }
 </table>
 
 @if (ViewBag.MyErrorMessage == true)
@@ -133,3 +150,5 @@ else if (ViewBag.MyErrorMessage == false)
         </div>
     </div>
 </div>
+
+

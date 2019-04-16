@@ -726,4 +726,28 @@
   <data name="CyclicReservationForm" xml:space="preserve">
     <value>Złóż cykliczną rezerwacje</value>
   </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Potwierdź</value>
+  </data>
+  <data name="IdTransaction" xml:space="preserve">
+    <value>ID transaction</value>
+  </data>
+  <data name="Redeem" xml:space="preserve">
+    <value>Zrealizuj</value>
+  </data>
+  <data name="Reminder" xml:space="preserve">
+    <value>Rezerwację należy opłacic w kasie najpóźniej 10 minut przed rozpoczęciem rezerwacji. Aby odwołać rezerwację skontaktuj się z</value>
+  </data>
+  <data name="ReservationConfirmation" xml:space="preserve">
+    <value>Potwierdzenie rezerwacji nr </value>
+  </data>
+  <data name="ThanksForReservation" xml:space="preserve">
+    <value>Dziękujemy za skorzystanie z usług Serwisu internetowej rezerwacji kortów.Poniżej przesyłamy podsumowanie</value>
+  </data>
+  <data name="WaitingReservations" xml:space="preserve">
+    <value>Rezerwacje oczekujące</value>
+  </data>
+  <data name="Withdraw" xml:space="preserve">
+    <value>Wycofaj</value>
+  </data>
 </root>
