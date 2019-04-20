@@ -21,6 +21,9 @@ namespace SystemRezerwacjiKortow.Database
             // testy kortu
             //testAddModyfyCourt();
             //SqlCourt.GetCourts();
+            //DateTime dateStart = new DateTime(2019, 4, 26, 4, 0, 0);
+            //DateTime dateStop = new DateTime(2019, 4, 27, 18, 0, 0);
+            //SqlCourt.GetAvailableCourts(1, dateStart, dateStop);
 
             // testy reklamy
             //testGetAdvertisement();
@@ -47,6 +50,9 @@ namespace SystemRezerwacjiKortow.Database
             //SqlReservation.GetReservationIDCourt(2, DateTime.Now.AddDays(2));
             //SqlReservation.GetReservationIDCourt(2, date);
             //SqlReservation.MakePayment(8);
+            //DateTime dateStart = new DateTime(2019, 5, 2, 10, 0, 0);
+            //DateTime dateStop = new DateTime(2019, 5, 2, 11, 0, 0);
+            //SqlReservation.SetReservationGear(1, 10, dateStart, dateStop, 4);
 
             // testy rezerwacji cyklicznych
             //DateTime dateStart = new DateTime(2019, 3, 12, 16, 49, 0);

@@ -58,5 +58,16 @@ namespace SystemRezerwacjiKortow.Models
         //[Display(Name = "Price", ResourceType = typeof(Texts))]
         [DataType(DataType.Currency)]
         public decimal PriceSummer { get; set; }
+
+        // potrzebne do listy dostepnych kortow
+        [Display(Name = "DateStart", ResourceType = typeof(Texts))]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime DateFrom { get; set; }
+
+        [Display(Name = "DateEnd", ResourceType = typeof(Texts))]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime DateTo { get; set; }
     }
 }
