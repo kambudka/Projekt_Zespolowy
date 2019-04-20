@@ -50,13 +50,12 @@ namespace SystemRezerwacjiKortow.Controllers
         }
 
         //[HttpPost]
-        public ActionResult AcceptReservation(int id)
+        public ActionResult ConfirmReservation(int id, bool accept=false)
         {
             ViewBag.MyErrorMessage = false;
             try
             {
-                SqlReservation.AcceptReservation(id, true);
-                SqlReservation.MakePayment(id);
+                SqlReservation.AcceptReservation(id, accept);
                 ViewBag.MyErrorMessage = true;
                 SendCourtReservationMail(SqlReservation.GetReservation(id));
                 return RedirectToAction("WaitingReservations");
@@ -67,17 +66,29 @@ namespace SystemRezerwacjiKortow.Controllers
             }
         }
 
+        public void CancelReservation(int id)
+        {
+            SqlReservation.CancelReservation(id, SqlUser.GetUser(User.Identity.Name).UserID);
+            //return RedirectToAction("WaitingReservations");
+        }
+
+        public ActionResult RedeemReservation(int id)
+        {
+            SqlReservation.MakePayment(id);
+            return RedirectToAction("WaitingReservations");
+        }
+
         public void SendCourtReservationMail(Reservation reservation)
         {
-            var subject = "Potwierdzenie rezerwacji nr " + reservation.ReservationID;
+            var subject = Resources.Texts.ReservationConfirmation +" "+ reservation.ReservationID;
             var body = "<p><img src=\"https://student.labranet.jamk.fi/~H3188/wp_harjoitustyo/wordpress/wp-content/gallery-bank/gallery-uploads/o_1a68kjem61o38eikheljsibvhi.jpg\" width=\"600\" height=\"100\" /></p>"+
-            "<p><font size=\"4\"> Dziękujemy za skorzystanie z usług Serwisu internetowej rezerwacji kortów.Poniżej przesyłamy podsumowanie Twojej transakcji rezerwacji.</font></p>" +
-                     "<p> &nbsp; &nbsp; ID transakcji: <strong>"+reservation.ReservationID+ "</strong></p>"+
-                        "<p> &nbsp; &nbsp; Numer kortu: "+SqlCourt.GetCourt(reservation.CourtID).CourtNumber+"</p>"+
-                           "<p> &nbsp; &nbsp; Data rozpoczęcia rezerwacji: <strong>"+reservation.DateFrom.ToString()+"</strong></p>"+
-                              "<p> &nbsp; &nbsp; Data zakończenia rezerwacji: <strong>" + reservation.DateTo.ToString()+ "</strong></p>" +
+            "<p><font size=\"4\">"+Resources.Texts.ThanksForReservation+"</font></p>" +
+                     "<p> &nbsp; &nbsp;"+Resources.Texts.IdTransaction+": <strong>"+reservation.ReservationID+ "</strong></p>"+
+                        "<p> &nbsp; &nbsp;"+Resources.Texts.CourtNumber+": "+SqlCourt.GetCourt(reservation.CourtID).CourtNumber+"</p>"+
+                           "<p> &nbsp; &nbsp;"+Resources.Texts.DateStart+": <strong>"+reservation.DateFrom.ToString()+"</strong></p>"+
+                              "<p> &nbsp; &nbsp;"+Resources.Texts.DateEnd+": <strong>" + reservation.DateTo.ToString()+ "</strong></p>" +
                                  "<p> &nbsp; &nbsp; &nbsp;<strong> ul.Zwierzyniecka 45A 15 - 333, Bialystok </strong></p>"+
-                                       "<p><span style = \"color: #999999;\"> Rezerwację należy opłacic w kasie najpóźniej 10 minut przed rozpoczęciem rezerwacji. Aby odwołać rezerwację skontaktuj się z</span> &nbsp;<a href = \"#\" >twojekorty@gmail.com </a></p> ";
+                                       "<p><span style = \"color: #999999;\">"+Resources.Texts.Reminder+" </span> &nbsp;<a href = \"#\" >twojekorty@gmail.com </a></p> ";
 
             var user = SqlUser.GetUserByID(reservation.UserID);
 
@@ -92,7 +103,7 @@ namespace SystemRezerwacjiKortow.Controllers
             foreach (Reservation reservation in ReservationList)
             {
                 //Nie pobiera rezerwacji które są anulowane i zaakceptowane
-                if (reservation.DateOfCancel == null && reservation.IsAccepted == false && reservation.IsExecuted == false)
+                if (reservation.DateOfCancel == null && reservation.IsExecuted == false)
                 {
                     list.Add(reservation);
                 }
