@@ -54,6 +54,11 @@ namespace SystemRezerwacjiKortow.Database
             //DateTime dateStop = new DateTime(2019, 5, 2, 11, 0, 0);
             //SqlReservation.SetReservationGear(1, 10, dateStart, dateStop, 4);
 
+            //DateTime dateStart = new DateTime(2019, 5, 2, 0, 0, 0);
+            //int amount = 0;
+            //SqlReservation.GetReservationStateGear(1, dateStart, 0, ref amount);
+
+
             // testy rezerwacji cyklicznych
             //DateTime dateStart = new DateTime(2019, 3, 12, 16, 49, 0);
             //DateTime dateStop = new DateTime(2019, 5, 12, 16, 49, 0);

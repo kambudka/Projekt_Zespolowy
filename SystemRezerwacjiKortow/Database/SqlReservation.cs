@@ -397,5 +397,54 @@ namespace SystemRezerwacjiKortow.Database
             }
             return result;
         }
+
+        // sprawdzanie zajętości sprzetu w danym dniu lub godzinie
+        // gearID - id sprzetu, którego zajętość ma być sprawdzona
+        // testDate - data, której zajętość ma być sprawdzona
+        // testHour - godzina, której zajętość ma być sprawdzona
+        // jeśli testHour zosatnie podane 0, to będzie sprawdzana zajętość całego dnia, a nie konkretnej godziny
+        // zwraca: 0 - sprzet całkowicie wolny
+        //         1 - sprzet całkowicie zajęty
+        //         2 - sprzet częściowo zajęty
+        //         3 - turniej
+        //         4 - nieczynne
+        // availableAmount - w tej zmiennej zwracana jest liczba dostepnego sprzetu
+        // przyklad uzycia w SqlTests !
+        public static int GetReservationStateGear(int courtID, DateTime testDate, int testHour, ref int availableAmount)
+        {
+            int result = -1;
+            using (SqlConnection connection = SqlDatabase.NewConnection())
+            {
+                if (SqlDatabase.OpenConnection(connection))
+                {
+                    var command = new SqlCommand("dbo.GetStateReservationGear", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@GearID", courtID);
+                    command.Parameters.AddWithValue("@Date", testDate);
+                    command.Parameters.AddWithValue("@Hour", testHour);
+                    command.Parameters.AddWithValue("@AmountAvailable", availableAmount);
+                    command.Parameters["@AmountAvailable"].Direction = ParameterDirection.InputOutput;  // żeby móc wyciągać dane
+                    command.CommandTimeout = SqlDatabase.Timeout;
+
+                    // użyć jeżeli chcemy wykorzystać wartość return z procedury
+                    command.Parameters.Add("@ReturnValue", SqlDbType.Int, 4).Direction = ParameterDirection.ReturnValue;
+
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        availableAmount = int.Parse(command.Parameters["@AmountAvailable"].Value.ToString());
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+
+                    // użyć jeżeli chcemy wykorzystać wartość return z procedury
+                    result = int.Parse(command.Parameters["@ReturnValue"].Value.ToString());
+
+                    SqlDatabase.CloseConnection(connection);
+                }
+            }
+            return result;
+        }
     }
 }
