@@ -402,7 +402,7 @@ namespace SystemRezerwacjiKortow.Database
         // gearID - id sprzetu, którego zajętość ma być sprawdzona
         // testDate - data, której zajętość ma być sprawdzona
         // testHour - godzina, której zajętość ma być sprawdzona
-        // jeśli testHour zosatnie podane 0, to będzie sprawdzana zajętość całego dnia, a nie konkretnej godziny
+        // jeśli testHour zosatnie podane -1, to będzie sprawdzana zajętość całego dnia, a nie konkretnej godziny
         // zwraca: 0 - sprzet całkowicie wolny
         //         1 - sprzet całkowicie zajęty
         //         2 - sprzet częściowo zajęty

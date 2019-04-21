@@ -750,4 +750,7 @@
   <data name="Withdraw" xml:space="preserve">
     <value>Wycofaj</value>
   </data>
+  <data name="AmountAvailable" xml:space="preserve">
+    <value>Dostępna ilość</value>
+  </data>
 </root>

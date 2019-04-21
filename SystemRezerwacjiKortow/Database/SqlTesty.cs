@@ -83,6 +83,11 @@ namespace SystemRezerwacjiKortow.Database
             //SqlReservation.AcceptReservation(290, true);
             //SqlContest.MakePaymentContest(17);
 
+
+            // testy sprzetu
+            //DateTime dateStart = new DateTime(2019, 4, 30, 10, 0, 0);
+            //DateTime dateStop = new DateTime(2019, 5, 5, 11, 0, 0);
+           // SqlGear.GetAvailableGears(1, dateStart, dateStop);
         }
         #region User
         private static void testInsertUser()

@@ -134,5 +134,43 @@ namespace SystemRezerwacjiKortow.Database
             }
             return gear;
         }
+
+        // zwraca listę dostepnego sprzetu
+        // gearID > 0 - lista dla wybranego sprzetu, 0 - caly sprzet
+        // dateFrom - od tej daty szukane terminy
+        // dateTo - do tej daty szukane terminy
+        public static List<Gear> GetAvailableGears(int gearID, DateTime dateFrom, DateTime dateTo)
+        {
+            var list = new List<Gear>();
+            using (SqlConnection connection = SqlDatabase.NewConnection())
+            {
+                if (SqlDatabase.OpenConnection(connection))
+                {
+                    var command = new SqlCommand("dbo.GetAvailableGear", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@GearID", gearID);
+                    command.Parameters.AddWithValue("@DateFrom", dateFrom);
+                    command.Parameters.AddWithValue("@DateTo", dateTo);
+                    command.CommandTimeout = SqlDatabase.Timeout;
+
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        list.Add(new Gear()
+                        {
+                            GearID = (int)reader["GearID"],
+                            PriceH = (decimal)reader["PriceH"],
+                            Name = (string)reader["Name"],
+                            Amount = (int)reader["Amount"],
+                            DateFrom = (DateTime)reader["DateFrom"],
+                            DateTo = (DateTime)reader["DateTo"],
+                            AmountAvailable = (int)reader["AmountAvailable"]
+                        });
+                    }
+                    SqlDatabase.CloseConnection(connection);
+                }
+            }
+            return list;
+        }
     }
 }

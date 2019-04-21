@@ -151,6 +151,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Available amount.
+        /// </summary>
+        public static string AmountAvailable {
+            get {
+                return ResourceManager.GetString("AmountAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back to list.
         /// </summary>
         public static string BackToList {
