@@ -750,4 +750,22 @@
   <data name="AmountAvailable" xml:space="preserve">
     <value>Available amount</value>
   </data>
+  <data name="FreeCourts" xml:space="preserve">
+    <value>Free Courts</value>
+  </data>
+  <data name="NoSearchedCourts" xml:space="preserve">
+    <value>There are no searched courts for choosen dates</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Searcher" xml:space="preserve">
+    <value>Search for free courts</value>
+  </data>
+  <data name="SearchResults" xml:space="preserve">
+    <value>Search results</value>
+  </data>
+  <data name="UpcomingTournaments" xml:space="preserve">
+    <value>Upcoming Tournaments</value>
+  </data>
 </root>

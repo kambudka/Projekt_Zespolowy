@@ -11,12 +11,10 @@
 </head>
 
 <body>
-
     <div>
         <div>
-            <h2>Nadchodzące Turnieje</h2>
+            <h2>@SystemRezerwacjiKortow.Resources.Texts.UpcomingTournaments</h2>
         </div>
-
         <hr class="line1">
         <div class="row">
             <div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
@@ -35,109 +33,15 @@
                                 <h2 class="title">@Html.DisplayFor(modelItem => item.Name)</h2>
                                 <p class="desc"> @Html.DisplayFor(modelItem => item.Description)</p>
                                 <ul>
-                                    <li><p style="float:left">Organizator: </p> <p style="float:left">@Html.DisplayFor(modelItem => item.Organizer)</p> </li>
-                                    <li><p style="float:right"> </p> <p style="float:left"> @Html.ActionLink("Wiecej", "Details", new { id = item.ContestID })</p> </li>
-                                 
+                                    <li><p style="float:left">@SystemRezerwacjiKortow.Resources.Texts.Organizer</p> <p style="float:left">@Html.DisplayFor(modelItem => item.Organizer)</p> </li>
+                                    <li><p style="float:right"> </p> <p style="float:left"> @Html.ActionLink("Wiecej", "Details", new { id = item.ContestID })</p> </li>                                
                                 </ul>
                             </div>
-
                         </li>
-
                     }
-
-
-
-                        @*<li>
-                                <time datetime="2014-07-20 0000">
-                                    <span class="day">9</span>
-                                    <span class="month">CZER</span>
-                                    <span class="year">2019</span>
-                                    <span class="time">12:00 AM</span>
-                                </time>
-                                <div class="info">
-                                    <h2 class="title">	Liga Tenisowa im. Łukasza Cieplińskiego</h2>
-                                    <p class="desc">Turniej potrwa od 20.07 do 22.07</p>
-                                    <ul>
-                                        <li><p style="float:left">Organizator: </p> <p style="float:left">Mateusz Matyczak</p> </li>
-
-                                    </ul>
-                                </div>
-
-                            </li>
-                            <li>
-                                <time datetime="2014-07-20 2000">
-                                    <span class="day">20</span>
-                                    <span class="month">lip</span>
-                                    <span class="year">2019</span>
-                                    <span class="time">8:00 PM</span>
-                                </time>
-                                <img src="https://ocdn.eu/pulscms-transforms/1/XVIktkqTURBXy8zNTM0OWIwMDU1MDZkNTU1ZWRiZWIzNGQxMmY4NzI1MS5qcGVnkpUDAB_NA-jNAjKTBc0DFM0BvA" />
-                                <div class="info">
-                                    <h2 class="title truncate_2_rows">Turniej tenisa dla dzieci i młodzieży o Statuetkę Starosty Powiatu Mieleckiego Andrzeja Chrabąszcza</h2>
-                                    <p class="desc truncate_1_row">Zapraszam wszystkich chętnych do oglądania i kibicowania</p>
-                                    <ul>
-                                        <li><p style="float:left">Organizator: </p> <p style="float:left">Małgorzata Kuczkowska</p> </li>
-                                    </ul>
-                                </div>
-
-                            </li>
-                            <li>
-                                <time datetime="2014-07-31 1600">
-                                    <span class="day">31</span>
-                                    <span class="month">lip</span>
-                                    <span class="year">2019</span>
-                                    <span class="time">4:00 PM</span>
-                                </time>
-
-                                <div class="info">
-                                    <h2 class="title">Turniej o puchar prezesa WTT</h2>
-                                    <p class="desc"> </p>
-                                    <ul>
-                                        <li><p style="float:left">Organizator: </p> <p style="float:left">Agnieszka Młyńska</p> </li>
-                                    </ul>
-                                </div>
-
-                            </li>
-
-                            <li>
-                                <time datetime="2014-07-31 1600">
-                                    <span class="day">12</span>
-                                    <span class="month">SIE</span>
-                                    <span class="year">2019</span>
-                                    <span class="time">4:00 PM</span>
-                                </time>
-
-                                <div class="info">
-                                    <h2 class="title">Turniej Deblowy</h2>
-                                    <p class="desc"> Turniej deblowy</p>
-                                    <ul>
-                                        <li><p style="float:left">Organizator: </p> <p style="float:left">Krzysztof Kiełczewski</p> </li>
-                                    </ul>
-                                </div>
-
-                            </li>
-
-                            <li>
-                                <time datetime="2014-07-31 1600">
-                                    <span class="day">24</span>
-                                    <span class="month">sie</span>
-                                    <span class="year">2019</span>
-                                    <span class="time">4:00 PM</span>
-                                </time>
-
-                                <div class="info">
-                                    <h2 class="title">Wiosenna Liga Tenisa</h2>
-                                    <p class="desc"> Ta</p>
-                                    <ul>
-                                        <li><p style="float:left">Organizator: </p> <p style="float:left">Kamil Budka</p> </li>
-                                    </ul>
-                                </div>
-
-                            </li>*@
                     </ul>
                 </div>
             </div>
         </div>
-
     </body>
 </html>

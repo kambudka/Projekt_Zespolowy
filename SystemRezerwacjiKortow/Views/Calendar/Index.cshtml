@@ -93,10 +93,17 @@
                                 location.href = "CyclicReservations/Index";
                             }
                         },
+                        search: {
+                            text: '@SystemRezerwacjiKortow.Resources.Texts.FreeCourts',
+                            click: function () {
+                                location.href = "Court/Search";
+                            }
+                        },
+
                     },
                    
                     header: {
-                        left: 'prev,next today subcourt courtnumber addcourt cyclic',
+                        left: 'prev,next today subcourt courtnumber addcourt cyclic search',
                         center: 'title',
                         right: 'month,agendaWeek'
                     },

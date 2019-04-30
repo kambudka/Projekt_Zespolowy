@@ -1,0 +1,92 @@
+﻿@model SystemRezerwacjiKortow.Models.Court
+
+@ViewBag.Message
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>@SystemRezerwacjiKortow.Resources.Texts.Searcher</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+      
+    <table>
+        <tr>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CourtID, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CourtID, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.CourtID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </td>
+           
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateFrom, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DateFrom, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DateFrom, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateFrom.Hour, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input name="hourStart" id="hourStart" type="text" class="form-control" />
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateTo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.DateTo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DateTo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateTo.Hour, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input name="hourStop" id="hourStop" type="text" class="form-control" />
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+
+    <div>
+        <button class="btn btn-success" type="submit">@SystemRezerwacjiKortow.Resources.Texts.Search!</button>
+    </div>
+
+</div>
+
+}
+
+<br /><br />
+<div>
+    @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.BackToList, "Index", "Calendar")
+</div>
+
+<script type="text/javascript">
+    function ne(o, z) {
+        if (document.getElementById(o).style.display == '') document.getElementById(o).style.display = 'none';
+        else {
+            if (z == 2) { document.getElementById(o).style.display = ''; }
+        }
+    }
+</script>
+
+

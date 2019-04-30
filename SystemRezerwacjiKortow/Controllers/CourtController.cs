@@ -111,5 +111,22 @@ namespace SystemRezerwacjiKortow.Controllers
                 return View();
             }
         }
+
+        public ActionResult Search()
+        {           
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult Search( [Bind(Include = "CourtNumber, SurfaceType, IsForDoubles, IsCovered, PriceH, Name, PriceWinterRatio, PriceWeekendRatio,DateFrom, DateTo,CourtID")] Court court)
+        {
+            List<Court> searchedCourts = SqlCourt.GetAvailableCourts(court.CourtID, court.DateFrom, court.DateTo);
+            return View("SearchResult", searchedCourts);         
+        }
+
+  
+
+
     }
 }

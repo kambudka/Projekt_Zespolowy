@@ -753,4 +753,22 @@
   <data name="AmountAvailable" xml:space="preserve">
     <value>Dostępna ilość</value>
   </data>
+  <data name="FreeCourts" xml:space="preserve">
+    <value>Wolne korty</value>
+  </data>
+  <data name="NoSearchedCourts" xml:space="preserve">
+    <value>Brak wolnych kortów w podanym terminie</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Szukaj</value>
+  </data>
+  <data name="Searcher" xml:space="preserve">
+    <value>Wyszukiwarka wolnych kortów</value>
+  </data>
+  <data name="SearchResults" xml:space="preserve">
+    <value>Wyniki wyszukiwania</value>
+  </data>
+  <data name="UpcomingTournaments" xml:space="preserve">
+    <value>Nadchodzące turneje</value>
+  </data>
 </root>

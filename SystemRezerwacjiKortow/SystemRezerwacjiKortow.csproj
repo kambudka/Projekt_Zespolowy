@@ -520,6 +520,8 @@
     <Content Include="Views\User\GetMyCourtsReservations.cshtml" />
     <Content Include="Views\User\CancelReservation.cshtml" />
     <Content Include="Views\CyclicReservations\Index.cshtml" />
+    <Content Include="Views\Court\Search.cshtml" />
+    <Content Include="Views\Court\SearchResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
