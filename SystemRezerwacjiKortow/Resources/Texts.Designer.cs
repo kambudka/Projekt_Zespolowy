@@ -160,6 +160,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Amount of hours.
+        /// </summary>
+        public static string AmountOfHours {
+            get {
+                return ResourceManager.GetString("AmountOfHours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Back to list.
         /// </summary>
         public static string BackToList {
@@ -417,6 +426,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string CustomerID {
             get {
                 return ResourceManager.GetString("CustomerID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Cyclic Reservation.
+        /// </summary>
+        public static string CyclicReservation {
+            get {
+                return ResourceManager.GetString("CyclicReservation", resourceCulture);
             }
         }
         
@@ -1357,6 +1375,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Next.
+        /// </summary>
+        public static string Next {
+            get {
+                return ResourceManager.GetString("Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu There are no searched courts for choosen dates.
         /// </summary>
         public static string NoSearchedCourts {
@@ -1461,6 +1488,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string Posts {
             get {
                 return ResourceManager.GetString("Posts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Previous.
+        /// </summary>
+        public static string Previous {
+            get {
+                return ResourceManager.GetString("Previous", resourceCulture);
             }
         }
         
@@ -1623,6 +1659,24 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string ReservationName {
             get {
                 return ResourceManager.GetString("ReservationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Reservation Type.
+        /// </summary>
+        public static string ReservationType {
+            get {
+                return ResourceManager.GetString("ReservationType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Reserve.
+        /// </summary>
+        public static string Reserve {
+            get {
+                return ResourceManager.GetString("Reserve", resourceCulture);
             }
         }
         

@@ -771,4 +771,22 @@
   <data name="UpcomingTournaments" xml:space="preserve">
     <value>Nadchodzące turneje</value>
   </data>
+  <data name="AmountOfHours" xml:space="preserve">
+    <value>Liczba godzin</value>
+  </data>
+  <data name="CyclicReservation" xml:space="preserve">
+    <value>Rezerwacja cykliczna</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Następny</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Poprzedni</value>
+  </data>
+  <data name="ReservationType" xml:space="preserve">
+    <value>Rodzaj rezerwacji</value>
+  </data>
+  <data name="Reserve" xml:space="preserve">
+    <value>Rezerwuj</value>
+  </data>
 </root>

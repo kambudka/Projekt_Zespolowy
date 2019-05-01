@@ -67,7 +67,7 @@
                 $('#calendar').fullCalendar({
                     customButtons: {
                         addcourt: {
-                            text: 'Nastepny',
+                            text: '@SystemRezerwacjiKortow.Resources.Texts.Next',
                             click: function () {
                                 if (court != 2)
                                     court = court + 1;
@@ -75,7 +75,7 @@
                             }
                         },
                         subcourt: {
-                            text: 'Poprzedni',
+                            text: '@SystemRezerwacjiKortow.Resources.Texts.Previous',
                             click: function () {
                                 if (court > 1)
                                     court = court - 1;
@@ -88,7 +88,7 @@
                             }
                         },
                         cyclic: {
-                            text: 'Rezerwacja cykliczna',
+                            text: '@SystemRezerwacjiKortow.Resources.Texts.CyclicReservation',
                             click: function () {
                                 location.href = "CyclicReservations/Index";
                             }
