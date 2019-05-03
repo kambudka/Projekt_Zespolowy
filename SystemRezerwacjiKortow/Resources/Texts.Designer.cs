@@ -169,6 +169,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Available gear.
+        /// </summary>
+        public static string AvailableGear {
+            get {
+                return ResourceManager.GetString("AvailableGear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Back to list.
         /// </summary>
         public static string BackToList {
@@ -1348,11 +1357,11 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu My courts reservations.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu My reservations.
         /// </summary>
-        public static string MyCourtsReservations {
+        public static string MyReservations {
             get {
-                return ResourceManager.GetString("MyCourtsReservations", resourceCulture);
+                return ResourceManager.GetString("MyReservations", resourceCulture);
             }
         }
         
@@ -1771,11 +1780,11 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Show my courts reservations.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Show my reservations.
         /// </summary>
-        public static string ShowMyCourtsReservations {
+        public static string ShowMyReservations {
             get {
-                return ResourceManager.GetString("ShowMyCourtsReservations", resourceCulture);
+                return ResourceManager.GetString("ShowMyReservations", resourceCulture);
             }
         }
         

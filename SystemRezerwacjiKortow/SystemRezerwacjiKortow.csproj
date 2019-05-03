@@ -167,6 +167,7 @@
     <Compile Include="Controllers\CourtController.cs" />
     <Compile Include="Controllers\CyclicReservationsController.cs" />
     <Compile Include="Controllers\GearController.cs" />
+    <Compile Include="Controllers\GearReservationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\PostController.cs" />
@@ -522,6 +523,10 @@
     <Content Include="Views\CyclicReservations\Index.cshtml" />
     <Content Include="Views\Court\Search.cshtml" />
     <Content Include="Views\Court\SearchResult.cshtml" />
+    <Content Include="Views\GearReservation\Index.cshtml" />
+    <Content Include="Views\GearReservation\GetAvailableGears.cshtml" />
+    <Content Include="Views\GearReservation\Reserve.cshtml" />
+    <Content Include="Views\GearReservation\ReserveDone.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

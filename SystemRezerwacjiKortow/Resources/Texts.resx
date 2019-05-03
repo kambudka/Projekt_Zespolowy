@@ -711,11 +711,11 @@
   <data name="CyclicReservationID" xml:space="preserve">
     <value>Cyclic Reservation ID</value>
   </data>
-  <data name="MyCourtsReservations" xml:space="preserve">
-    <value>My courts reservations</value>
+  <data name="MyReservations" xml:space="preserve">
+    <value>My reservations</value>
   </data>
-  <data name="ShowMyCourtsReservations" xml:space="preserve">
-    <value>Show my courts reservations</value>
+  <data name="ShowMyReservations" xml:space="preserve">
+    <value>Show my reservations</value>
   </data>
   <data name="CyclicReservationError" xml:space="preserve">
     <value>Ups! Looks like this date has already been taken :(</value>
@@ -785,5 +785,8 @@
   </data>
   <data name="Reserve" xml:space="preserve">
     <value>Reserve</value>
+  </data>
+  <data name="AvailableGear" xml:space="preserve">
+    <value>Available gear</value>
   </data>
 </root>

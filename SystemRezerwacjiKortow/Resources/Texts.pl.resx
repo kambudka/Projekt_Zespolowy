@@ -714,11 +714,11 @@
   <data name="CancelReservation" xml:space="preserve">
     <value>Anuluj rezerwację</value>
   </data>
-  <data name="MyCourtsReservations" xml:space="preserve">
-    <value>Moje rezerwacje kortów</value>
+  <data name="MyReservations" xml:space="preserve">
+    <value>Moje rezerwacje</value>
   </data>
-  <data name="ShowMyCourtsReservations" xml:space="preserve">
-    <value>Pokaż moje rezerwacje kortów</value>
+  <data name="ShowMyReservations" xml:space="preserve">
+    <value>Pokaż moje rezerwacje</value>
   </data>
   <data name="CyclicReservationError" xml:space="preserve">
     <value>Ups! Wygląda na to, że ta data została już zajęta :(</value>
@@ -788,5 +788,8 @@
   </data>
   <data name="Reserve" xml:space="preserve">
     <value>Rezerwuj</value>
+  </data>
+  <data name="AvailableGear" xml:space="preserve">
+    <value>Dostępny sprzęt</value>
   </data>
 </root>
