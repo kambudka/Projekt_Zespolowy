@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SystemRezerwacjiKortow.Models.Gear>
+
+@{
+    ViewBag.Title = @SystemRezerwacjiKortow.Resources.Texts.Gear;
+}
+
+<h2>@SystemRezerwacjiKortow.Resources.Texts.Gear</h2>
+
+<p>
+    @using (Html.BeginForm("GetAvailableGears", "GearReservation"))
+    {
+       @Html.Label("Check availability to:") <input type="text" name="year" placeholder="Year" /> <input type="text" name="month" placeholder="Month" /> <input type="text" name="day" placeholder="Day" /> <input type="submit" value="Check" class="btn btn-primary" />
+    }
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+       
+        
+    </tr>
+}
+
+</table>

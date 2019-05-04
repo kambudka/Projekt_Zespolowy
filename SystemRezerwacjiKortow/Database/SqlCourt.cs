@@ -191,5 +191,52 @@ namespace SystemRezerwacjiKortow.Database
             }
             return price;
         }
+
+
+        // zwraca listę dostepnych kortów
+        // courtID > 0 - lista dla wybranego kortu, 0 - wszystkie korty
+        // dateFrom - od tej daty szukane terminy
+        // dateTo - do tej daty szukane terminy
+        public static List<Court> GetAvailableCourts(int courtID, DateTime dateFrom, DateTime dateTo)
+        {
+            var list = new List<Court>();
+            using (SqlConnection connection = SqlDatabase.NewConnection())
+            {
+                if (SqlDatabase.OpenConnection(connection))
+                {
+                    var command = new SqlCommand("dbo.GetAvailableCourt", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@CourtID", courtID);
+                    command.Parameters.AddWithValue("@DateFrom", dateFrom);
+                    command.Parameters.AddWithValue("@DateTo", dateTo);
+                    command.CommandTimeout = SqlDatabase.Timeout;
+
+                    var reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        list.Add(new Court()
+                        {
+                            CourtID = (int)reader["CourtID"],
+                            CourtNumber = (int)reader["CourtNumber"],
+                            SurfaceType = (string)reader["SurfaceType"],
+                            IsForDoubles = (bool)reader["IsForDoubles"],
+                            IsCovered = (bool)reader["IsCovered"],
+                            PriceH = (decimal)reader["PriceH"],
+                            Name = (string)reader["Name"],
+                            PriceWinterRatio = (decimal)reader["PriceWinterRatio"],
+                            PriceWeekendRatio = (decimal)reader["PriceWeekendRatio"],
+                            PriceWinter = (decimal)reader["PriceWinter"],
+                            PriceWinterWeekend = (decimal)reader["PriceWinterWeekend"],
+                            PriceSummerWeekend = (decimal)reader["PriceSummerWeekend"],
+                            PriceSummer = (decimal)reader["PriceSummer"],
+                            DateFrom = (DateTime)reader["DateFrom"],
+                            DateTo = (DateTime)reader["DateTo"]
+                        });
+                    }
+                    SqlDatabase.CloseConnection(connection);
+                }
+            }
+            return list;
+        }
     }
 }

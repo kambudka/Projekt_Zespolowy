@@ -347,5 +347,104 @@ namespace SystemRezerwacjiKortow.Database
             }
             return result;
         }
+
+        // składanie rezerwacji (zwykłej) na sprzet
+        // uwzglednia liczbe dostepnych sztuk oraz godziny otwarcia
+        // zwraca true, jeśli rezerwacja się powiodła lub false w przypadku niepowodzenia
+        // gearID - id sprzetu, ktory ma byc zarezerwowany
+        // gearAmount - ilosc sprzetu, ktory ma byc zarezerwowany
+        // dateTimeFrom - data i godzina rozpoczecia rezerwacji
+        // dateTimeTo - data i godzina zakonczenia rezerwacji
+        // userID - id uzytkownika skladajacego rezerwacje
+        // rezerwacja jest mozliwa tylko, gdy w tym czasie nie ma innych rezerwacji (sprawdzane na poziomie bazy)
+        // oraz gdy rozpoczyna sie i konczy w czasie godzin otwarcia kompleksu
+        public static bool SetReservationGear(int gearID, int gearAmount, DateTime dateTimeFrom, DateTime dateTimeTo, int userID)
+        {
+            bool result = false;
+            int reservationID = 0;
+            using (SqlConnection connection = SqlDatabase.NewConnection())
+            {
+                if (SqlDatabase.OpenConnection(connection))
+                {
+                    var command = new SqlCommand("dbo.SetReservationGear", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@GearID", gearID);
+                    command.Parameters.AddWithValue("@Amount", gearAmount);
+                    command.Parameters.AddWithValue("@DateFrom", dateTimeFrom);
+                    command.Parameters.AddWithValue("@DateTo", dateTimeTo);
+                    command.Parameters.AddWithValue("@UserID", userID);
+                    command.Parameters.AddWithValue("@ReservationID", reservationID);
+                    command.Parameters["@ReservationID"].Direction = ParameterDirection.InputOutput;  // żeby móc wyciągać dane
+                    command.CommandTimeout = SqlDatabase.Timeout;
+
+                    // użyć jeżeli chcemy wykorzystać wartość return z procedury
+                    //command.Parameters.Add("@ReturnValue", SqlDbType.Int, 4).Direction = ParameterDirection.ReturnValue;
+
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        reservationID = int.Parse(command.Parameters["@ReservationID"].Value.ToString());
+                        result = reservationID > 0;
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+
+                    // użyć jeżeli chcemy wykorzystać wartość return z procedury
+                    //result = int.Parse(command.Parameters["@ReturnValue"].Value.ToString());
+                    SqlDatabase.CloseConnection(connection);
+                }
+            }
+            return result;
+        }
+
+        // sprawdzanie zajętości sprzetu w danym dniu lub godzinie
+        // gearID - id sprzetu, którego zajętość ma być sprawdzona
+        // testDate - data, której zajętość ma być sprawdzona
+        // testHour - godzina, której zajętość ma być sprawdzona
+        // jeśli testHour zosatnie podane -1, to będzie sprawdzana zajętość całego dnia, a nie konkretnej godziny
+        // zwraca: 0 - sprzet całkowicie wolny
+        //         1 - sprzet całkowicie zajęty
+        //         2 - sprzet częściowo zajęty
+        //         3 - turniej
+        //         4 - nieczynne
+        // availableAmount - w tej zmiennej zwracana jest liczba dostepnego sprzetu
+        // przyklad uzycia w SqlTests !
+        public static int GetReservationStateGear(int courtID, DateTime testDate, int testHour, ref int availableAmount)
+        {
+            int result = -1;
+            using (SqlConnection connection = SqlDatabase.NewConnection())
+            {
+                if (SqlDatabase.OpenConnection(connection))
+                {
+                    var command = new SqlCommand("dbo.GetStateReservationGear", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@GearID", courtID);
+                    command.Parameters.AddWithValue("@Date", testDate);
+                    command.Parameters.AddWithValue("@Hour", testHour);
+                    command.Parameters.AddWithValue("@AmountAvailable", availableAmount);
+                    command.Parameters["@AmountAvailable"].Direction = ParameterDirection.InputOutput;  // żeby móc wyciągać dane
+                    command.CommandTimeout = SqlDatabase.Timeout;
+
+                    // użyć jeżeli chcemy wykorzystać wartość return z procedury
+                    command.Parameters.Add("@ReturnValue", SqlDbType.Int, 4).Direction = ParameterDirection.ReturnValue;
+
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        availableAmount = int.Parse(command.Parameters["@AmountAvailable"].Value.ToString());
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+
+                    // użyć jeżeli chcemy wykorzystać wartość return z procedury
+                    result = int.Parse(command.Parameters["@ReturnValue"].Value.ToString());
+
+                    SqlDatabase.CloseConnection(connection);
+                }
+            }
+            return result;
+        }
     }
 }

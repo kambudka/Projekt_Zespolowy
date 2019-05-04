@@ -1,0 +1,50 @@
+﻿@model IEnumerable<SystemRezerwacjiKortow.Models.Court>
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>@SystemRezerwacjiKortow.Resources.Texts.SearchResults</h2>
+@if (!Model.Any())
+{
+    <br /><br />
+<h1 class="text-center">@SystemRezerwacjiKortow.Resources.Texts.NoSearchedCourts</h1>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourtNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTo)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourtNumber)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateFrom)
+                    @Html.DisplayFor(modelItem => item.DateFrom.TimeOfDay)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateTo)
+                    @Html.DisplayFor(modelItem => item.DateTo.TimeOfDay)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+}

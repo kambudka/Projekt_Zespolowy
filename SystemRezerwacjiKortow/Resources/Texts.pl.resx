@@ -714,11 +714,11 @@
   <data name="CancelReservation" xml:space="preserve">
     <value>Anuluj rezerwację</value>
   </data>
-  <data name="MyCourtsReservations" xml:space="preserve">
-    <value>Moje rezerwacje kortów</value>
+  <data name="MyReservations" xml:space="preserve">
+    <value>Moje rezerwacje</value>
   </data>
-  <data name="ShowMyCourtsReservations" xml:space="preserve">
-    <value>Pokaż moje rezerwacje kortów</value>
+  <data name="ShowMyReservations" xml:space="preserve">
+    <value>Pokaż moje rezerwacje</value>
   </data>
   <data name="CyclicReservationError" xml:space="preserve">
     <value>Ups! Wygląda na to, że ta data została już zajęta :(</value>
@@ -749,5 +749,47 @@
   </data>
   <data name="Withdraw" xml:space="preserve">
     <value>Wycofaj</value>
+  </data>
+  <data name="AmountAvailable" xml:space="preserve">
+    <value>Dostępna ilość</value>
+  </data>
+  <data name="FreeCourts" xml:space="preserve">
+    <value>Wolne korty</value>
+  </data>
+  <data name="NoSearchedCourts" xml:space="preserve">
+    <value>Brak wolnych kortów w podanym terminie</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Szukaj</value>
+  </data>
+  <data name="Searcher" xml:space="preserve">
+    <value>Wyszukiwarka wolnych kortów</value>
+  </data>
+  <data name="SearchResults" xml:space="preserve">
+    <value>Wyniki wyszukiwania</value>
+  </data>
+  <data name="UpcomingTournaments" xml:space="preserve">
+    <value>Nadchodzące turneje</value>
+  </data>
+  <data name="AmountOfHours" xml:space="preserve">
+    <value>Liczba godzin</value>
+  </data>
+  <data name="CyclicReservation" xml:space="preserve">
+    <value>Rezerwacja cykliczna</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Następny</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Poprzedni</value>
+  </data>
+  <data name="ReservationType" xml:space="preserve">
+    <value>Rodzaj rezerwacji</value>
+  </data>
+  <data name="Reserve" xml:space="preserve">
+    <value>Rezerwuj</value>
+  </data>
+  <data name="AvailableGear" xml:space="preserve">
+    <value>Dostępny sprzęt</value>
   </data>
 </root>

@@ -1,0 +1,87 @@
+﻿@model SystemRezerwacjiKortow.Models.Gear
+
+@{
+    ViewBag.Title = @SystemRezerwacjiKortow.Resources.Texts.Reserve;
+}
+
+<h2>@SystemRezerwacjiKortow.Resources.Texts.Reserve</h2>
+
+<div>
+    <h4>@SystemRezerwacjiKortow.Resources.Texts.Gear</h4>
+    <hr />
+    <table class="table">
+
+        @using (Html.BeginForm("ReserveDone", "GearReservation"))
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.PriceH)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.PriceH)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Name)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.DateFrom)
+                </td>
+
+                <td>
+                    @Html.EditorFor(model => model.DateFrom, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+
+                <td>
+                    <input type="text" name="fromHour" placeholder="Hour" class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.DateTo)
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.DateTo, new { htmlAttributes = new { @class = "form-control" } })
+                </td>
+                <td>
+                    <input type="text" name="toHour" placeholder="Hour" class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(model => model.Amount)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label(SystemRezerwacjiKortow.Resources.Texts.Amount)
+                </td>
+
+                @Html.HiddenFor(model => model.GearID)
+
+                <td>
+                    <input type="text" name="amount" class="form-control" />
+                </td>
+                <td>
+                    <input type="submit" value="@SystemRezerwacjiKortow.Resources.Texts.Reserve" class="btn btn-primary" />
+                </td>
+            </tr>
+            
+                }
+        </table>
+    
+</div>
+<p>
+     @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.BackToList, "Index")
+</p>
