@@ -26,6 +26,16 @@ namespace SystemRezerwacjiKortow.Controllers
            // DateTime endDate = DateTime.ParseExact("31.12.2018 22:00", "dd.MM.yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
           //  decimal price = SqlCourt.GetCourtPrice(startDate, endDate, 2);
             List<OpeningHours> openingHours = SqlCompany.GetOpeningHours();
+
+            if (Request.Cookies["Currency"] == null)
+            {
+                HttpCookie currencyCookie = new HttpCookie("Currency");
+                currencyCookie.Value = "PLN";
+                Response.Cookies.Add(currencyCookie);
+            }
+
+            ViewBag.CurrentCurrency = Request.Cookies["Currency"].Value;
+
             return View(openingHours);
         }
       

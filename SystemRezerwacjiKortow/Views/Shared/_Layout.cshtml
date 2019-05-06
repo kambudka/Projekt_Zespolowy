@@ -41,7 +41,11 @@
                             <li class="dropdown-item">@Html.ActionLink("Polski", "Change", "Language", new { LanguageAbbrevation = "pl" }, null)</li>
                             <li class="dropdown-item">@Html.ActionLink("Deutsch", "Change", "Language", new { LanguageAbbrevation = "de" }, null)</li>
                         </ul>
-
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @SystemRezerwacjiKortow.Resources.Texts.Currency: @ViewBag.CurrentCurrency
+                        </a>
                     </li>
                     @if (User.Identity.IsAuthenticated)
                     {
