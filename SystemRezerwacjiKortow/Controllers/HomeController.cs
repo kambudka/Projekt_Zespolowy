@@ -27,15 +27,6 @@ namespace SystemRezerwacjiKortow.Controllers
           //  decimal price = SqlCourt.GetCourtPrice(startDate, endDate, 2);
             List<OpeningHours> openingHours = SqlCompany.GetOpeningHours();
 
-            if (Request.Cookies["Currency"] == null)
-            {
-                HttpCookie currencyCookie = new HttpCookie("Currency");
-                currencyCookie.Value = "PLN";
-                Response.Cookies.Add(currencyCookie);
-            }
-
-            ViewBag.CurrentCurrency = Request.Cookies["Currency"].Value;
-
             return View(openingHours);
         }
       

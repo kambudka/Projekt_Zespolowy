@@ -539,13 +539,13 @@
     <Content Include="Views\GearReservation\ReserveDone.cshtml" />
     <Content Include="Views\Statistics\MakePDF.cshtml" />
     <Content Include="Views\Statistics\MonthList.cshtml" />
+    <Content Include="Views\Currency\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="bin\bin\pl\" />
     <Folder Include="Views\Contest\" />
     <Folder Include="Views\Court\Language\" />
-    <Folder Include="Views\Currency\" />
     <Folder Include="Views\Language\" />
   </ItemGroup>
   <ItemGroup>

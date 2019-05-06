@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = SystemRezerwacjiKortow.Resources.Texts.Currency;
+}
+
+<h2>@SystemRezerwacjiKortow.Resources.Texts.Currency</h2>
+
+@Html.DropDownList("Currencies", new List<SelectListItem>
+{
+    new SelectListItem{ Text="PLN (Złoty) 1.0000", Value= "0"}
+})
