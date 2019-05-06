@@ -66,10 +66,10 @@ namespace SystemRezerwacjiKortow.Controllers
             }
         }
 
-        public void CancelReservation(int id)
+        public ActionResult CancelReservation(int id)
         {
             SqlReservation.CancelReservation(id, SqlUser.GetUser(User.Identity.Name).UserID);
-            //return RedirectToAction("WaitingReservations");
+            return RedirectToAction("WaitingReservations");
         }
 
         public ActionResult RedeemReservation(int id)

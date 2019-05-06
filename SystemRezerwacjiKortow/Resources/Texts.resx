@@ -789,4 +789,31 @@
   <data name="AvailableGear" xml:space="preserve">
     <value>Available gear</value>
   </data>
+  <data name="DifferentUsers" xml:space="preserve">
+    <value>Count of different users</value>
+  </data>
+  <data name="MonthList" xml:space="preserve">
+    <value>List of Months</value>
+  </data>
+  <data name="MonthName" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="MonthRaport" xml:space="preserve">
+    <value>Monthly Raport</value>
+  </data>
+  <data name="MonthYear" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="TotalGearCount" xml:space="preserve">
+    <value>Monthly Gear Count</value>
+  </data>
+  <data name="TotalHireCount" xml:space="preserve">
+    <value>Monthly Hire Count</value>
+  </data>
+  <data name="TotalHireRevenue" xml:space="preserve">
+    <value>Monthly Revenue</value>
+  </data>
 </root>

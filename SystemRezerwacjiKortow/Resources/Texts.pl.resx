@@ -792,4 +792,31 @@
   <data name="AvailableGear" xml:space="preserve">
     <value>Dostępny sprzęt</value>
   </data>
+  <data name="DifferentUsers" xml:space="preserve">
+    <value>Liczba unikalnych rezerwujących</value>
+  </data>
+  <data name="MonthList" xml:space="preserve">
+    <value>Spis miesięcy</value>
+  </data>
+  <data name="MonthName" xml:space="preserve">
+    <value>Miesiąc</value>
+  </data>
+  <data name="MonthRaport" xml:space="preserve">
+    <value>Raport Miesięczny</value>
+  </data>
+  <data name="MonthYear" xml:space="preserve">
+    <value>Rok</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Drukuj</value>
+  </data>
+  <data name="TotalGearCount" xml:space="preserve">
+    <value>Liczba wyporzyczonego sprzętu</value>
+  </data>
+  <data name="TotalHireCount" xml:space="preserve">
+    <value>Liczba dokonanych rezerwacji</value>
+  </data>
+  <data name="TotalHireRevenue" xml:space="preserve">
+    <value>Miesięczny przychód</value>
+  </data>
 </root>

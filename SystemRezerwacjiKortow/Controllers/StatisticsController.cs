@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rotativa;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,10 +13,104 @@ namespace SystemRezerwacjiKortow.Controllers
 {
     public class StatisticsController : Controller
     {
+       public List<Month> Months = new List<Month>();
+       public List<Hire> HireList = new List<Hire>();
         // GET: Statistics
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult MonthList()
+        {
+            HireList = SqlHire.GetHires();
+            Month newmonth;
+            HireList.Sort((x, y) => DateTime.Compare(x.DateTo, y.DateTo));
+            foreach (Hire hire in HireList)
+            {
+                //Dla listy Hire jest liczona ilośc rezerwacji w danych miesiącu
+                string month;
+                switch (hire.DateTo.Month)
+                {
+                    case 1:
+                        month = "Styczen";
+                        break;
+                    case 2:
+                        month = "Luty";
+                        break;
+                    case 3:
+                        month = "Marzec";
+                        break;
+                    case 4:
+                        month = "Kwiecien";
+                        break;
+                    case 5:
+                        month = "Maj";
+                        break;
+                    case 6:
+                        month = "Czewiec";
+                        break;
+                    case 7:
+                        month = "Lipiec";
+                        break;
+                    case 8:
+                        month = "Sierpien";
+                        break;
+                    case 9:
+                        month = "Wrzesien";
+                        break;
+                    case 10:
+                        month = "Pazdziernik";
+                        break;
+                    case 11:
+                        month = "Listopad";
+                        break;
+                    case 12:
+                        month = "Grudzien";
+                        break;
+                    default:
+                        month = "Błąd";
+                        break;
+                }
+
+                //Sprawdzamy czy w tabeli jest już taki miesiąc
+                Month result = Months.Find(x => x.MonthName.Contains(month));
+                if (result != null)
+                {
+                    //Jak znaleziono miesiąc w liscie odczytujemy wartosci i dodajemy
+                    result.TotalHireCount++;
+                    result.TotalGearCount += hire.GearAmount;
+                    result.TotalHireRevenue += hire.Payment;
+
+                }
+                else
+                {
+                    //Jeżeli nie znaleziono miesiąca w tabeli, jest dodawany nowy wpis
+                    newmonth = new Month();
+                    newmonth.MonthYear = hire.DateFrom.Year;
+                    newmonth.MonthName = month;
+                    newmonth.TotalHireCount = 1;
+                    newmonth.TotalHireRevenue = hire.Payment;
+                    newmonth.TotalGearCount = hire.GearAmount;
+                    //newmonth.DifferenUsers = 1;
+                    Months.Add(newmonth);
+                }
+            
+            }
+
+            return View(Months);
+        }
+
+        public ActionResult MakePDF(Month month2)
+        {
+            Month PDFMonth = new Month();
+            return View(month2);
+        }
+
+        public ActionResult PrintPDF(Month month)
+        {
+            var report = new ActionAsPdf("MakePDF", month);
+            return report;
         }
 
 
@@ -47,14 +142,44 @@ namespace SystemRezerwacjiKortow.Controllers
                 string month;
                 switch (hire.DateTo.Month)
                 {
+                    case 1:
+                        month = "Styczen";
+                        break;
+                    case 2:
+                        month = "Luty";
+                        break;
                     case 3:
                         month = "Marzec";
                         break;
                     case 4:
                         month = "Kwiecien";
                         break;
+                    case 5:
+                        month = "Maj";
+                        break;
+                    case 6:
+                        month = "Czewiec";
+                        break;
+                    case 7:
+                        month = "Lipiec";
+                        break;
+                    case 8:
+                        month = "Sierpien";
+                        break;
+                    case 9:
+                        month = "Wrzesien";
+                        break;
+                    case 10:
+                        month = "Pazdziernik";
+                        break;
+                    case 11:
+                        month = "Listopad";
+                        break;
+                    case 12:
+                        month = "Grudzien";
+                        break;
                     default:
-                        month = "Chujwie";
+                        month = "Błąd";
                         break;
                 }
                 //Sprawdzamy czy w tabeli jest już taki miesiąc
@@ -87,75 +212,11 @@ namespace SystemRezerwacjiKortow.Controllers
         }
 
         // GET: Statistics/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string name, int year)
         {
-            return View();
+            Month month = Months.Find(x => x.MonthName.Contains(name));
+            return View(month);
         }
 
-        // GET: Statistics/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Statistics/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Statistics/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Statistics/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Statistics/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Statistics/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

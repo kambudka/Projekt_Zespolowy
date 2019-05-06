@@ -1,0 +1,61 @@
+﻿@model SystemRezerwacjiKortow.Models.Month
+
+@{
+    ViewBag.Title = "MakePDF";
+}
+
+<h2>@SystemRezerwacjiKortow.Resources.Texts.MonthRaport</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalHireCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalHireCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalHireRevenue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalHireRevenue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalGearCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGearCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DifferenUsers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DifferenUsers)
+        </dd>
+
+    </dl>
+</div>

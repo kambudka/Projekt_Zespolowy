@@ -718,6 +718,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Count of different users.
+        /// </summary>
+        public static string DifferentUsers {
+            get {
+                return ResourceManager.GetString("DifferentUsers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Discount.
         /// </summary>
         public static string Discount {
@@ -1357,6 +1366,42 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu List of Months.
+        /// </summary>
+        public static string MonthList {
+            get {
+                return ResourceManager.GetString("MonthList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Month.
+        /// </summary>
+        public static string MonthName {
+            get {
+                return ResourceManager.GetString("MonthName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Monthly Raport.
+        /// </summary>
+        public static string MonthRaport {
+            get {
+                return ResourceManager.GetString("MonthRaport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Year.
+        /// </summary>
+        public static string MonthYear {
+            get {
+                return ResourceManager.GetString("MonthYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu My reservations.
         /// </summary>
         public static string MyReservations {
@@ -1560,6 +1605,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string PriceWinterRatio {
             get {
                 return ResourceManager.GetString("PriceWinterRatio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Print.
+        /// </summary>
+        public static string Print {
+            get {
+                return ResourceManager.GetString("Print", resourceCulture);
             }
         }
         
@@ -1902,6 +1956,33 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string TitlePL {
             get {
                 return ResourceManager.GetString("TitlePL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Monthly Gear Count.
+        /// </summary>
+        public static string TotalGearCount {
+            get {
+                return ResourceManager.GetString("TotalGearCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Monthly Hire Count.
+        /// </summary>
+        public static string TotalHireCount {
+            get {
+                return ResourceManager.GetString("TotalHireCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Monthly Revenue.
+        /// </summary>
+        public static string TotalHireRevenue {
+            get {
+                return ResourceManager.GetString("TotalHireRevenue", resourceCulture);
             }
         }
         

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<SystemRezerwacjiKortow.Models.Month>
+
+@{
+    ViewBag.Title = "MonthList";
+}
+
+<h2>@SystemRezerwacjiKortow.Resources.Texts.MonthList</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalHireCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalHireRevenue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalGearCount)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.DifferenUsers)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonthName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonthYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalHireCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalHireRevenue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalGearCount)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.DifferenUsers)
+        </td>*@
+        <td>
+            @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.Print, "PrintPDF", item)
+        </td>
+    </tr>
+}
+
+</table>

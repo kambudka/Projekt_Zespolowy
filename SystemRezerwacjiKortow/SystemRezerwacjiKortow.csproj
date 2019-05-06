@@ -55,6 +55,9 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -200,6 +203,7 @@
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Gear.cs" />
     <Compile Include="Models\Hire.cs" />
+    <Compile Include="Models\Month.cs" />
     <Compile Include="Models\OpeningHours.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Reservation.cs" />
@@ -323,6 +327,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
+    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
+    <Content Include="Rotativa\wkhtmltoimage.exe" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -342,6 +350,7 @@
     <Content Include="bin\SystemRezerwacjiKortow.dll.config" />
     <Content Include="obj\Release\SystemRezerwacjiKortow.csproj.CoreCompileInputs.cache" />
     <Content Include="konfiguracje.config" />
+    <Content Include="App_Browsers\qt.browser" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\fullcalendar.js" />
     <Content Include="Scripts\fullcalendar.min.js" />
@@ -527,6 +536,8 @@
     <Content Include="Views\GearReservation\GetAvailableGears.cshtml" />
     <Content Include="Views\GearReservation\Reserve.cshtml" />
     <Content Include="Views\GearReservation\ReserveDone.cshtml" />
+    <Content Include="Views\Statistics\MakePDF.cshtml" />
+    <Content Include="Views\Statistics\MonthList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
