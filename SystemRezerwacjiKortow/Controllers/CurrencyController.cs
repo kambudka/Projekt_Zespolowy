@@ -25,8 +25,31 @@ namespace SystemRezerwacjiKortow.Controllers
                 listItems.Add(new SelectListItem { Value = currenciesList[i].code, Text = $"1 {currenciesList[i].currency} ({currenciesList[i].code}) = {currenciesList[i].mid} PLN" });
             }
 
+            ViewBag.SelectedCurrency = GetCurrency();
             ViewBag.Currencies = listItems;
+
             return View();
+        }
+
+        public ActionResult UpdateCurrency()
+        {
+            SetCurrency("GBP");
+            return RedirectToAction("Index");
+        }
+
+        public string GetCurrency()
+        {
+            if (Session["Currency"] == null)
+            {
+                SetCurrency("PLN");
+            }
+
+            return Session["Currency"].ToString();
+        }
+
+        public void SetCurrency(string value)
+        {
+            Session["Currency"] = value;
         }
     }
 

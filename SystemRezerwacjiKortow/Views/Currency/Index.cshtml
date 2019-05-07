@@ -4,7 +4,10 @@
 }
 
 <h2>@SystemRezerwacjiKortow.Resources.Texts.Currency</h2>
+<div>
+    <p>Aktualnie wybrana waluta: <strong>@ViewBag.SelectedCurrency</strong></p>
+</div>
 
 @Html.DropDownList("CurrenciesDropDownList", (IEnumerable<SelectListItem>)ViewBag.Currencies)
 
-<button>@Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.Save, "Index", "Currency")</button>
+<button>@Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.Save, "UpdateCurrency", "Currency")</button>
