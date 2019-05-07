@@ -168,6 +168,7 @@
     <Compile Include="Controllers\CalendarController.cs" />
     <Compile Include="Controllers\ContestsController.cs" />
     <Compile Include="Controllers\CourtController.cs" />
+    <Compile Include="Controllers\CurrencyController.cs" />
     <Compile Include="Controllers\CyclicReservationsController.cs" />
     <Compile Include="Controllers\GearController.cs" />
     <Compile Include="Controllers\GearReservationController.cs" />
@@ -198,6 +199,8 @@
     <Compile Include="Models\ComplexCourt.cs" />
     <Compile Include="Models\Contest.cs" />
     <Compile Include="Models\Court.cs" />
+    <Compile Include="Models\Currencies.cs" />
+    <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CyclicReservation.cs" />
     <Compile Include="Models\Event.cs" />
@@ -538,6 +541,7 @@
     <Content Include="Views\GearReservation\ReserveDone.cshtml" />
     <Content Include="Views\Statistics\MakePDF.cshtml" />
     <Content Include="Views\Statistics\MonthList.cshtml" />
+    <Content Include="Views\Currency\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

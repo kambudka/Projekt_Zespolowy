@@ -819,4 +819,7 @@
   <data name="TotalHireRevenue" xml:space="preserve">
     <value>Miesięczny przychód</value>
   </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Waluta</value>
+  </data>
 </root>

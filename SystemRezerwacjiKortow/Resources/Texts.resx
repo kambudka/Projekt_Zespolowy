@@ -816,4 +816,7 @@
   <data name="TotalHireRevenue" xml:space="preserve">
     <value>Monthly Revenue</value>
   </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
 </root>
