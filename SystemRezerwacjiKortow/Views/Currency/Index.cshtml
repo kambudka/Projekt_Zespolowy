@@ -5,7 +5,11 @@
 
 <h2>@SystemRezerwacjiKortow.Resources.Texts.Currency</h2>
 
-@Html.DropDownList("Currencies", new List<SelectListItem>
-{
-    new SelectListItem{ Text="PLN (Złoty) 1.0000", Value= "0"}
-})
+<ul>
+    @foreach (var item in ViewBag.Currencies)
+    {
+        <li>item</li>
+    }
+</ul>
+
+<button>@Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.Save, "Index", "Currency")</button>
