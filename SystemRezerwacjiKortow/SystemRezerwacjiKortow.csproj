@@ -199,6 +199,7 @@
     <Compile Include="Models\ComplexCourt.cs" />
     <Compile Include="Models\Contest.cs" />
     <Compile Include="Models\Court.cs" />
+    <Compile Include="Models\Currencies.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CyclicReservation.cs" />

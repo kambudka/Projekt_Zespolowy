@@ -30,8 +30,9 @@ namespace SystemRezerwacjiKortow.Controllers
             using (HttpClient httpClient = new HttpClient())
             {
                 string json = await httpClient.GetStringAsync(url);
-                List <Currency> currenciesList = JsonConvert.DeserializeObject<List<Currency>>(json);
-                return currenciesList;
+                List<Currencies> currenciesTable = JsonConvert.DeserializeObject<List<Currencies>>(json);
+                List<Currency> currencies = currenciesTable[0].rates;
+                return currencies;
             }
         }
     }
