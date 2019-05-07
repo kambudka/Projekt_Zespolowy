@@ -17,7 +17,15 @@ namespace SystemRezerwacjiKortow.Controllers
         // GET: Currency
         public async Task<ActionResult> Index()
         {
-            ViewBag.Currencies = await service.GetCurrenciesAsync();
+            List<Currency> currenciesList = await service.GetCurrenciesAsync();
+
+            List<SelectListItem> listItems = new List<SelectListItem>();
+            for (int i = 0; i < currenciesList.Count; i++)
+            {
+                listItems.Add(new SelectListItem { Value = currenciesList[i].code, Text = $"1 {currenciesList[i].currency} ({currenciesList[i].code}) = {currenciesList[i].mid} PLN" });
+            }
+
+            ViewBag.Currencies = listItems;
             return View();
         }
     }
