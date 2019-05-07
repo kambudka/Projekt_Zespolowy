@@ -9,6 +9,6 @@ namespace SystemRezerwacjiKortow.Models
     {
         public string currency { set; get; }
         public string code { set; get; }
-        public double mid { set; get; }
+        public decimal mid { set; get; }
     }
 }

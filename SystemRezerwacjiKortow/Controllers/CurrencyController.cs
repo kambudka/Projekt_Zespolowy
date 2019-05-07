@@ -32,7 +32,7 @@ namespace SystemRezerwacjiKortow.Controllers
                 string json = await httpClient.GetStringAsync(url);
                 List<Currencies> currenciesTable = JsonConvert.DeserializeObject<List<Currencies>>(json);
                 List<Currency> currencies = currenciesTable[0].rates;
-                currencies.Insert(0, new Currency { currency = "złoty", code="PLN", mid=1.0000 });      // Uzupełnienie listy z API o złotówki
+                currencies.Insert(0, new Currency { currency = "złoty", code="PLN", mid=1.0000M });      // Uzupełnienie listy z API o złotówki
                 return currencies;
             }
         }
