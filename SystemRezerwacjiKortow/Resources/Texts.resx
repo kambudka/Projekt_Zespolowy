@@ -819,4 +819,7 @@
   <data name="Currency" xml:space="preserve">
     <value>Currency</value>
   </data>
+  <data name="CurrentCurrency" xml:space="preserve">
+    <value>Currently chosen currency:</value>
+  </data>
 </root>

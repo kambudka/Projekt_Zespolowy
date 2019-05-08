@@ -439,6 +439,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Currently chosen currency:.
+        /// </summary>
+        public static string CurrentCurrency {
+            get {
+                return ResourceManager.GetString("CurrentCurrency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Customer ID.
         /// </summary>
         public static string CustomerID {

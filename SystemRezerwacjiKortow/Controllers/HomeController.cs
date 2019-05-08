@@ -17,20 +17,23 @@ namespace SystemRezerwacjiKortow.Controllers
             ViewBag.Status = true;
             SqlDatabase.init();  // ustawianie wartości początkowych zmiennych
             //SqlTesty.Testy();   // do testowania bazy danych
-
+            //SetCurrency("PLN");
             // List<Customer> customers = SqlDatabase.GetCustomers();
             //List<User> users = SqlUser.GetUsers();
             // List<Court> courts = SqlCourt.GetCourts();
             // List<Gear> gears = SqlGear.GetGears();
-           // DateTime startDate = DateTime.ParseExact("30.12.2018 10:00", "dd.MM.yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-           // DateTime endDate = DateTime.ParseExact("31.12.2018 22:00", "dd.MM.yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-          //  decimal price = SqlCourt.GetCourtPrice(startDate, endDate, 2);
+            // DateTime startDate = DateTime.ParseExact("30.12.2018 10:00", "dd.MM.yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+            // DateTime endDate = DateTime.ParseExact("31.12.2018 22:00", "dd.MM.yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+            //  decimal price = SqlCourt.GetCourtPrice(startDate, endDate, 2);
             List<OpeningHours> openingHours = SqlCompany.GetOpeningHours();
 
             return View(openingHours);
         }
-      
-      
+
+        public void SetCurrency(string value)
+        {
+            Session["Currency"] = value;
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

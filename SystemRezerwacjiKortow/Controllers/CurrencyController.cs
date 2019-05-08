@@ -13,9 +13,35 @@ namespace SystemRezerwacjiKortow.Controllers
     public class CurrencyController : Controller
     {
         private CurrencyService service = new CurrencyService();
-
+        
         // GET: Currency
         public async Task<ActionResult> Index()
+        {
+            List<Currency> currenciesList = await service.GetCurrenciesAsync();
+            Dictionary<String, decimal> countingValues = new Dictionary<string, decimal>();
+        List<SelectListItem> listItems = new List<SelectListItem>();
+            for (int i = 0; i < currenciesList.Count; i++)
+            {
+                listItems.Add(new SelectListItem { Value = currenciesList[i].code, Text = $"1 {currenciesList[i].currency} ({currenciesList[i].code}) = {currenciesList[i].mid} PLN" });
+            }
+            
+                countingValues.Clear();
+            
+            for(int j=0;j<listItems.Count;j++)
+            {
+                countingValues.Add(currenciesList[j].code, currenciesList[j].mid);
+            }
+               
+            
+            Session["Currencies"] = countingValues;
+            ViewBag.SelectedCurrency = GetCurrency();
+            //ViewBag.Currencies = listItems;
+            ViewBag.Currencies = new SelectList(listItems, "Value", "Text");
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Index(string Currencies)
         {
             List<Currency> currenciesList = await service.GetCurrenciesAsync();
 
@@ -24,9 +50,9 @@ namespace SystemRezerwacjiKortow.Controllers
             {
                 listItems.Add(new SelectListItem { Value = currenciesList[i].code, Text = $"1 {currenciesList[i].currency} ({currenciesList[i].code}) = {currenciesList[i].mid} PLN" });
             }
-
+            SetCurrency(Currencies);
             ViewBag.SelectedCurrency = GetCurrency();
-            ViewBag.Currencies = listItems;
+            ViewBag.Currencies = new SelectList(listItems, "Value", "Text");
 
             return View();
         }

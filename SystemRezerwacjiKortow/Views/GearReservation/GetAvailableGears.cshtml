@@ -39,7 +39,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.PriceH)
+            @Html.DisplayFor(modelItem => item.PriceH) @ViewBag.Code
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Name)

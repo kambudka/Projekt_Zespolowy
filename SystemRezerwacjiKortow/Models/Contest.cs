@@ -42,7 +42,7 @@ namespace SystemRezerwacjiKortow.Models
         public DateTime? DateCancel { get; set; }
 
         [Display(Name = "DuePayment", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+        //[DataType(DataType.Currency)]
         public decimal PaymentToPay { get; set; }
 
         // potrzebne do widoku

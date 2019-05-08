@@ -22,10 +22,54 @@ namespace SystemRezerwacjiKortow.Controllers
 
         public ActionResult PriceList()
         {
+            Dictionary<string, decimal> tmp = null;
+            if (Session["Currencies"] != null)
+            {
+                tmp = (Dictionary<string, decimal>)Session["Currencies"];
+            }
+
+
+            if (tmp != null)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    list[i].PriceSummer = list[i].PriceSummer / tmp[Session["Currency"].ToString()];
+                    list[i].PriceWinter = list[i].PriceWinter / tmp[Session["Currency"].ToString()];
+                    list[i].PriceWinterWeekend = list[i].PriceWinterWeekend / tmp[Session["Currency"].ToString()];
+                    list[i].PriceSummerWeekend = list[i].PriceSummerWeekend / tmp[Session["Currency"].ToString()];
+                }
+            }
+            if (Session["Currency"] == null)
+            {
+                Session["Currency"] = "PLN";
+            }
+            ViewBag.Code = Session["Currency"];
             return View(list);
         }
         public ActionResult PriceListWinter()
         {
+            Dictionary<string, decimal> tmp = null;
+            if (Session["Currencies"] != null)
+            {
+                tmp = (Dictionary<string, decimal>)Session["Currencies"];
+            }
+
+
+            if (tmp != null)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    list[i].PriceSummer = list[i].PriceSummer / tmp[Session["Currency"].ToString()];
+                    list[i].PriceWinter = list[i].PriceWinter / tmp[Session["Currency"].ToString()];
+                    list[i].PriceWinterWeekend = list[i].PriceWinterWeekend / tmp[Session["Currency"].ToString()];
+                    list[i].PriceSummerWeekend = list[i].PriceSummerWeekend / tmp[Session["Currency"].ToString()];
+                }
+            }
+            if (Session["Currency"] == null)
+            {
+                Session["Currency"] = "PLN";
+            }
+            ViewBag.Code = Session["Currency"];
             return View(list);
         }
 

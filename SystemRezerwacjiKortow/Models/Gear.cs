@@ -12,7 +12,7 @@ namespace SystemRezerwacjiKortow.Models
         public int GearID { get; set; }
 
         [Display(Name = "Price", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+        //[DataType(DataType.Currency)]
         //[Required(ErrorMessage = "Cena jest wymagana")]
         public decimal PriceH { get; set; }
 

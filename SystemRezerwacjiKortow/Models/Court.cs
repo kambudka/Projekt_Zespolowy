@@ -28,7 +28,7 @@ namespace SystemRezerwacjiKortow.Models
         public bool IsCovered { get; set; }
 
         [Display(Name = "Price", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+       // [DataType(DataType.Currency)]
         public decimal PriceH { get; set; }
 
         [Display(Name = "CourtName", ResourceType = typeof(Texts))]
@@ -44,19 +44,19 @@ namespace SystemRezerwacjiKortow.Models
         public decimal PriceWeekendRatio { get; set; }
 
         //[Display(Name = "Price", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+        //[DataType(DataType.Currency)]
         public decimal PriceWinter { get; set; }
 
         //[Display(Name = "Price", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+       // [DataType(DataType.Currency)]
         public decimal PriceWinterWeekend { get; set; }
 
         //[Display(Name = "Price", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+        //[DataType(DataType.Currency)]
         public decimal PriceSummerWeekend { get; set; }
 
         //[Display(Name = "Price", ResourceType = typeof(Texts))]
-        [DataType(DataType.Currency)]
+        //[DataType(DataType.Currency)]
         public decimal PriceSummer { get; set; }
 
         // potrzebne do listy dostepnych kortow

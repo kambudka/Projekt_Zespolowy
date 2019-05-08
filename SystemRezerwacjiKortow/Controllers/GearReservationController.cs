@@ -15,10 +15,29 @@ namespace SystemRezerwacjiKortow.Controllers
         {
             List<Gear> allGear = new List<Gear>();
             allGear = SqlGear.GetGears();
-           /* DateTime a = new DateTime(2019, 1, 1);
-            DateTime dateTo = DateTime.Now;
-            dateTo.AddDays(14);
-            availableGear = SqlGear.GetAvailableGears(0,a,DateTime.Now);*/
+            Dictionary<string, decimal> tmp=null;
+            if (Session["Currencies"]!=null)
+            {
+                tmp= (Dictionary<string, decimal>)Session["Currencies"];
+            }
+            
+            
+            if(tmp!=null)
+            {
+                for (int i = 0; i < allGear.Count; i++)
+                {
+                    allGear[i].PriceH = allGear[i].PriceH / tmp[Session["Currency"].ToString()]; ;
+                }
+            }
+            DateTime dt = DateTime.Now;
+            ViewBag.Year = dt.Year;
+            ViewBag.Month = dt.Month;
+            ViewBag.Day = dt.Day;
+            if(Session["Currency"]==null)
+            {
+                Session["Currency"] = "PLN";
+            }
+            ViewBag.Code = Session["Currency"];
             return View(allGear);
         }
         public ActionResult GetAvailableGears(int year, int month, int day)
@@ -28,6 +47,30 @@ namespace SystemRezerwacjiKortow.Controllers
             DateTime dateTo = new DateTime(year, month, day);
             dateTo.AddHours(12);
             availableGear = SqlGear.GetAvailableGears(0, now, dateTo);
+            
+            Dictionary<string, decimal> tmp = null;
+            if (Session["Currencies"] != null)
+            {
+                tmp = (Dictionary<string, decimal>)Session["Currencies"];
+            }
+
+
+            if (tmp != null)
+            {
+                for (int i = 0; i < availableGear.Count; i++)
+                {
+                    availableGear[i].PriceH = availableGear[i].PriceH / tmp[Session["Currency"].ToString()]; ;
+                }
+            }
+            DateTime dt = DateTime.Now;
+            ViewBag.Year = dt.Year;
+            ViewBag.Month = dt.Month;
+            ViewBag.Day = dt.Day;
+            if (Session["Currency"] == null)
+            {
+                Session["Currency"] = "PLN";
+            }
+            ViewBag.Code = Session["Currency"];
             return View(availableGear);
         }
         public ActionResult Reserve(int id)
@@ -39,6 +82,28 @@ namespace SystemRezerwacjiKortow.Controllers
             else
             {
                 Gear gear = SqlGear.GetGear(id);
+                Dictionary<string, decimal> tmp = null;
+                if (Session["Currencies"] != null)
+                {
+                    tmp = (Dictionary<string, decimal>)Session["Currencies"];
+                }
+
+
+                if (tmp != null)
+                {
+                    
+                        gear.PriceH = gear.PriceH / tmp[Session["Currency"].ToString()]; ;
+                    
+                }
+                DateTime dt = DateTime.Now;
+                ViewBag.Year = dt.Year;
+                ViewBag.Month = dt.Month;
+                ViewBag.Day = dt.Day;
+                if (Session["Currency"] == null)
+                {
+                    Session["Currency"] = "PLN";
+                }
+                ViewBag.Code = Session["Currency"];
                 return View(gear);
             } 
         }
