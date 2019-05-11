@@ -118,711 +118,711 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AdminPanel" xml:space="preserve">
-    <value>Panel administratora</value>
+    <value>Administratorfenster</value>
   </data>
   <data name="Advertisements" xml:space="preserve">
-    <value>Reklamy</value>
+    <value>Anzeigen</value>
   </data>
   <data name="Amount" xml:space="preserve">
-    <value>Ilość</value>
+    <value>Menge</value>
   </data>
   <data name="ChangePassword" xml:space="preserve">
-    <value>Zmień hasło</value>
+    <value>Passwort ändern</value>
   </data>
   <data name="City" xml:space="preserve">
-    <value>Miasto</value>
+    <value>Stadt</value>
   </data>
   <data name="CompanyName" xml:space="preserve">
-    <value>Nazwa firmy</value>
+    <value>Der Name des Unternehmens</value>
   </data>
   <data name="Complex" xml:space="preserve">
-    <value>Kompleks</value>
+    <value>Komplex</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
-    <value>Potwierdź hasło</value>
+    <value>Passwort bestätigen</value>
   </data>
   <data name="Contact" xml:space="preserve">
     <value>Kontakt</value>
   </data>
   <data name="Court" xml:space="preserve">
-    <value>Kort</value>
+    <value>Tennisplatz</value>
   </data>
   <data name="CourtIndoor" xml:space="preserve">
-    <value>Kort kryty</value>
+    <value>Tennishalle</value>
   </data>
   <data name="Courts" xml:space="preserve">
-    <value>Korty</value>
+    <value>Tennisplätze</value>
   </data>
   <data name="DateOfBirth" xml:space="preserve">
-    <value>Data urodzenia</value>
+    <value>Geburtsdatum</value>
   </data>
   <data name="DayOfWeek" xml:space="preserve">
-    <value>Dzień tygodnia</value>
+    <value>Wochentag</value>
   </data>
   <data name="DayWeek1" xml:space="preserve">
-    <value>Poniedziałek</value>
+    <value>Montag</value>
   </data>
   <data name="DayWeek2" xml:space="preserve">
-    <value>Wtorek</value>
+    <value>Dienstag</value>
   </data>
   <data name="DayWeek3" xml:space="preserve">
-    <value>Środa</value>
+    <value>Mittwoch</value>
   </data>
   <data name="DayWeek4" xml:space="preserve">
-    <value>Czwartek</value>
+    <value>Donnerstag</value>
   </data>
   <data name="DayWeek5" xml:space="preserve">
-    <value>Piątek</value>
+    <value>Freitag</value>
   </data>
   <data name="DayWeek6" xml:space="preserve">
-    <value>Sobota</value>
+    <value>Samstag</value>
   </data>
   <data name="DayWeek7" xml:space="preserve">
-    <value>Niedziela</value>
+    <value>Sonntag</value>
   </data>
   <data name="Discount" xml:space="preserve">
-    <value>Zniżka</value>
+    <value>Rabatt</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edytuj</value>
+    <value>Eearbeiten</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
   <data name="EmailEnding" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;Pozdrawiamy, &lt;br/&gt;Zespół Twoich Kortów</value>
+    <value>&lt;br/&gt; &lt;br/&gt; Grüße, &lt;br/&gt; Team Ihrer Korts</value>
   </data>
   <data name="EmailExistsMessage" xml:space="preserve">
-    <value>Podany adres email już jest w bazie</value>
+    <value>Die angegebene E-Mail-Adresse befindet sich bereits in der Datenbank</value>
   </data>
   <data name="EmailFrom" xml:space="preserve">
-    <value>Nasze korty</value>
+    <value>Nasze Korts</value>
   </data>
   <data name="EmailHello" xml:space="preserve">
-    <value>Witaj</value>
+    <value>Willkommen</value>
   </data>
   <data name="EmailVerificationBody" xml:space="preserve">
-    <value>Twoje konto zostało pomyślnie utworzone.&lt;br/&gt;Aby aktywować konto kliknij w poniższy link aktywacyjny:</value>
+    <value>Ihr Konto wurde erfolgreich erstellt. &lt;br/&gt; Um Ihr Konto zu aktivieren, klicken Sie auf den folgenden Aktivierungslink:</value>
   </data>
   <data name="EmailVerificationMessage" xml:space="preserve">
-    <value>Wszystko już prawie gotowe. Link aktywacyjny do konta został wysłany na adres: </value>
+    <value>Alles ist fast fertig. Der Aktivierungslink zum Konto wurde an folgende Adresse gesendet:</value>
   </data>
   <data name="EmaiVerificationSubject" xml:space="preserve">
-    <value>Twoje konto zostało pomyślnie utworzone</value>
+    <value>Ihr Konto wurde erfolgreich erstellt</value>
   </data>
   <data name="EnterYourCity" xml:space="preserve">
-    <value>Miasto jest wymagane</value>
+    <value>Die Stadt ist erforderlich</value>
   </data>
   <data name="EnterYourConfirmPassword" xml:space="preserve">
-    <value>Potwierdzenie hasła jest wymagane</value>
+    <value>Die Bestätigung des Passworts ist erforderlich</value>
   </data>
   <data name="EnterYourDateOfBirth" xml:space="preserve">
-    <value>Data urodzenia jest wymagana</value>
+    <value>Geburtsdatum ist erforderlich</value>
   </data>
   <data name="EnterYourEmail" xml:space="preserve">
-    <value>Email jest wymagany</value>
+    <value>Email ist erforderlich</value>
   </data>
   <data name="EnterYourName" xml:space="preserve">
-    <value>Imię jest wymagane</value>
+    <value>Der Name ist erforderlich</value>
   </data>
   <data name="EnterYourPassword" xml:space="preserve">
-    <value>Hasło jest wymagane</value>
+    <value>Das Passwort ist erforderlich</value>
   </data>
   <data name="EnterYourPhone" xml:space="preserve">
-    <value>Numer telefonu jest wymagany</value>
+    <value>Eine Telefonnummer ist erforderlich</value>
   </data>
   <data name="EnterYourPostalCode" xml:space="preserve">
-    <value>Kod pocztowy jest wymagany</value>
+    <value>Eine Postleitzahl ist erforderlich</value>
   </data>
   <data name="EnterYourStreet" xml:space="preserve">
-    <value>Ulica jest wymagana</value>
+    <value>Straße ist erforderlich</value>
   </data>
   <data name="EnterYourSurname" xml:space="preserve">
-    <value>Nazwisko jest wymagane</value>
+    <value>Der Nachname ist erforderlich</value>
   </data>
   <data name="EquipmentRental" xml:space="preserve">
-    <value>Wypożyczalnia sprzętu</value>
+    <value>Verleih von Sportgeräten</value>
   </data>
   <data name="EquipmentType" xml:space="preserve">
-    <value>Rodzaj sprzętu</value>
+    <value>Art der Sportausrüstung</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Błąd</value>
+    <value>Fehler</value>
   </data>
   <data name="ErrorPasswordLength" xml:space="preserve">
-    <value>Hasło musi mieć minimum 6 znaków</value>
+    <value>Das Passwort muss aus mindestens 6 Zeichen bestehen</value>
   </data>
   <data name="ErrorPasswordMatch" xml:space="preserve">
-    <value>Hasła nie pasują do siebie</value>
+    <value>Die Passwörter stimmen nicht überein</value>
   </data>
   <data name="ErrorRequest" xml:space="preserve">
-    <value>Wystąpił błąd podczas przetwarzania żądania</value>
+    <value>Bei der Verarbeitung der Anfrage ist ein Fehler aufgetreten</value>
   </data>
   <data name="Events" xml:space="preserve">
-    <value>Wydarzenia</value>
+    <value>Geschehen</value>
   </data>
   <data name="Gear" xml:space="preserve">
-    <value>Sprzęt</value>
+    <value>Sportausrüstung</value>
   </data>
   <data name="General" xml:space="preserve">
-    <value>Ogólne</value>
+    <value>General</value>
   </data>
   <data name="HomeCalendar" xml:space="preserve">
-    <value>KALENDARZ</value>
+    <value>KALENDER</value>
   </data>
   <data name="HomeContact" xml:space="preserve">
     <value>KONTAKT</value>
   </data>
   <data name="HomeContests" xml:space="preserve">
-    <value>TURNIEJE</value>
+    <value>TURNIERE</value>
   </data>
   <data name="HomeCourts" xml:space="preserve">
-    <value>KORTY</value>
+    <value>TENNISPLÄTZE</value>
   </data>
   <data name="HomeGear" xml:space="preserve">
-    <value>SPRZĘT</value>
+    <value>SPORTAUSRÜSTUNG</value>
   </data>
   <data name="HomeNews" xml:space="preserve">
-    <value>OGŁOSZENIA</value>
+    <value>BEITRÄGE</value>
   </data>
   <data name="HomePage" xml:space="preserve">
-    <value>Strona główna</value>
+    <value>Startseite</value>
   </data>
   <data name="HomePrice" xml:space="preserve">
-    <value>CENNIK</value>
+    <value>PREISLISTE</value>
   </data>
   <data name="Hour" xml:space="preserve">
-    <value>Godzina</value>
+    <value>Stunde</value>
   </data>
   <data name="InvalidPassword" xml:space="preserve">
-    <value>Podano błędne hasło</value>
+    <value>Es wurde ein falsches Passwort angegeben</value>
   </data>
   <data name="InvalidRequest" xml:space="preserve">
-    <value>Nieprawidłowe żądanie</value>
+    <value>Falsche Anfrage</value>
   </data>
   <data name="InvalidUser" xml:space="preserve">
-    <value>Użytkownik o podanym adresie email nie istnieje</value>
+    <value>Der Benutzer mit der angegebenen E-Mail-Adresse existiert nicht</value>
   </data>
   <data name="JustNow" xml:space="preserve">
-    <value>już dziś</value>
+    <value>heute</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Język</value>
+    <value>Sprache</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Zaloguj</value>
+    <value>Einloggen</value>
   </data>
   <data name="LoginTitle" xml:space="preserve">
-    <value>Logowanie</value>
+    <value>Eogowanie</value>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>Wyloguj się</value>
+    <value>Abmelden</value>
   </data>
   <data name="LogoutSuccessful" xml:space="preserve">
-    <value>Zostałeś pomyślnie wylogowany</value>
+    <value>Sie haben sich erfolgreich abgemeldet</value>
   </data>
   <data name="MondayFriday" xml:space="preserve">
-    <value>pon-pt</value>
+    <value>Mon.-Fri.</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Imię</value>
+    <value>Name</value>
   </data>
   <data name="NewUser" xml:space="preserve">
-    <value>Jesteś nowym użytkownikiem</value>
+    <value>Sie sind ein neuer Benutzer</value>
   </data>
   <data name="PageTitle" xml:space="preserve">
-    <value>System rezerwacji kortów</value>
+    <value>Tennisplatz-System</value>
   </data>
   <data name="Panel" xml:space="preserve">
-    <value>Panel</value>
+    <value>Platte</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Hasło</value>
+    <value>Passwort</value>
   </data>
   <data name="PaymentsHistory" xml:space="preserve">
-    <value>Historia płatności</value>
+    <value>Zahlungsverlauf</value>
   </data>
   <data name="PostalCode" xml:space="preserve">
-    <value>Kod pocztowy</value>
+    <value>Postleitzahl</value>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>Cena za godzinę</value>
+    <value>Preis pro Stunde</value>
   </data>
   <data name="PriceList" xml:space="preserve">
-    <value>Cennik</value>
+    <value>Preisliste</value>
   </data>
   <data name="PriceListSummer" xml:space="preserve">
-    <value>Cennik letni</value>
+    <value>Sommerpreisliste</value>
   </data>
   <data name="PriceListWinter" xml:space="preserve">
-    <value>Cennik zimowy</value>
+    <value>Winterpreisliste</value>
   </data>
   <data name="ProfileConfigurationGeneral" xml:space="preserve">
-    <value>Konfiguracja profilu - ogólne</value>
+    <value>Profilkonfiguration - Allgemein</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Zarejestruj</value>
+    <value>Registrieren</value>
   </data>
   <data name="RegisterNow" xml:space="preserve">
-    <value>Zarejestruj się</value>
+    <value>Registrieren</value>
   </data>
   <data name="Registration" xml:space="preserve">
-    <value>Rejestracja</value>
+    <value>die Registrierung</value>
   </data>
   <data name="RememberMe" xml:space="preserve">
-    <value>Pamiętaj mnie</value>
+    <value>Erinnere dich an mich</value>
   </data>
   <data name="ReturnHome" xml:space="preserve">
-    <value>Powrót do strony głównej</value>
+    <value>Zurück zur Hauptseite</value>
   </data>
   <data name="RoleID" xml:space="preserve">
-    <value>ID roli</value>
+    <value>Rollen-ID</value>
   </data>
   <data name="RoleName" xml:space="preserve">
-    <value>Rola</value>
+    <value>Rollen</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Zapisz</value>
+    <value>Speichern</value>
   </data>
   <data name="SetUpPayments" xml:space="preserve">
-    <value>Konfiguruj płatności</value>
+    <value>Zahlungen einrichten</value>
   </data>
   <data name="Show" xml:space="preserve">
-    <value>Pokaż</value>
+    <value>Anzeige</value>
   </data>
   <data name="SqlError001" xml:space="preserve">
-    <value>W tabeli Court nie znaleziono kortu</value>
+    <value>Kein Tennisplatz</value>
   </data>
   <data name="Street" xml:space="preserve">
-    <value>Ulica</value>
+    <value>Straße</value>
   </data>
   <data name="Success" xml:space="preserve">
-    <value>Sukces</value>
+    <value>Erfolg</value>
   </data>
   <data name="SummerSeason" xml:space="preserve">
-    <value>Sezon letni 2019</value>
+    <value>Sommersaison 2019</value>
   </data>
   <data name="Surname" xml:space="preserve">
-    <value>Nazwisko</value>
+    <value>Nachname</value>
   </data>
   <data name="UserManual" xml:space="preserve">
-    <value>Instrukcja użytkownika</value>
+    <value>Benutzerhandbuch</value>
   </data>
   <data name="UserProfile" xml:space="preserve">
-    <value>Profil użytkownika</value>
+    <value>Benutzerprofil</value>
   </data>
   <data name="Users" xml:space="preserve">
-    <value>Użytkownicy</value>
+    <value>Benutzer</value>
   </data>
   <data name="VerificationSuccessful" xml:space="preserve">
-    <value>Twoje konto zostało potwierdzone. Kliknij tutaj, żeby się zalogować</value>
+    <value>Ihr Konto wurde bestätigt. Klicken Sie hier, um sich anzumelden</value>
   </data>
   <data name="VerificationUser" xml:space="preserve">
-    <value>Weryfikacja użytkownika</value>
+    <value>Benutzerüberprüfung</value>
   </data>
   <data name="VerifyYourEmail" xml:space="preserve">
-    <value>Najpierw zweryfikuj swój adres email</value>
+    <value>Überprüfen Sie zunächst Ihre E-Mail-Adresse</value>
   </data>
   <data name="Welcome" xml:space="preserve">
-    <value>Witaj</value>
+    <value>Willkommen</value>
   </data>
   <data name="WelcomeInTennis" xml:space="preserve">
-    <value>Witaj w świecie tenisa</value>
+    <value>Willkommen in der Welt des Tennis</value>
   </data>
   <data name="WinterSeason" xml:space="preserve">
-    <value>Sezon zimowy 2019</value>
+    <value>Wintersaison 2019</value>
   </data>
   <data name="ComplexName" xml:space="preserve">
-    <value>Nazwa kompleksu</value>
+    <value>Der Name des Komplexes</value>
   </data>
   <data name="CourtName" xml:space="preserve">
-    <value>Nazwa kortu</value>
+    <value>Der Name des Tennisplatzes</value>
   </data>
   <data name="CourtNumber" xml:space="preserve">
-    <value>Numer kortu</value>
+    <value>Tennisplatz Nummer</value>
   </data>
   <data name="DuePayment" xml:space="preserve">
-    <value>Należna płatność</value>
+    <value>Fällige Zahlung</value>
   </data>
   <data name="EndDate" xml:space="preserve">
-    <value>Data zakończenia</value>
+    <value>Enddatum</value>
   </data>
   <data name="EnterDate" xml:space="preserve">
-    <value>Data jest wymagana</value>
+    <value>Das Datum ist erforderlich</value>
   </data>
   <data name="EnterName" xml:space="preserve">
-    <value>Nazwa jest wymagana</value>
+    <value>Der Name ist erforderlich</value>
   </data>
   <data name="EventName" xml:space="preserve">
-    <value>Nazwa wydarzenia</value>
+    <value>Ereignisname</value>
   </data>
   <data name="IsCovered" xml:space="preserve">
-    <value>Czy jest zakryty</value>
+    <value>Ist es gedeckt?</value>
   </data>
   <data name="IsForDoubles" xml:space="preserve">
-    <value>Czy jest deblowy</value>
+    <value>Ist es doppelt</value>
   </data>
   <data name="StartDate" xml:space="preserve">
-    <value>Data rozpoczęcia</value>
+    <value>Startdatum</value>
   </data>
   <data name="SurfaceType" xml:space="preserve">
-    <value>Typ powierzchni</value>
+    <value>Oberflächentyp</value>
   </data>
   <data name="ComplexData" xml:space="preserve">
-    <value>Dane kompleksu</value>
+    <value>Komplexe Daten</value>
   </data>
   <data name="Contests" xml:space="preserve">
-    <value>Turnieje</value>
+    <value>Turniere</value>
   </data>
   <data name="CourtID" xml:space="preserve">
-    <value>ID kortu</value>
+    <value>Tennisplatz-ID</value>
   </data>
   <data name="CreateNew" xml:space="preserve">
-    <value>Utwórz nowy</value>
+    <value>Erstelle ein neues</value>
   </data>
   <data name="CustomerID" xml:space="preserve">
-    <value>ID klienta</value>
+    <value>Klient-ID</value>
   </data>
   <data name="DayOfWeekNumber" xml:space="preserve">
-    <value>Numer dnia tygodnia</value>
+    <value>Nummer des Wochentags</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Usuń</value>
+    <value>löschen</value>
   </data>
   <data name="Details" xml:space="preserve">
-    <value>Szczegóły</value>
+    <value>Details</value>
   </data>
   <data name="EditComplex" xml:space="preserve">
-    <value>Edycja danych kompleksu</value>
+    <value>Komplexe Daten bearbeiten</value>
   </data>
   <data name="EditOpeningHours" xml:space="preserve">
-    <value>Edycja godzin otwarcia</value>
+    <value>Ausgabe der Öffnungszeiten</value>
   </data>
   <data name="GearName" xml:space="preserve">
-    <value>Nazwa sprzętu</value>
+    <value>Der Name des Sportgeräts</value>
   </data>
   <data name="IsEmailVeryfied" xml:space="preserve">
-    <value>Czy email potwierdzony</value>
+    <value>Ist die E-Mail bestätigt</value>
   </data>
   <data name="OpeningHours" xml:space="preserve">
-    <value>Godziny otwarcia</value>
+    <value>Öffnungszeiten</value>
   </data>
   <data name="ReturnToList" xml:space="preserve">
-    <value>Powrót do listy</value>
+    <value>Zurück zur Liste</value>
   </data>
   <data name="TimeFrom" xml:space="preserve">
-    <value>Czas od</value>
+    <value>Zeit von</value>
   </data>
   <data name="TimeTo" xml:space="preserve">
-    <value>Czas do</value>
+    <value>Zeit zu</value>
   </data>
   <data name="AddingCourt" xml:space="preserve">
-    <value>Dodawanie kortu</value>
+    <value>Hinzufügen eines Tennisplatzes</value>
   </data>
   <data name="AddingGear" xml:space="preserve">
-    <value>Dodawanie sprzętu</value>
+    <value>Hinzufügen eine Sportgeräte</value>
   </data>
   <data name="CanReserver" xml:space="preserve">
-    <value>Czy może rezerwować</value>
+    <value>Kann er reservieren</value>
   </data>
   <data name="DeleteQuestion" xml:space="preserve">
-    <value>Czy na pewno chcesz to usunąć</value>
+    <value>Möchten Sie dies wirklich löschen?</value>
   </data>
   <data name="DeleteTitle" xml:space="preserve">
-    <value>Usuwanie</value>
+    <value>Entfernung</value>
   </data>
   <data name="EditTitle" xml:space="preserve">
-    <value>Edytowanie</value>
+    <value>Bearbeitung</value>
   </data>
   <data name="IsAdmin" xml:space="preserve">
-    <value>Czy jest adminem</value>
+    <value>Ist er ein Administrator</value>
   </data>
   <data name="ContestID" xml:space="preserve">
-    <value>ID wydarzenia</value>
+    <value>Ereignis-ID</value>
   </data>
   <data name="CyclicReservationID" xml:space="preserve">
-    <value>ID rezerwacji cyklicznej</value>
+    <value>Zyklische Reservierung-ID</value>
   </data>
   <data name="DateCancel" xml:space="preserve">
-    <value>Data anulowania rezerwacji</value>
+    <value>Datum der Stornierung</value>
   </data>
   <data name="DateEnd" xml:space="preserve">
-    <value>Data zakończenia</value>
+    <value>Enddatum</value>
   </data>
   <data name="DateInsert" xml:space="preserve">
-    <value>Data wpłynięcia rezerwacji</value>
+    <value>Datum der Reservierung</value>
   </data>
   <data name="DatePayment" xml:space="preserve">
-    <value>Data płatności</value>
+    <value>Datum der Zahlung</value>
   </data>
   <data name="DateStart" xml:space="preserve">
-    <value>Data rozpoczęcia</value>
+    <value>Startdatum</value>
   </data>
   <data name="DayInterval" xml:space="preserve">
-    <value>Częstotliwość (co ile dni)</value>
+    <value>Häufigkeit (wie viele Tage)</value>
   </data>
   <data name="DayOfMonth" xml:space="preserve">
-    <value>Dzień miesiąca</value>
+    <value>Tag des Monats</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Opis</value>
+    <value>Beschreibung</value>
   </data>
   <data name="EnterDescription" xml:space="preserve">
-    <value>Opis jest wymagany</value>
+    <value>Beschreibung ist erforderlich</value>
   </data>
   <data name="GearAmount" xml:space="preserve">
-    <value>Ilość sprzętu</value>
+    <value>Die Menge an Sportgeräten</value>
   </data>
   <data name="GearID" xml:space="preserve">
-    <value>ID sprzętu</value>
+    <value>Sportausrüstung-ID</value>
   </data>
   <data name="IsExecuted" xml:space="preserve">
-    <value>Czy zakończone</value>
+    <value>Abgeschlossen haben</value>
   </data>
   <data name="UserID" xml:space="preserve">
-    <value>ID użytkownika</value>
+    <value>Benutzer-ID</value>
   </data>
   <data name="Weekend" xml:space="preserve">
-    <value>Weekend</value>
+    <value>Wochenende</value>
   </data>
   <data name="WorkingDays" xml:space="preserve">
-    <value>Poniedziałek - Piątek</value>
+    <value>Montag - Freitag</value>
   </data>
   <data name="ClientDiscount" xml:space="preserve">
-    <value>10% zniżki od każdej ceny</value>
+    <value>10% Rabatt auf jeden Preis</value>
   </data>
   <data name="AllGears" xml:space="preserve">
-    <value>Wszystkie sprzęty</value>
+    <value>Alle Sportgeräte</value>
   </data>
   <data name="AllCourts" xml:space="preserve">
-    <value>Wszystkie korty</value>
+    <value>Alle Tennisplätze</value>
   </data>
   <data name="EnterEmail" xml:space="preserve">
-    <value>Wpisz swój e-mail</value>
+    <value>Geben Sie Ihre E-Mail-Adresse ein</value>
   </data>
   <data name="EnterNewPassword" xml:space="preserve">
-    <value>Wpisz nowe hasło</value>
+    <value>Geben Sie das neue Passwort ein</value>
   </data>
   <data name="EnterOldPassword" xml:space="preserve">
-    <value>Wpisz stare hasło</value>
+    <value>Geben Sie das alte Passwort ein</value>
   </data>
   <data name="RemindPassword" xml:space="preserve">
-    <value>Zapomniałem hasła</value>
+    <value>Ich habe mein Passwort vergessen</value>
   </data>
   <data name="RepeatPassword" xml:space="preserve">
-    <value>Powtórz hasło</value>
+    <value>Passwort wiederholen</value>
   </data>
   <data name="Address" xml:space="preserve">
-    <value>Adres</value>
+    <value>Adresse</value>
   </data>
   <data name="CallCourtManagerNote" xml:space="preserve">
-    <value>W przypadku pytań odnośnie konkretnego kortu, prosimy w pierwszej kolejności kontaktować się z jego nadzorcą (dostępne na stronie &lt;a href="#"&gt;Korty&lt;/a&gt;).</value>
+    <value>Wenn Sie Fragen zu einem bestimmten Gericht haben, wenden Sie sich bitte zuerst an den Vorgesetzten (verfügbar unter &lt;a href="#"&gt; Tennisplätze &lt;/a&gt;).</value>
   </data>
   <data name="WinterSeasonBeginning" xml:space="preserve">
-    <value>Początek sezonu zimowego</value>
+    <value>Der Beginn der Wintersaison</value>
   </data>
   <data name="WinterSeasonEnding" xml:space="preserve">
-    <value>Zakończenie sezonu zimowego</value>
+    <value>Das Ende der Wintersaison</value>
   </data>
   <data name="UserName" xml:space="preserve">
-    <value>Imię i nazwisko</value>
+    <value>Vor- und Nachname</value>
   </data>
   <data name="DateOfInsert" xml:space="preserve">
-    <value>Data</value>
+    <value>Datum</value>
   </data>
   <data name="DescriptionDE" xml:space="preserve">
-    <value>Treść DE</value>
+    <value>Inhaltsverzeichnis  DE</value>
   </data>
   <data name="DescriptionEN" xml:space="preserve">
-    <value>Treść EN</value>
+    <value>Inhaltsverzeichnis  EN</value>
   </data>
   <data name="DescriptionPL" xml:space="preserve">
-    <value>Treść PL</value>
+    <value>Inhaltsverzeichnis  PL</value>
   </data>
   <data name="PostID" xml:space="preserve">
-    <value>ID posta</value>
+    <value>Post-ID</value>
   </data>
   <data name="TitleDE" xml:space="preserve">
-    <value>Tytuł DE</value>
+    <value>Titel DE</value>
   </data>
   <data name="TitleEN" xml:space="preserve">
-    <value>Tytuł EN</value>
+    <value>Titel EN</value>
   </data>
   <data name="TitlePL" xml:space="preserve">
-    <value>Tytuł PL</value>
+    <value>Titel PL</value>
   </data>
   <data name="AddingPost" xml:space="preserve">
-    <value>Dodaj post</value>
+    <value>Post hinzufügen</value>
   </data>
   <data name="Post" xml:space="preserve">
     <value>Post</value>
   </data>
   <data name="Posts" xml:space="preserve">
-    <value>Posty</value>
+    <value>Beiträge</value>
   </data>
   <data name="CharRemainingContent" xml:space="preserve">
-    <value>300 znaków do wykorzystania</value>
+    <value>300 Zeichen zu verwenden</value>
   </data>
   <data name="CharRemainingTitle" xml:space="preserve">
-    <value>50 znaków do wykorzystania</value>
+    <value>50 Zeichen zu verwenden</value>
   </data>
   <data name="Publish" xml:space="preserve">
-    <value>Opublikuj</value>
+    <value>Post</value>
   </data>
   <data name="AdvertisementName" xml:space="preserve">
-    <value>Nazwa reklamy</value>
+    <value>Der Name der Anzeige</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>Próba usunięcia reklamy została odrzucona! Zgłosznie reklamy zostało już przyjęte przez administrację.</value>
+    <value>Der Versuch, eine Anzeige zu löschen, wurde abgelehnt! Die Anzeige wurde bereits von der Verwaltung angenommen.</value>
   </data>
   <data name="CanReserve" xml:space="preserve">
-    <value>Czy może rezerwować</value>
+    <value>Kann er reservieren</value>
   </data>
   <data name="ContestName" xml:space="preserve">
-    <value>Nazwa turnieju</value>
+    <value>Der Name des Turniers</value>
   </data>
   <data name="IsAccepted" xml:space="preserve">
-    <value>Czy jest zaakceptowana</value>
+    <value>Wird akzeptiert</value>
   </data>
   <data name="IsExecuted1" xml:space="preserve">
-    <value>Czy jest zrealizowana</value>
+    <value>Ist es implementiert</value>
   </data>
   <data name="ReservationName" xml:space="preserve">
-    <value>Rezerwowany przedmiot</value>
+    <value>Reservierter Artikel</value>
   </data>
   <data name="PriceWeekendRatio" xml:space="preserve">
-    <value>Współczynnik ceny w weekend</value>
+    <value>Preisverhältnis über das Wochenende</value>
   </data>
   <data name="PriceWinterRatio" xml:space="preserve">
-    <value>Współczynnik ceny w zimę</value>
+    <value>Preisverhältnis im Winter</value>
   </data>
   <data name="DeleteAccount" xml:space="preserve">
-    <value>Usuń konto</value>
+    <value>Konto löschen</value>
   </data>
   <data name="Organizer" xml:space="preserve">
-    <value>Organizator</value>
+    <value>Veranstalter</value>
   </data>
   <data name="Payment" xml:space="preserve">
-    <value>Koszt</value>
+    <value>Ausgabe</value>
   </data>
   <data name="BackToList" xml:space="preserve">
-    <value>Powrót do listy</value>
+    <value>Zurück zur Liste</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Anuluj</value>
+    <value>Stornieren</value>
   </data>
   <data name="CancelReservation" xml:space="preserve">
-    <value>Anuluj rezerwację</value>
+    <value>Reservierung stornieren</value>
   </data>
   <data name="MyReservations" xml:space="preserve">
-    <value>Moje rezerwacje</value>
+    <value>Meine Reservierungen</value>
   </data>
   <data name="ShowMyReservations" xml:space="preserve">
-    <value>Pokaż moje rezerwacje</value>
+    <value>Meine Reservierungen anzeigen</value>
   </data>
   <data name="CyclicReservationError" xml:space="preserve">
-    <value>Ups! Wygląda na to, że ta data została już zajęta :(</value>
+    <value>Ups! Es scheint, dass dieses Datum bereits vergeben ist :(</value>
   </data>
   <data name="CyclicReservationForm" xml:space="preserve">
-    <value>Złóż cykliczną rezerwacje</value>
+    <value>Machen Sie eine zyklische Reservierung</value>
   </data>
   <data name="Confirm" xml:space="preserve">
-    <value>Potwierdź</value>
+    <value>Bestätigen</value>
   </data>
   <data name="IdTransaction" xml:space="preserve">
-    <value>ID transakcji</value>
+    <value>Transaktion-ID</value>
   </data>
   <data name="Redeem" xml:space="preserve">
-    <value>Zrealizuj</value>
+    <value>Einlösen</value>
   </data>
   <data name="Reminder" xml:space="preserve">
-    <value>Rezerwację należy opłacic w kasie najpóźniej 10 minut przed rozpoczęciem rezerwacji. Aby odwołać rezerwację skontaktuj się z</value>
+    <value>Die Reservierung muss spätestens 10 Minuten vor Buchungsbeginn an der Kasse bezahlt werden. Um eine Reservierung zu stornieren, wenden Sie sich an</value>
   </data>
   <data name="ReservationConfirmation" xml:space="preserve">
-    <value>Potwierdzenie rezerwacji nr </value>
+    <value>Reservierungsbestätigung nr</value>
   </data>
   <data name="ThanksForReservation" xml:space="preserve">
-    <value>Dziękujemy za skorzystanie z usług Serwisu internetowej rezerwacji kortów.Poniżej przesyłamy podsumowanie</value>
+    <value>Vielen Dank, dass Sie die Dienste der Tennis Club-Website nutzen. Nachfolgend senden wir eine Zusammenfassung</value>
   </data>
   <data name="WaitingReservations" xml:space="preserve">
-    <value>Rezerwacje oczekujące</value>
+    <value>Ausstehende Reservierungen</value>
   </data>
   <data name="Withdraw" xml:space="preserve">
-    <value>Wycofaj</value>
+    <value>Zurückziehen</value>
   </data>
   <data name="AmountAvailable" xml:space="preserve">
-    <value>Dostępna ilość</value>
+    <value>Verfügbare Menge</value>
   </data>
   <data name="FreeCourts" xml:space="preserve">
-    <value>Wolne korty</value>
+    <value>Frei Tennisplätze</value>
   </data>
   <data name="NoSearchedCourts" xml:space="preserve">
-    <value>Brak wolnych kortów w podanym terminie</value>
+    <value>Keine freien Plätze zum angegebenen Datum</value>
   </data>
   <data name="Search" xml:space="preserve">
-    <value>Szukaj</value>
+    <value>Suche</value>
   </data>
   <data name="Searcher" xml:space="preserve">
-    <value>Wyszukiwarka wolnych kortów</value>
+    <value>Suchmaschine für frei Tennisplätze</value>
   </data>
   <data name="SearchResults" xml:space="preserve">
-    <value>Wyniki wyszukiwania</value>
+    <value>Suchergebnisse</value>
   </data>
   <data name="UpcomingTournaments" xml:space="preserve">
-    <value>Nadchodzące turnieje</value>
+    <value>Kommende Turniere</value>
   </data>
   <data name="AmountOfHours" xml:space="preserve">
-    <value>Liczba godzin</value>
+    <value>Anzahl der Stunden</value>
   </data>
   <data name="CyclicReservation" xml:space="preserve">
-    <value>Rezerwacja cykliczna</value>
+    <value>Zyklische Reservierung</value>
   </data>
   <data name="Next" xml:space="preserve">
-    <value>Następny</value>
+    <value>Nächste</value>
   </data>
   <data name="Previous" xml:space="preserve">
-    <value>Poprzedni</value>
+    <value>Früher</value>
   </data>
   <data name="ReservationType" xml:space="preserve">
-    <value>Rodzaj rezerwacji</value>
+    <value>Art der Reservierung</value>
   </data>
   <data name="Reserve" xml:space="preserve">
-    <value>Rezerwuj</value>
+    <value>Reserviere</value>
   </data>
   <data name="AvailableGear" xml:space="preserve">
-    <value>Dostępny sprzęt</value>
+    <value>Vorhandene Sportgeräte</value>
   </data>
   <data name="DifferentUsers" xml:space="preserve">
-    <value>Liczba unikalnych rezerwujących</value>
+    <value>Die Anzahl der eindeutigen Reservisten</value>
   </data>
   <data name="MonthList" xml:space="preserve">
-    <value>Spis miesięcy</value>
+    <value>Liste der Monate</value>
   </data>
   <data name="MonthName" xml:space="preserve">
-    <value>Miesiąc</value>
+    <value>Monat</value>
   </data>
   <data name="MonthRaport" xml:space="preserve">
-    <value>Raport Miesięczny</value>
+    <value>Monatsbericht</value>
   </data>
   <data name="MonthYear" xml:space="preserve">
-    <value>Rok</value>
+    <value>Jahr</value>
   </data>
   <data name="Print" xml:space="preserve">
-    <value>Drukuj</value>
+    <value>Drucken</value>
   </data>
   <data name="TotalGearCount" xml:space="preserve">
-    <value>Liczba wypożyczonego sprzętu</value>
+    <value>Anzahl der gemieteten Sportgeräte</value>
   </data>
   <data name="TotalHireCount" xml:space="preserve">
-    <value>Liczba dokonanych rezerwacji</value>
+    <value>Anzahl der vorgenommenen Reservierungen</value>
   </data>
   <data name="TotalHireRevenue" xml:space="preserve">
-    <value>Miesięczny przychód</value>
+    <value>Monatliches Einkommen</value>
   </data>
   <data name="Currency" xml:space="preserve">
-    <value>Waluta</value>
+    <value>Währung</value>
   </data>
   <data name="CurrentCurrency" xml:space="preserve">
-    <value>Aktualnie wybrana waluta:</value>
+    <value>Die aktuell ausgewählte Währung:</value>
   </data>
 </root>
