@@ -9,11 +9,12 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 @Html.DropDownList("Filter", new SelectListItem[]{
-                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.All, Value = "0"},
-                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.Courts, Value = "1"},
                                     new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.Gear, Value = "2"},
-                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.Contests, Value = "3"}
+                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.Courts, Value = "1"},
+                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.Contests, Value = "3"},
+                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.All, Value = "0"}
                                     }, new { @class = "form-control", @onchange = "CallChangefunc(this.value)" })
 <table class="table">
     <tr>
@@ -161,14 +162,14 @@ else if (ViewBag.MyErrorMessage == false)
 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
 <script>
     function CallChangefunc(value) {
-        if (value == 2) {
-            window.location = "/Admin/WaitingGear";
+        if (value == 1) {
+            window.location = "/Admin/WaitingCourts";
         }
         else if (value == 3) {
             window.location = "/Admin/WaitingContests";
         }
-        else if (value == 1) {
-            window.location = "/Admin/WaitingCourts";
+        else if (value == 0) {
+            window.location = "/Admin/WaitingReservations";
         }
     }
 </script>

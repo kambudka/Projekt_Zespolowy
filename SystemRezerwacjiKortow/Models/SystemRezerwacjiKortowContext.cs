@@ -24,5 +24,7 @@ namespace SystemRezerwacjiKortow.Models
         public System.Data.Entity.DbSet<SystemRezerwacjiKortow.Models.CyclicReservation> CyclicReservations { get; set; }
 
         public System.Data.Entity.DbSet<SystemRezerwacjiKortow.Models.Gear> Gears { get; set; }
+
+        public System.Data.Entity.DbSet<SystemRezerwacjiKortow.Models.Court> Courts { get; set; }
     }
 }

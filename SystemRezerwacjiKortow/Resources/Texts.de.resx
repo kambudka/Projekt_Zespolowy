@@ -825,4 +825,7 @@
   <data name="CurrentCurrency" xml:space="preserve">
     <value>Die aktuell ausgewählte Währung:</value>
   </data>
+  <data name="All" xml:space="preserve">
+    <value>Alle</value>
+  </data>
 </root>
