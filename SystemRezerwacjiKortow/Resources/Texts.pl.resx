@@ -837,4 +837,10 @@
   <data name="Here" xml:space="preserve">
     <value>Tutaj</value>
   </data>
+  <data name="ChangeLanguageAnswer" xml:space="preserve">
+    <value>Żeby zmienić język, przejdź do Paska Nawigacyjnego. Tam znajdziesz zakładkę Język. Kliknij na niego, aby wybrać jeden z dostępnych na liście.</value>
+  </data>
+  <data name="HowToChangeLanguage" xml:space="preserve">
+    <value>Jak zmienić język?</value>
+  </data>
 </root>

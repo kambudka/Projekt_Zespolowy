@@ -834,4 +834,10 @@
   <data name="Here" xml:space="preserve">
     <value>Here</value>
   </data>
+  <data name="ChangeLanguageAnswer" xml:space="preserve">
+    <value>To change language, head to the Navigation Bar. There you will find Language tab. Click it to choose one from the list.</value>
+  </data>
+  <data name="HowToChangeLanguage" xml:space="preserve">
+    <value>How to change language?</value>
+  </data>
 </root>

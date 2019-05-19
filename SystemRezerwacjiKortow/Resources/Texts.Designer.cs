@@ -241,6 +241,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu To change language, head to the Navigation Bar. There you will find Language tab. Click it to choose one from the list..
+        /// </summary>
+        public static string ChangeLanguageAnswer {
+            get {
+                return ResourceManager.GetString("ChangeLanguageAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Change password.
         /// </summary>
         public static string ChangePassword {
@@ -1263,6 +1272,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string Hour {
             get {
                 return ResourceManager.GetString("Hour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu How to change language?.
+        /// </summary>
+        public static string HowToChangeLanguage {
+            get {
+                return ResourceManager.GetString("HowToChangeLanguage", resourceCulture);
             }
         }
         

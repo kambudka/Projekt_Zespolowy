@@ -837,4 +837,10 @@
   <data name="Here" xml:space="preserve">
     <value>Hier</value>
   </data>
+  <data name="ChangeLanguageAnswer" xml:space="preserve">
+    <value>Um die Sprache zu ändern, navigieren Sie zur Navigationsleiste. Dort finden Sie die Registerkarte Sprache. Klicken Sie darauf, um einen Eintrag aus der Liste auszuwählen.</value>
+  </data>
+  <data name="HowToChangeLanguage" xml:space="preserve">
+    <value>Wie ändere ich die Sprache?</value>
+  </data>
 </root>
