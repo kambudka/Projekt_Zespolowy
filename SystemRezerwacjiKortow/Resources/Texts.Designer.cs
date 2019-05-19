@@ -1996,6 +1996,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Tennis Court System is a website made for all tennis enthusiasts. You can here reserve courts for trainings, additional gear, and even organize a tournament. You can also easily participate in tournaments organized by others. We do hope our website will be helpful!.
+        /// </summary>
+        public static string TennisCourtSystemAnswer {
+            get {
+                return ResourceManager.GetString("TennisCourtSystemAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu ThanksForReservation	Thank you for using the services of the Tennis Club Website. Below we send a summary of your booking transaction..
         /// </summary>
         public static string ThanksForReservation {
@@ -2199,6 +2208,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string WelcomeInTennis {
             get {
                 return ResourceManager.GetString("WelcomeInTennis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu What is Tennis Court System?.
+        /// </summary>
+        public static string WhatIsTennisCourtSystem {
+            get {
+                return ResourceManager.GetString("WhatIsTennisCourtSystem", resourceCulture);
             }
         }
         

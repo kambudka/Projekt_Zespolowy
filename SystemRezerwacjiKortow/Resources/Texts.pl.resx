@@ -849,4 +849,10 @@
   <data name="Reservations" xml:space="preserve">
     <value>Rezerwacje</value>
   </data>
+  <data name="TennisCourtSystemAnswer" xml:space="preserve">
+    <value>System Rezerwacji Kortów jest stroną stworzoną dla wszystkich entuzjastów Tenisa Ziemnego! Dzięki niej możesz zarezerwować korty do treningu, wypożyczyć sprzęt, a nawet zorganizować turniej. Strona oferuje również w łatwy sposób zapisywać się na turnieje organizowane przez innych. Mamy nadzieję, że strona okaże się przydatna!</value>
+  </data>
+  <data name="WhatIsTennisCourtSystem" xml:space="preserve">
+    <value>Czym jest System Rezerwacji Kortów?</value>
+  </data>
 </root>

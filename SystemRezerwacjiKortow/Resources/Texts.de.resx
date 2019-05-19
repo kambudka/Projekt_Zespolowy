@@ -849,4 +849,10 @@
   <data name="Reservations" xml:space="preserve">
     <value>Reservierung</value>
   </data>
+  <data name="TennisCourtSystemAnswer" xml:space="preserve">
+    <value>Tennisplatzsystem ist eine Website für alle Tennisbegeisterten. Sie können hier Plätze für Trainings und zusätzliche Ausrüstung reservieren und sogar ein Turnier organisieren. Sie können auch problemlos an von anderen organisierten Turnieren teilnehmen. Wir hoffen, dass unsere Website hilfreich sein wird!</value>
+  </data>
+  <data name="WhatIsTennisCourtSystem" xml:space="preserve">
+    <value>Was ist ein Tennisplatzsystem?</value>
+  </data>
 </root>

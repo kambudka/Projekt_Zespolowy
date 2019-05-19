@@ -846,4 +846,10 @@
   <data name="Reservations" xml:space="preserve">
     <value>Reservations</value>
   </data>
+  <data name="TennisCourtSystemAnswer" xml:space="preserve">
+    <value>Tennis Court System is a website made for all tennis enthusiasts. You can here reserve courts for trainings, additional gear, and even organize a tournament. You can also easily participate in tournaments organized by others. We do hope our website will be helpful!</value>
+  </data>
+  <data name="WhatIsTennisCourtSystem" xml:space="preserve">
+    <value>What is Tennis Court System?</value>
+  </data>
 </root>
