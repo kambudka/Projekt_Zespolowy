@@ -170,6 +170,7 @@
     <Compile Include="Controllers\CourtController.cs" />
     <Compile Include="Controllers\CurrencyController.cs" />
     <Compile Include="Controllers\CyclicReservationsController.cs" />
+    <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\GearController.cs" />
     <Compile Include="Controllers\GearReservationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -547,6 +548,7 @@
     <Content Include="Views\Statistics\MakePDF.cshtml" />
     <Content Include="Views\Statistics\MonthList.cshtml" />
     <Content Include="Views\Currency\Index.cshtml" />
+    <Content Include="Views\FAQ\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

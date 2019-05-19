@@ -828,4 +828,10 @@
   <data name="About" xml:space="preserve">
     <value>O programie</value>
   </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>Tutaj</value>
+  </data>
 </root>

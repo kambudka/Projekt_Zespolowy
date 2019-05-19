@@ -825,4 +825,10 @@
   <data name="About" xml:space="preserve">
     <value>About the program</value>
   </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>Here</value>
+  </data>
 </root>
