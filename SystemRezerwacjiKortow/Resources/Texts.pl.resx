@@ -846,11 +846,29 @@
   <data name="CommonQuestions" xml:space="preserve">
     <value>Ogólne pytania</value>
   </data>
+  <data name="CyclicReservationAnswer" xml:space="preserve">
+    <value>Cykliczna rezerwacja pozwala na rezerwację kortu cotygodniowo o określonej godzinie. Dzięki temu użytkownik, który chce trenować o stałych porach, nie musi się martwić o odnawianie rezerwacji. Aby zarezerwować kort cyklicznie, po prostu zaznacz checkbox przy  składaniu rezerwacji.</value>
+  </data>
+  <data name="HowToRegisterAnswer" xml:space="preserve">
+    <value>Bardzo łatwo! Najpierw udaj się do Paska Nawigacyjnego i wybierz zakładkę Rejestracja po prawej stronie. Zostaniesz przekierowany na stronę rejestracyjną. Wypełnij formularz swoimi danymi i kliknij przycisk Zarejestruj. Powinienes zobaczyć komunikat o poprawności stworzeniu konta. Teraz idź do swojej skrzynki mailowej i otwórz wiadomość od Twoje Korty Tenisowe. Tam znajdziesz link aktywacyjny. Kliknij go, aby aktywować swoje konto. Po tym wszystkim masz już dostęp do większej ilości dostępnych funkcji na stronie!</value>
+  </data>
+  <data name="HowToRegisterQuestion" xml:space="preserve">
+    <value>Jak zarejestrować konto?</value>
+  </data>
+  <data name="HowToReserveAnswer" xml:space="preserve">
+    <value>Żeby zarezerwować kort, przejdź do opcji Kalendarz na głównej stronie. Wybierz dzień, na który chciałbyś zarezerwować kort, następnie przytrzymaj lewy przycisk myszy, zaznacz planowane godziny i zwolnij klawisz. Wyświetli się wiadomość z informacją o rezerwacji. Naciśnij Zapisz aby złożyć rezerwację. Miej na uwadze, że rezerwacja nie jest natychmiastowa, gdyż musi ją potwierdzić administrator bądź zarządca kortu. Opłać swoją rezerwację. Gdy twoja rezerwacja zostanie zaakceptowana, dostaniesz emaila z potwierdzeniem.</value>
+  </data>
+  <data name="HowToReserveQuestion" xml:space="preserve">
+    <value>Jak zarezerwować kort?</value>
+  </data>
   <data name="Reservations" xml:space="preserve">
     <value>Rezerwacje</value>
   </data>
   <data name="TennisCourtSystemAnswer" xml:space="preserve">
     <value>System Rezerwacji Kortów jest stroną stworzoną dla wszystkich entuzjastów Tenisa Ziemnego! Dzięki niej możesz zarezerwować korty do treningu, wypożyczyć sprzęt, a nawet zorganizować turniej. Strona oferuje również w łatwy sposób zapisywać się na turnieje organizowane przez innych. Mamy nadzieję, że strona okaże się przydatna!</value>
+  </data>
+  <data name="WhatIsCyclicReservation" xml:space="preserve">
+    <value>Co to jest cykliczna rezerwacja?</value>
   </data>
   <data name="WhatIsTennisCourtSystem" xml:space="preserve">
     <value>Czym jest System Rezerwacji Kortów?</value>

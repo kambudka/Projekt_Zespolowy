@@ -493,6 +493,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Cyclic reservation allows user to reserve court every week at specified hour. Thanks to that user can train at the same hours every week without re-reserving his order. To use cyclic reservation, simply check checkbox when reserving court..
+        /// </summary>
+        public static string CyclicReservationAnswer {
+            get {
+                return ResourceManager.GetString("CyclicReservationAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ups! Looks like this date has already been taken :(.
         /// </summary>
         public static string CyclicReservationError {
@@ -1290,6 +1299,42 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string HowToChangeLanguage {
             get {
                 return ResourceManager.GetString("HowToChangeLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu It&apos;s very easy! First head to navigation bar and select Register tab on the right. You will be redirected to Registration page. Fill form with your credentials and press Register button. You should see a message about successfully created account. Now go to your email and open message from Twoje Korty Tenisowe. There you will find activation link. Click on it to activate your account. After that you have access to more website functionalities!.
+        /// </summary>
+        public static string HowToRegisterAnswer {
+            get {
+                return ResourceManager.GetString("HowToRegisterAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu How to register?.
+        /// </summary>
+        public static string HowToRegisterQuestion {
+            get {
+                return ResourceManager.GetString("HowToRegisterQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu To reserve court, head to Calendar option at home page. Here choose day when you want to reserve court, then hold your left mouse button, select desired hours and release that button. A message will appear with reservation info. Click Save to make a reservation. Keep in mind that your reservation is not instant as administrator or court manager has to confirm. Pay for your order. When your reservation is accepted, you will get confirmation email..
+        /// </summary>
+        public static string HowToReserveAnswer {
+            get {
+                return ResourceManager.GetString("HowToReserveAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu How to reserve court?.
+        /// </summary>
+        public static string HowToReserveQuestion {
+            get {
+                return ResourceManager.GetString("HowToReserveQuestion", resourceCulture);
             }
         }
         
@@ -2208,6 +2253,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string WelcomeInTennis {
             get {
                 return ResourceManager.GetString("WelcomeInTennis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu What is cyclic reservation?.
+        /// </summary>
+        public static string WhatIsCyclicReservation {
+            get {
+                return ResourceManager.GetString("WhatIsCyclicReservation", resourceCulture);
             }
         }
         
