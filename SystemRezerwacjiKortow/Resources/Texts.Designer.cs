@@ -295,6 +295,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Common Questions.
+        /// </summary>
+        public static string CommonQuestions {
+            get {
+                return ResourceManager.GetString("CommonQuestions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Company name.
         /// </summary>
         public static string CompanyName {
@@ -1794,6 +1803,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string ReservationName {
             get {
                 return ResourceManager.GetString("ReservationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Reservations.
+        /// </summary>
+        public static string Reservations {
+            get {
+                return ResourceManager.GetString("Reservations", resourceCulture);
             }
         }
         

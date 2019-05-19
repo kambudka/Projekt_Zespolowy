@@ -843,4 +843,10 @@
   <data name="HowToChangeLanguage" xml:space="preserve">
     <value>Wie ändere ich die Sprache?</value>
   </data>
+  <data name="CommonQuestions" xml:space="preserve">
+    <value>Häufige Frage</value>
+  </data>
+  <data name="Reservations" xml:space="preserve">
+    <value>Reservierung</value>
+  </data>
 </root>
