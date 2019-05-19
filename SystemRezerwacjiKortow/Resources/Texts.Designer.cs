@@ -1114,6 +1114,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Welcome to the &lt;strong&gt;F&lt;/strong&gt;requentry &lt;strong&gt;A&lt;/strong&gt;sked &lt;strong&gt;Q&lt;/strong&gt;uestions page! Here is the list containing important and common questions about this website. If you can&apos;t find an answer to your question, please contact with us at Contact page..
+        /// </summary>
+        public static string FAQIntro {
+            get {
+                return ResourceManager.GetString("FAQIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Free Courts.
         /// </summary>
         public static string FreeCourts {

@@ -831,6 +831,9 @@
   <data name="FAQ" xml:space="preserve">
     <value>FAQ</value>
   </data>
+  <data name="FAQIntro" xml:space="preserve">
+    <value>Willkommen auf der Seite mit den häufig gestellten Fragen (&lt;strong&gt;FAQ&lt;/strong&gt;)! Hier finden Sie eine Liste der wichtigsten und am häufigsten gestellten Fragen zu dieser Website. Wenn Sie keine Antwort auf Ihre Frage finden, kontaktieren Sie uns bitte über die Kontaktseite.</value>
+  </data>
   <data name="Here" xml:space="preserve">
     <value>Hier</value>
   </data>
