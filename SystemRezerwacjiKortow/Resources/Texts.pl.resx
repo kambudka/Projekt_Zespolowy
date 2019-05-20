@@ -872,5 +872,7 @@
   </data>
   <data name="WhatIsTennisCourtSystem" xml:space="preserve">
     <value>Czym jest System Rezerwacji Kortów?</value>
+  <data name="All" xml:space="preserve">
+    <value>Wszystko</value>
   </data>
 </root>

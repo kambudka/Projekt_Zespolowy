@@ -387,7 +387,34 @@ namespace SystemRezerwacjiKortow.Controllers
             TempData["Logout"] = Resources.Texts.LogoutSuccessful;
             return RedirectToAction("Index", "Home");
         }
+        public ActionResult GetCourts()
+        {
+            List<Reservation> myAllReservations = SqlReservation.GetReservations(SqlUser.GetUser(User.Identity.Name).UserID);
+            List<Reservation> myCourts = new List<Reservation>();
+            foreach (Reservation r in myAllReservations)
+            {
+                if (r.DateOfCancel == null && r.CourtID!=0)
+                {
+                    myCourts.Add(r);
+                }
+            }
+            return View(myCourts);
+           
+        }
+        public ActionResult GetGear()
+        {
+            List<Reservation> myAllReservations = SqlReservation.GetReservations(SqlUser.GetUser(User.Identity.Name).UserID);
+            List<Reservation> myGear = new List<Reservation>();
+            foreach (Reservation r in myAllReservations)
+            {
+                if (r.DateOfCancel == null && r.GearID!=0)
+                {
+                    myGear.Add(r);
+                }
+            }
+            return View(myGear);
 
+        }
         public ActionResult GetMyCourtsReservations()
         {
             List<Reservation> myAllReservations = SqlReservation.GetReservations(SqlUser.GetUser(User.Identity.Name).UserID);

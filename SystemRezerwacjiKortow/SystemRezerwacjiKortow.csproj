@@ -555,6 +555,11 @@
     <Content Include="Views\Statistics\MonthList.cshtml" />
     <Content Include="Views\Currency\Index.cshtml" />
     <Content Include="Views\FAQ\Index.cshtml" />
+    <Content Include="Views\User\GetCourts.cshtml" />
+    <Content Include="Views\User\GetGear.cshtml" />
+    <Content Include="Views\Admin\WaitingCourts.cshtml" />
+    <Content Include="Views\Admin\WaitingGear.cshtml" />
+    <Content Include="Views\Admin\WaitingContests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
