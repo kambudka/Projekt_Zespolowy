@@ -61,6 +61,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu About the program.
+        /// </summary>
+        public static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Adding court.
         /// </summary>
         public static string AddingCourt {
@@ -241,6 +250,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu To change language, head to the Navigation Bar. There you will find Language tab. Click it to choose one from the list..
+        /// </summary>
+        public static string ChangeLanguageAnswer {
+            get {
+                return ResourceManager.GetString("ChangeLanguageAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Change password.
         /// </summary>
         public static string ChangePassword {
@@ -282,6 +300,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string ClientDiscount {
             get {
                 return ResourceManager.GetString("ClientDiscount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Common Questions.
+        /// </summary>
+        public static string CommonQuestions {
+            get {
+                return ResourceManager.GetString("CommonQuestions", resourceCulture);
             }
         }
         
@@ -471,6 +498,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string CyclicReservation {
             get {
                 return ResourceManager.GetString("CyclicReservation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Cyclic reservation allows user to reserve court every week at specified hour. Thanks to that user can train at the same hours every week without re-reserving his order. To use cyclic reservation, simply check checkbox when reserving court..
+        /// </summary>
+        public static string CyclicReservationAnswer {
+            get {
+                return ResourceManager.GetString("CyclicReservationAnswer", resourceCulture);
             }
         }
         
@@ -1105,6 +1141,24 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu FAQ.
+        /// </summary>
+        public static string FAQ {
+            get {
+                return ResourceManager.GetString("FAQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Welcome to the &lt;strong&gt;F&lt;/strong&gt;requentry &lt;strong&gt;A&lt;/strong&gt;sked &lt;strong&gt;Q&lt;/strong&gt;uestions page! Here is the list containing important and common questions about this website. If you can&apos;t find an answer to your question, please contact with us at Contact page..
+        /// </summary>
+        public static string FAQIntro {
+            get {
+                return ResourceManager.GetString("FAQIntro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Free Courts.
         /// </summary>
         public static string FreeCourts {
@@ -1155,6 +1209,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string General {
             get {
                 return ResourceManager.GetString("General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Here.
+        /// </summary>
+        public static string Here {
+            get {
+                return ResourceManager.GetString("Here", resourceCulture);
             }
         }
         
@@ -1236,6 +1299,51 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string Hour {
             get {
                 return ResourceManager.GetString("Hour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu How to change language?.
+        /// </summary>
+        public static string HowToChangeLanguage {
+            get {
+                return ResourceManager.GetString("HowToChangeLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu It&apos;s very easy! First head to navigation bar and select Register tab on the right. You will be redirected to Registration page. Fill form with your credentials and press Register button. You should see a message about successfully created account. Now go to your email and open message from Twoje Korty Tenisowe. There you will find activation link. Click on it to activate your account. After that you have access to more website functionalities!.
+        /// </summary>
+        public static string HowToRegisterAnswer {
+            get {
+                return ResourceManager.GetString("HowToRegisterAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu How to register?.
+        /// </summary>
+        public static string HowToRegisterQuestion {
+            get {
+                return ResourceManager.GetString("HowToRegisterQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu To reserve court, head to Calendar option at home page. Here choose day when you want to reserve court, then hold your left mouse button, select desired hours and release that button. A message will appear with reservation info. Click Save to make a reservation. Keep in mind that your reservation is not instant as administrator or court manager has to confirm. Pay for your order. When your reservation is accepted, you will get confirmation email..
+        /// </summary>
+        public static string HowToReserveAnswer {
+            get {
+                return ResourceManager.GetString("HowToReserveAnswer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu How to reserve court?.
+        /// </summary>
+        public static string HowToReserveQuestion {
+            get {
+                return ResourceManager.GetString("HowToReserveQuestion", resourceCulture);
             }
         }
         
@@ -1753,6 +1861,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Reservations.
+        /// </summary>
+        public static string Reservations {
+            get {
+                return ResourceManager.GetString("Reservations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Reservation Type.
         /// </summary>
         public static string ReservationType {
@@ -1929,6 +2046,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string Surname {
             get {
                 return ResourceManager.GetString("Surname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Tennis Court System is a website made for all tennis enthusiasts. You can here reserve courts for trainings, additional gear, and even organize a tournament. You can also easily participate in tournaments organized by others. We do hope our website will be helpful!.
+        /// </summary>
+        public static string TennisCourtSystemAnswer {
+            get {
+                return ResourceManager.GetString("TennisCourtSystemAnswer", resourceCulture);
             }
         }
         
@@ -2136,6 +2262,24 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string WelcomeInTennis {
             get {
                 return ResourceManager.GetString("WelcomeInTennis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu What is cyclic reservation?.
+        /// </summary>
+        public static string WhatIsCyclicReservation {
+            get {
+                return ResourceManager.GetString("WhatIsCyclicReservation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu What is Tennis Court System?.
+        /// </summary>
+        public static string WhatIsTennisCourtSystem {
+            get {
+                return ResourceManager.GetString("WhatIsTennisCourtSystem", resourceCulture);
             }
         }
         

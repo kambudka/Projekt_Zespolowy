@@ -170,6 +170,7 @@
     <Compile Include="Controllers\CourtController.cs" />
     <Compile Include="Controllers\CurrencyController.cs" />
     <Compile Include="Controllers\CyclicReservationsController.cs" />
+    <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\GearController.cs" />
     <Compile Include="Controllers\GearReservationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -331,6 +332,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Image\FAQ\how_to_change_language.png" />
+    <Content Include="Content\Image\FAQ\how_to_register.PNG" />
+    <Content Include="Content\Image\FAQ\how_to_register_2.PNG" />
+    <Content Include="Content\Image\FAQ\how_to_reserve.png" />
+    <Content Include="Content\Image\FAQ\how_to_reserve_2.png" />
+    <Content Include="Content\Image\FAQ\how_to_reserve_3.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -547,6 +554,7 @@
     <Content Include="Views\Statistics\MakePDF.cshtml" />
     <Content Include="Views\Statistics\MonthList.cshtml" />
     <Content Include="Views\Currency\Index.cshtml" />
+    <Content Include="Views\FAQ\Index.cshtml" />
     <Content Include="Views\User\GetCourts.cshtml" />
     <Content Include="Views\User\GetGear.cshtml" />
     <Content Include="Views\Admin\WaitingCourts.cshtml" />
