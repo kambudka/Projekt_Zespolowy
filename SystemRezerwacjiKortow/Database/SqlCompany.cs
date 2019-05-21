@@ -128,7 +128,7 @@ namespace SystemRezerwacjiKortow.Database
                             TimeTo = (TimeSpan)reader["TimeTo"],
                         };                   
                     }
-
+                    if(openingHours!=null)
                     switch (openingHours.DayOfWeek)
                     {
                         case 1: // dla sqla pierwszy dzien tygodnia to niedziela

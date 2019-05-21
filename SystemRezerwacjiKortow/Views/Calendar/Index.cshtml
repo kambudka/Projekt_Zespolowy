@@ -9,6 +9,8 @@
 
     <script>
 
+
+
         $(document).ready(function () {
 
             var events = [];
@@ -30,6 +32,26 @@
                 court = 1;
             }
 
+            function GetCalendarStartDate() {
+                var calendar = $('#calendar').fullCalendar('getCalendar');
+                var view = calendar.view;
+                var start = view.start._d;
+                var end = view.end._d;
+                return start.toString();
+            }
+            function GetCalendarEndDate() {
+                var calendar = $('#calendar').fullCalendar('getCalendar');
+                var view = calendar.view;
+                var start = view.start._d;
+                var end = view.end._d;
+                return end;
+            }
+
+            function GetCourt() {
+                return court;
+            }
+
+            
             function FetchBusinessHours() {
                 $.ajax({
                     type: "GET",
@@ -52,7 +74,7 @@
 
 
 
-          
+
 
             function Refech() {
                 $('#calendar').fullCalendar('destroy');
@@ -99,13 +121,37 @@
                                 location.href = "Court/Search";
                             }
                         },
+                        raportPDF: {
+                            text: 'Generuj PDF',
+                            click: function (date) {
+                                var moment = $('#calendar').fullCalendar('getDate');
+                                var start = GetCalendarStartDate();
+                                var end = GetCalendarEndDate();
+                                location.href = "Calendar/GeneratePDF" + "?start=" + start.toString() + "&end=" + end.toString() + "&courtId=" + court.toString();
+                                //$.ajax({
+                                //    cache: false,
+                                //    type: "GET",
+                                //    data: { 'start': start, 'end': end, 'courtId': court },
+                                //    url: "Calendar/GeneratePDF",
+                                //    success: function (data) {
+                                //        var response = JSON.parse(data);
+                                //        window.location.href = "Calendar/DownloadFile?fileGuid=" + response.FileGuid
+                                //            + "&filename=" + response.FileName;
+                                //    },
+                                //    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                //        alert("Status: " + textStatus); alert("Error: " + errorThrown);
+                                //    }       
+                                //});
+                                
+                            }
+                        },
 
                     },
-                   
+
                     header: {
                         left: 'prev,next today subcourt courtnumber addcourt cyclic search',
                         center: 'title',
-                        right: 'month,agendaWeek'
+                        right: 'month,agendaWeek raportPDF'
                     },
                     aspectRatio: 2,
                     timeFormat: 'H(:mm)',
@@ -183,7 +229,7 @@
                             $description.append($('<p/>').html('<b>ID:</b>' + calEvent.id));
                             $('#infoModal #pDetails').empty().html($description);
                             $('#infoModal').modal();
-                }
+                        }
                     },
                     select: function (start, end) {
                         selectedEvent = {
@@ -461,7 +507,7 @@
                 } else {
                     text.style.display = "none";
                 }
-            } 
+            }
         });
 
 
@@ -469,7 +515,12 @@
     </script>
 }
 
-<div id="calendar"></div>
+<div id="calendar">
+    <div style="margin-left:10px;">
+        @Html.ActionLink("Generate PDF", "DownloadFile", "Calendar", new { onclick = "GetCalendarStartDate();" });
+    </div>
+
+</div>
 
 <div id="myModalSave" class="modal fade" role="dialog">
     @if (Request.IsAuthenticated)
@@ -493,17 +544,17 @@
                             </p>
                         </div>
                         <div id="extra" style="display :none;">
-                                <p id="text">Checkbox is CHECKED!</p>
-                                <b> Weekly: </b>
-                                <input type="radio" name="type" value="Weekly" class="form-control">
-                                <b> Monthly: </b>
-                                <input type="radio" name="type" value="Monthly" class="form-control">
-                                <b> Custom: </b>
-                                <input type="radio" name="type" value="Custom" class="form-control">
-                                <b> Number of days: </b>
-                                <input type="number" id="Length" placeholder="1" min="1" max="6" class="form-control">
+                            <p id="text">Checkbox is CHECKED!</p>
+                            <b> Weekly: </b>
+                            <input type="radio" name="type" value="Weekly" class="form-control">
+                            <b> Monthly: </b>
+                            <input type="radio" name="type" value="Monthly" class="form-control">
+                            <b> Custom: </b>
+                            <input type="radio" name="type" value="Custom" class="form-control">
+                            <b> Number of days: </b>
+                            <input type="number" id="Length" placeholder="1" min="1" max="6" class="form-control">
                         </div>
-                        
+
                         <button type="button" id="btnSave" class="btn btn-success">Save</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </form>
