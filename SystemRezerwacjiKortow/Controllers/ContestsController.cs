@@ -25,6 +25,28 @@ namespace SystemRezerwacjiKortow.Controllers
         public ActionResult Details(int id)
         {
             Contest contest = SqlContest.GetContest(id);
+            Dictionary<string, decimal> tmp = null;
+            if (Session["Currencies"] != null)
+            {
+                tmp = (Dictionary<string, decimal>)Session["Currencies"];
+            }
+
+
+            if (tmp != null)
+            {
+               
+                    contest.PaymentToPay = contest.PaymentToPay / tmp[Session["Currency"].ToString()]; ;
+                
+            }
+            DateTime dt = DateTime.Now;
+            ViewBag.Year = dt.Year;
+            ViewBag.Month = dt.Month;
+            ViewBag.Day = dt.Day;
+            if (Session["Currency"] == null)
+            {
+                Session["Currency"] = "PLN";
+            }
+            ViewBag.Code = Session["Currency"];
             return View(contest);
         }
 

@@ -34,7 +34,7 @@
                                 <p class="desc"> @Html.DisplayFor(model => model.Description)</p>
                                 <ul>
                                     <li><p style="float:left">Organizator: </p> <p style="float:left">@Html.DisplayFor(model => model.Organizer)</p> </li>
-                                    <li><p style="float:right; font-weight:bold"  class="month" > </p> <p style="float:left"> @Html.DisplayFor(model => model.PaymentToPay)</p> </li>
+                                    <li><p style="float:right; font-weight:bold"  class="month" > </p> <p style="float:left"> @Html.DisplayFor(model => model.PaymentToPay) @ViewBag.Code</p> </li>
 
                                 </ul>
                             </div>

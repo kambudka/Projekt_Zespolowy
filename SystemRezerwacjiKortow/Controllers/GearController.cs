@@ -14,12 +14,53 @@ namespace SystemRezerwacjiKortow.Controllers
         // GET: Gear
         public ActionResult Index()
         {
+
+            Dictionary<string, decimal> tmp = null;
+            if (Session["Currencies"] != null)
+            {
+                tmp = (Dictionary<string, decimal>)Session["Currencies"];
+            }
+
+
+            if (tmp != null)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    list[i].PriceH = list[i].PriceH / tmp[Session["Currency"].ToString()];
+                    
+                }
+            }
+            if (Session["Currency"] == null)
+            {
+                Session["Currency"] = "PLN";
+            }
+            ViewBag.Code = Session["Currency"];
             return View(list);
         }
         public ActionResult PriceListGear()
         {
             ViewBag.Message = "Nasza oferta";
             List<Gear> listGear = SqlGear.GetGears();
+            Dictionary<string, decimal> tmp = null;
+            if (Session["Currencies"] != null)
+            {
+                tmp = (Dictionary<string, decimal>)Session["Currencies"];
+            }
+
+
+            if (tmp != null)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    listGear[i].PriceH = listGear[i].PriceH / tmp[Session["Currency"].ToString()];
+
+                }
+            }
+            if (Session["Currency"] == null)
+            {
+                Session["Currency"] = "PLN";
+            }
+            ViewBag.Code = Session["Currency"];
             return View(listGear);
         }
 

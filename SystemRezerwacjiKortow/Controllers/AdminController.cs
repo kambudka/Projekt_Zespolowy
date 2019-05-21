@@ -113,6 +113,57 @@ namespace SystemRezerwacjiKortow.Controllers
 
         }
 
+        public ActionResult WaitingCourts()
+        {
+            ReservationList = new List<Reservation>();
+            ReservationList = SqlReservation.GetReservations(13);
+            var list = new List<Reservation>();
+            foreach (Reservation reservation in ReservationList)
+            {
+                //Nie pobiera rezerwacji które są anulowane i zaakceptowane
+                if (reservation.DateOfCancel == null && reservation.IsExecuted == false && reservation.CourtID!=0 && reservation.ContestID==0)
+                {
+                    list.Add(reservation);
+                }
+            }
+
+            return View(list);
+        }
+
+        public ActionResult WaitingGear()
+        {
+            ReservationList = new List<Reservation>();
+            ReservationList = SqlReservation.GetReservations(13);
+            var list = new List<Reservation>();
+            foreach (Reservation reservation in ReservationList)
+            {
+                //Nie pobiera rezerwacji które są anulowane i zaakceptowane
+                if (reservation.DateOfCancel == null && reservation.IsExecuted == false && reservation.CourtID == 0 && reservation.ContestID == 0 && reservation.GearID!=0)
+                {
+                    list.Add(reservation);
+                }
+            }
+
+            return View(list);
+        }
+
+        public ActionResult WaitingContests()
+        {
+            ReservationList = new List<Reservation>();
+            ReservationList = SqlReservation.GetReservations(13);
+            var list = new List<Reservation>();
+            foreach (Reservation reservation in ReservationList)
+            {
+                //Nie pobiera rezerwacji które są anulowane i zaakceptowane
+                if (reservation.DateOfCancel == null && reservation.IsExecuted == false &&  reservation.ContestID != 0)
+                {
+                    list.Add(reservation);
+                }
+            }
+
+            return View(list);
+        }
+
         public ActionResult Complex()
         {
             List<OpeningHours> list = SqlCompany.GetOpeningHours();

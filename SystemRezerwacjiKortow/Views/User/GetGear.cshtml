@@ -8,14 +8,14 @@
 
 
 @Html.DropDownList("Filter", new SelectListItem[]{
-                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.All, Value = "0"},
+                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.Gear, Value = "2"},
                                     new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.Courts, Value = "1"},
-                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.Gear, Value = "2"}
+                                    new SelectListItem(){ Text = SystemRezerwacjiKortow.Resources.Texts.All, Value = "0"}
                                     }, new { @class = "form-control", @onchange = "CallChangefunc(this.value)" })
 
 
 
-<table class="table" >
+<table class="table">
     <tr>
 
         <th>
@@ -42,8 +42,8 @@
     @foreach (var item in Model)
     {
         if (item.IsAccepted)
-        { 
-            <tr style="background-color:greenyellow" class="Search" id="o1"> 
+        {
+            <tr style="background-color:greenyellow" class="Search" id="o1">
                 <td>
                     @Html.DisplayFor(modelItem => item.DateFrom)
                 </td>
@@ -106,11 +106,11 @@
 <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
 <script>
     function CallChangefunc(value) {
-        if (value == 2) {
-            window.location = "/User/GetGear";
-        }
-        else if (value == 1) {
+        if (value == 1) {
             window.location = "/User/GetCourts";
+        }
+        else if (value == 0) {
+            window.location = "/User/GetMyCourtsReservations";
         }
     }
 </script>

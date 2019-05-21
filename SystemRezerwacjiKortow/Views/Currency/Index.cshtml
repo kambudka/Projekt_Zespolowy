@@ -5,9 +5,19 @@
 
 <h2>@SystemRezerwacjiKortow.Resources.Texts.Currency</h2>
 <div>
-    <p>Aktualnie wybrana waluta: <strong>@ViewBag.SelectedCurrency</strong></p>
+    <p>@SystemRezerwacjiKortow.Resources.Texts.CurrentCurrency <strong>@ViewBag.SelectedCurrency</strong></p>
 </div>
+@using (Html.BeginForm("Index", "Currency", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
 
-@Html.DropDownList("CurrenciesDropDownList", (IEnumerable<SelectListItem>)ViewBag.Currencies)
-
-<button>@Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.Save, "UpdateCurrency", "Currency")</button>
+<table>
+    <tr>
+        <td>
+            @Html.DropDownList("Currencies", null, htmlAttributes: new { @class = "form-control" })
+        </td>
+        <td>
+            <input type="submit" value="@SystemRezerwacjiKortow.Resources.Texts.Save" class="btn btn-success" />
+        </td>
+    </tr>
+</table>
+}

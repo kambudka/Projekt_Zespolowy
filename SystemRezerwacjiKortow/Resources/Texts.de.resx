@@ -117,760 +117,763 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddingCourt" xml:space="preserve">
-    <value>Adding court</value>
-  </data>
-  <data name="AddingGear" xml:space="preserve">
-    <value>Adding gear</value>
-  </data>
-  <data name="Address" xml:space="preserve">
-    <value>Address</value>
-  </data>
   <data name="AdminPanel" xml:space="preserve">
-    <value>Admin panel</value>
+    <value>Administratorfenster</value>
   </data>
   <data name="Advertisements" xml:space="preserve">
-    <value>Advertisements</value>
-  </data>
-  <data name="AllCourts" xml:space="preserve">
-    <value>All Courts</value>
-  </data>
-  <data name="AllGears" xml:space="preserve">
-    <value>All Gears</value>
+    <value>Anzeigen</value>
   </data>
   <data name="Amount" xml:space="preserve">
-    <value>Amount</value>
-  </data>
-  <data name="CallCourtManagerNote" xml:space="preserve">
-    <value>In case of any questions about specific tennis court, please contact court's manager first (available at &lt;a href="#"&gt;Courts&lt;/a&gt; page).</value>
-  </data>
-  <data name="CanReserver" xml:space="preserve">
-    <value>Can reserve</value>
+    <value>Menge</value>
   </data>
   <data name="ChangePassword" xml:space="preserve">
-    <value>Change password</value>
+    <value>Passwort ändern</value>
   </data>
   <data name="City" xml:space="preserve">
-    <value>City</value>
-  </data>
-  <data name="ClientDiscount" xml:space="preserve">
-    <value>-10% from each price</value>
+    <value>Stadt</value>
   </data>
   <data name="CompanyName" xml:space="preserve">
-    <value>Company name</value>
+    <value>Der Name des Unternehmens</value>
   </data>
   <data name="Complex" xml:space="preserve">
-    <value>Complex</value>
-  </data>
-  <data name="ComplexData" xml:space="preserve">
-    <value>Complex data</value>
-  </data>
-  <data name="ComplexName" xml:space="preserve">
-    <value>Complex name</value>
+    <value>Komplex</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
-    <value>Confirm password</value>
+    <value>Passwort bestätigen</value>
   </data>
   <data name="Contact" xml:space="preserve">
-    <value>Contact</value>
-  </data>
-  <data name="Contests" xml:space="preserve">
-    <value>Contests</value>
+    <value>Kontakt</value>
   </data>
   <data name="Court" xml:space="preserve">
-    <value>Court</value>
-  </data>
-  <data name="CourtID" xml:space="preserve">
-    <value>Court ID</value>
+    <value>Tennisplatz</value>
   </data>
   <data name="CourtIndoor" xml:space="preserve">
-    <value>Indoor tennis court</value>
-  </data>
-  <data name="CourtName" xml:space="preserve">
-    <value>Court name</value>
-  </data>
-  <data name="CourtNumber" xml:space="preserve">
-    <value>Court number</value>
+    <value>Tennishalle</value>
   </data>
   <data name="Courts" xml:space="preserve">
-    <value>Courts</value>
-  </data>
-  <data name="CreateNew" xml:space="preserve">
-    <value>Create new</value>
-  </data>
-  <data name="CustomerID" xml:space="preserve">
-    <value>Customer ID</value>
-  </data>
-  <data name="DateCancel" xml:space="preserve">
-    <value>Date cancel reservation</value>
-  </data>
-  <data name="DateEnd" xml:space="preserve">
-    <value>Date end</value>
+    <value>Tennisplätze</value>
   </data>
   <data name="DateOfBirth" xml:space="preserve">
-    <value>Date of birth</value>
-  </data>
-  <data name="DatePayment" xml:space="preserve">
-    <value>Date payment</value>
-  </data>
-  <data name="DateStart" xml:space="preserve">
-    <value>Date start</value>
-  </data>
-  <data name="DayInterval" xml:space="preserve">
-    <value>Interval (how many days)</value>
-  </data>
-  <data name="DayOfMonth" xml:space="preserve">
-    <value>Day of month</value>
+    <value>Geburtsdatum</value>
   </data>
   <data name="DayOfWeek" xml:space="preserve">
-    <value>Day of week</value>
-  </data>
-  <data name="DayOfWeekNumber" xml:space="preserve">
-    <value>Number of day of week</value>
+    <value>Wochentag</value>
   </data>
   <data name="DayWeek1" xml:space="preserve">
-    <value>Monday</value>
+    <value>Montag</value>
   </data>
   <data name="DayWeek2" xml:space="preserve">
-    <value>Tuesday</value>
+    <value>Dienstag</value>
   </data>
   <data name="DayWeek3" xml:space="preserve">
-    <value>Wednesday</value>
+    <value>Mittwoch</value>
   </data>
   <data name="DayWeek4" xml:space="preserve">
-    <value>Thursday</value>
+    <value>Donnerstag</value>
   </data>
   <data name="DayWeek5" xml:space="preserve">
-    <value>Friday</value>
+    <value>Freitag</value>
   </data>
   <data name="DayWeek6" xml:space="preserve">
-    <value>Saturday</value>
+    <value>Samstag</value>
   </data>
   <data name="DayWeek7" xml:space="preserve">
-    <value>Sunday</value>
-  </data>
-  <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="DeleteQuestion" xml:space="preserve">
-    <value>Are you sure you want to delete this</value>
-  </data>
-  <data name="DeleteTitle" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="Description" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="Details" xml:space="preserve">
-    <value>Details</value>
+    <value>Sonntag</value>
   </data>
   <data name="Discount" xml:space="preserve">
-    <value>Discount</value>
-  </data>
-  <data name="DuePayment" xml:space="preserve">
-    <value>Due payment</value>
+    <value>Rabatt</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="EditComplex" xml:space="preserve">
-    <value>Edit complex date</value>
-  </data>
-  <data name="EditOpeningHours" xml:space="preserve">
-    <value>Edit opening hours</value>
-  </data>
-  <data name="EditTitle" xml:space="preserve">
-    <value>Edit</value>
+    <value>Eearbeiten</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
   <data name="EmailEnding" xml:space="preserve">
-    <value>&lt;br/&gt;&lt;br/&gt;Regards, &lt;br/&gt;Your Courts Team</value>
+    <value>&lt;br/&gt; &lt;br/&gt; Grüße, &lt;br/&gt; Team Ihrer Korts</value>
   </data>
   <data name="EmailExistsMessage" xml:space="preserve">
-    <value>The e-mail address provided is already in the database</value>
+    <value>Die angegebene E-Mail-Adresse befindet sich bereits in der Datenbank</value>
   </data>
   <data name="EmailFrom" xml:space="preserve">
-    <value>Our Courts</value>
+    <value>Nasze Korts</value>
   </data>
   <data name="EmailHello" xml:space="preserve">
-    <value>Hello</value>
+    <value>Willkommen</value>
   </data>
   <data name="EmailVerificationBody" xml:space="preserve">
-    <value>Your account has been successfully created. &lt;br/&gt; To activate your account, click the activation link below:</value>
+    <value>Ihr Konto wurde erfolgreich erstellt. &lt;br/&gt; Um Ihr Konto zu aktivieren, klicken Sie auf den folgenden Aktivierungslink:</value>
   </data>
   <data name="EmailVerificationMessage" xml:space="preserve">
-    <value>Everything is almost ready. Activation link to the account was sent to the email: </value>
+    <value>Alles ist fast fertig. Der Aktivierungslink zum Konto wurde an folgende Adresse gesendet:</value>
   </data>
-  <data name="EmailVerificationSubject" xml:space="preserve">
-    <value>Your account has been successfully created</value>
-  </data>
-  <data name="EndDate" xml:space="preserve">
-    <value>End date</value>
-  </data>
-  <data name="EnterDate" xml:space="preserve">
-    <value>Date field is required</value>
-  </data>
-  <data name="EnterDescription" xml:space="preserve">
-    <value>Description field is required</value>
-  </data>
-  <data name="EnterEmail" xml:space="preserve">
-    <value>Enter your e-mail</value>
-  </data>
-  <data name="EnterName" xml:space="preserve">
-    <value>Name field is required</value>
-  </data>
-  <data name="EnterNewPassword" xml:space="preserve">
-    <value>Enter new password</value>
-  </data>
-  <data name="EnterOldPassword" xml:space="preserve">
-    <value>Enter old password</value>
+  <data name="EmaiVerificationSubject" xml:space="preserve">
+    <value>Ihr Konto wurde erfolgreich erstellt</value>
   </data>
   <data name="EnterYourCity" xml:space="preserve">
-    <value>City field is required</value>
+    <value>Die Stadt ist erforderlich</value>
   </data>
   <data name="EnterYourConfirmPassword" xml:space="preserve">
-    <value>Confirm password field is required</value>
+    <value>Die Bestätigung des Passworts ist erforderlich</value>
   </data>
   <data name="EnterYourDateOfBirth" xml:space="preserve">
-    <value>Date of birth field is required</value>
+    <value>Geburtsdatum ist erforderlich</value>
   </data>
   <data name="EnterYourEmail" xml:space="preserve">
-    <value>Email field is required</value>
+    <value>Email ist erforderlich</value>
   </data>
   <data name="EnterYourName" xml:space="preserve">
-    <value>Name field is required</value>
+    <value>Der Name ist erforderlich</value>
   </data>
   <data name="EnterYourPassword" xml:space="preserve">
-    <value>Password field is required</value>
+    <value>Das Passwort ist erforderlich</value>
   </data>
   <data name="EnterYourPhone" xml:space="preserve">
-    <value>Phone field is required</value>
+    <value>Eine Telefonnummer ist erforderlich</value>
   </data>
   <data name="EnterYourPostalCode" xml:space="preserve">
-    <value>Postal code field is required</value>
+    <value>Eine Postleitzahl ist erforderlich</value>
   </data>
   <data name="EnterYourStreet" xml:space="preserve">
-    <value>Street field is required</value>
+    <value>Straße ist erforderlich</value>
   </data>
   <data name="EnterYourSurname" xml:space="preserve">
-    <value>Surname field is required</value>
+    <value>Der Nachname ist erforderlich</value>
   </data>
   <data name="EquipmentRental" xml:space="preserve">
-    <value>Equipment rental</value>
+    <value>Verleih von Sportgeräten</value>
   </data>
   <data name="EquipmentType" xml:space="preserve">
-    <value>Type of equipment</value>
+    <value>Art der Sportausrüstung</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Error</value>
+    <value>Fehler</value>
   </data>
   <data name="ErrorPasswordLength" xml:space="preserve">
-    <value>The password must have a minimum of 6 characters</value>
+    <value>Das Passwort muss aus mindestens 6 Zeichen bestehen</value>
   </data>
   <data name="ErrorPasswordMatch" xml:space="preserve">
-    <value>The passwords do not match</value>
+    <value>Die Passwörter stimmen nicht überein</value>
   </data>
   <data name="ErrorRequest" xml:space="preserve">
-    <value>An error occurred while processing the request</value>
-  </data>
-  <data name="EventName" xml:space="preserve">
-    <value>Event name</value>
+    <value>Bei der Verarbeitung der Anfrage ist ein Fehler aufgetreten</value>
   </data>
   <data name="Events" xml:space="preserve">
-    <value>Events</value>
+    <value>Geschehen</value>
   </data>
   <data name="Gear" xml:space="preserve">
-    <value>Gear</value>
-  </data>
-  <data name="GearAmount" xml:space="preserve">
-    <value>Gear amount</value>
-  </data>
-  <data name="GearID" xml:space="preserve">
-    <value>Gear ID</value>
-  </data>
-  <data name="GearName" xml:space="preserve">
-    <value>Gear name</value>
+    <value>Sportausrüstung</value>
   </data>
   <data name="General" xml:space="preserve">
     <value>General</value>
   </data>
   <data name="HomeCalendar" xml:space="preserve">
-    <value>CALENDAR</value>
+    <value>KALENDER</value>
   </data>
   <data name="HomeContact" xml:space="preserve">
-    <value>CONTACT</value>
+    <value>KONTAKT</value>
   </data>
   <data name="HomeContests" xml:space="preserve">
-    <value>CONTESTS</value>
+    <value>TURNIERE</value>
   </data>
   <data name="HomeCourts" xml:space="preserve">
-    <value>COURTS</value>
+    <value>TENNISPLÄTZE</value>
   </data>
   <data name="HomeGear" xml:space="preserve">
-    <value>GEAR</value>
+    <value>SPORTAUSRÜSTUNG</value>
   </data>
   <data name="HomeNews" xml:space="preserve">
-    <value>NEWS</value>
+    <value>BEITRÄGE</value>
   </data>
   <data name="HomePage" xml:space="preserve">
-    <value>Home</value>
+    <value>Startseite</value>
   </data>
   <data name="HomePrice" xml:space="preserve">
-    <value>PRICE LIST</value>
+    <value>PREISLISTE</value>
   </data>
   <data name="Hour" xml:space="preserve">
-    <value>Hour</value>
+    <value>Stunde</value>
   </data>
   <data name="InvalidPassword" xml:space="preserve">
-    <value>An incorrect password is provided</value>
+    <value>Es wurde ein falsches Passwort angegeben</value>
   </data>
   <data name="InvalidRequest" xml:space="preserve">
-    <value>Invalid request</value>
+    <value>Falsche Anfrage</value>
   </data>
   <data name="InvalidUser" xml:space="preserve">
-    <value>The user with the given email address does not exist</value>
-  </data>
-  <data name="IsAdmin" xml:space="preserve">
-    <value>Is admin</value>
-  </data>
-  <data name="IsCovered" xml:space="preserve">
-    <value>Is covered</value>
-  </data>
-  <data name="IsEmailVeryfied" xml:space="preserve">
-    <value>Is email veryfied</value>
-  </data>
-  <data name="IsForDoubles" xml:space="preserve">
-    <value>Is for doubles</value>
+    <value>Der Benutzer mit der angegebenen E-Mail-Adresse existiert nicht</value>
   </data>
   <data name="JustNow" xml:space="preserve">
-    <value>totay</value>
+    <value>heute</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Sprache</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>Einloggen</value>
   </data>
   <data name="LoginTitle" xml:space="preserve">
-    <value>Login</value>
+    <value>Eogowanie</value>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>Logout</value>
+    <value>Abmelden</value>
   </data>
   <data name="LogoutSuccessful" xml:space="preserve">
-    <value>You have been successfully logged out</value>
+    <value>Sie haben sich erfolgreich abgemeldet</value>
   </data>
   <data name="MondayFriday" xml:space="preserve">
-    <value>Mon. - Fri.</value>
+    <value>Mon.-Fri.</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="NewUser" xml:space="preserve">
-    <value>Are you a new user</value>
-  </data>
-  <data name="OpeningHours" xml:space="preserve">
-    <value>Opening hours</value>
+    <value>Sie sind ein neuer Benutzer</value>
   </data>
   <data name="PageTitle" xml:space="preserve">
-    <value>Tennis court system</value>
+    <value>Tennisplatz-System</value>
   </data>
   <data name="Panel" xml:space="preserve">
-    <value>Panel</value>
+    <value>Platte</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Password</value>
+    <value>Passwort</value>
   </data>
   <data name="PaymentsHistory" xml:space="preserve">
-    <value>Payments history</value>
+    <value>Zahlungsverlauf</value>
   </data>
   <data name="PostalCode" xml:space="preserve">
-    <value>Postal code</value>
-  </data>
-  <data name="PostID" xml:space="preserve">
-    <value>Post ID</value>
+    <value>Postleitzahl</value>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>Price per hour</value>
+    <value>Preis pro Stunde</value>
   </data>
   <data name="PriceList" xml:space="preserve">
-    <value>Price list</value>
+    <value>Preisliste</value>
   </data>
   <data name="PriceListSummer" xml:space="preserve">
-    <value>Summer price list</value>
+    <value>Sommerpreisliste</value>
   </data>
   <data name="PriceListWinter" xml:space="preserve">
-    <value>Winter price list</value>
+    <value>Winterpreisliste</value>
   </data>
   <data name="ProfileConfigurationGeneral" xml:space="preserve">
-    <value>Profile configuration - general</value>
+    <value>Profilkonfiguration - Allgemein</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Register</value>
+    <value>Registrieren</value>
   </data>
   <data name="RegisterNow" xml:space="preserve">
-    <value>Register</value>
+    <value>Registrieren</value>
   </data>
   <data name="Registration" xml:space="preserve">
-    <value>Registration</value>
+    <value>die Registrierung</value>
   </data>
   <data name="RememberMe" xml:space="preserve">
-    <value>Remember me</value>
-  </data>
-  <data name="RemindPassword" xml:space="preserve">
-    <value>I forgot my password</value>
-  </data>
-  <data name="RepeatPassword" xml:space="preserve">
-    <value>Repeat password</value>
+    <value>Erinnere dich an mich</value>
   </data>
   <data name="ReturnHome" xml:space="preserve">
-    <value>Return to homepage</value>
-  </data>
-  <data name="ReturnToList" xml:space="preserve">
-    <value>Return to list</value>
+    <value>Zurück zur Hauptseite</value>
   </data>
   <data name="RoleID" xml:space="preserve">
-    <value>Role ID</value>
+    <value>Rollen-ID</value>
   </data>
   <data name="RoleName" xml:space="preserve">
-    <value>Role</value>
+    <value>Rollen</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Speichern</value>
   </data>
   <data name="SetUpPayments" xml:space="preserve">
-    <value>Set up payments</value>
+    <value>Zahlungen einrichten</value>
   </data>
   <data name="Show" xml:space="preserve">
-    <value>Show</value>
+    <value>Anzeige</value>
   </data>
   <data name="SqlError001" xml:space="preserve">
-    <value>No court</value>
-  </data>
-  <data name="StartDate" xml:space="preserve">
-    <value>Start date</value>
+    <value>Kein Tennisplatz</value>
   </data>
   <data name="Street" xml:space="preserve">
-    <value>Street</value>
+    <value>Straße</value>
   </data>
   <data name="Success" xml:space="preserve">
-    <value>Success</value>
+    <value>Erfolg</value>
   </data>
   <data name="SummerSeason" xml:space="preserve">
-    <value>Summer season 2019</value>
-  </data>
-  <data name="SurfaceType" xml:space="preserve">
-    <value>Surface type</value>
+    <value>Sommersaison 2019</value>
   </data>
   <data name="Surname" xml:space="preserve">
-    <value>Surname</value>
-  </data>
-  <data name="TimeFrom" xml:space="preserve">
-    <value>Time from</value>
-  </data>
-  <data name="TimeTo" xml:space="preserve">
-    <value>Time to</value>
-  </data>
-  <data name="UserID" xml:space="preserve">
-    <value>User ID</value>
+    <value>Nachname</value>
   </data>
   <data name="UserManual" xml:space="preserve">
-    <value>User's manual</value>
-  </data>
-  <data name="UserName" xml:space="preserve">
-    <value>Name and surname</value>
+    <value>Benutzerhandbuch</value>
   </data>
   <data name="UserProfile" xml:space="preserve">
-    <value>User profile</value>
+    <value>Benutzerprofil</value>
   </data>
   <data name="Users" xml:space="preserve">
-    <value>Users</value>
+    <value>Benutzer</value>
   </data>
   <data name="VerificationSuccessful" xml:space="preserve">
-    <value>Your account has been confirmed. Click here to login</value>
+    <value>Ihr Konto wurde bestätigt. Klicken Sie hier, um sich anzumelden</value>
   </data>
   <data name="VerificationUser" xml:space="preserve">
-    <value>User veryfication</value>
+    <value>Benutzerüberprüfung</value>
   </data>
   <data name="VerifyYourEmail" xml:space="preserve">
-    <value>First, verify your email address</value>
-  </data>
-  <data name="Weekend" xml:space="preserve">
-    <value>Weekend</value>
+    <value>Überprüfen Sie zunächst Ihre E-Mail-Adresse</value>
   </data>
   <data name="Welcome" xml:space="preserve">
-    <value>Welcome</value>
+    <value>Willkommen</value>
   </data>
   <data name="WelcomeInTennis" xml:space="preserve">
-    <value>Welcome in tennis world</value>
+    <value>Willkommen in der Welt des Tennis</value>
   </data>
   <data name="WinterSeason" xml:space="preserve">
-    <value>Winter season 2019</value>
+    <value>Wintersaison 2019</value>
   </data>
-  <data name="WinterSeasonBeginning" xml:space="preserve">
-    <value>Winter Season Beginning</value>
+  <data name="ComplexName" xml:space="preserve">
+    <value>Der Name des Komplexes</value>
   </data>
-  <data name="WinterSeasonEnding" xml:space="preserve">
-    <value>Winter Season Ending</value>
+  <data name="CourtName" xml:space="preserve">
+    <value>Der Name des Tennisplatzes</value>
+  </data>
+  <data name="CourtNumber" xml:space="preserve">
+    <value>Tennisplatz Nummer</value>
+  </data>
+  <data name="DuePayment" xml:space="preserve">
+    <value>Fällige Zahlung</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Enddatum</value>
+  </data>
+  <data name="EnterDate" xml:space="preserve">
+    <value>Das Datum ist erforderlich</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Der Name ist erforderlich</value>
+  </data>
+  <data name="EventName" xml:space="preserve">
+    <value>Ereignisname</value>
+  </data>
+  <data name="IsCovered" xml:space="preserve">
+    <value>Ist es gedeckt?</value>
+  </data>
+  <data name="IsForDoubles" xml:space="preserve">
+    <value>Ist es doppelt</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Startdatum</value>
+  </data>
+  <data name="SurfaceType" xml:space="preserve">
+    <value>Oberflächentyp</value>
+  </data>
+  <data name="ComplexData" xml:space="preserve">
+    <value>Komplexe Daten</value>
+  </data>
+  <data name="Contests" xml:space="preserve">
+    <value>Turniere</value>
+  </data>
+  <data name="CourtID" xml:space="preserve">
+    <value>Tennisplatz-ID</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>Erstelle ein neues</value>
+  </data>
+  <data name="CustomerID" xml:space="preserve">
+    <value>Klient-ID</value>
+  </data>
+  <data name="DayOfWeekNumber" xml:space="preserve">
+    <value>Nummer des Wochentags</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>löschen</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="EditComplex" xml:space="preserve">
+    <value>Komplexe Daten bearbeiten</value>
+  </data>
+  <data name="EditOpeningHours" xml:space="preserve">
+    <value>Ausgabe der Öffnungszeiten</value>
+  </data>
+  <data name="GearName" xml:space="preserve">
+    <value>Der Name des Sportgeräts</value>
+  </data>
+  <data name="IsEmailVeryfied" xml:space="preserve">
+    <value>Ist die E-Mail bestätigt</value>
+  </data>
+  <data name="OpeningHours" xml:space="preserve">
+    <value>Öffnungszeiten</value>
+  </data>
+  <data name="ReturnToList" xml:space="preserve">
+    <value>Zurück zur Liste</value>
+  </data>
+  <data name="TimeFrom" xml:space="preserve">
+    <value>Zeit von</value>
+  </data>
+  <data name="TimeTo" xml:space="preserve">
+    <value>Zeit zu</value>
+  </data>
+  <data name="AddingCourt" xml:space="preserve">
+    <value>Hinzufügen eines Tennisplatzes</value>
+  </data>
+  <data name="AddingGear" xml:space="preserve">
+    <value>Hinzufügen eine Sportgeräte</value>
+  </data>
+  <data name="CanReserver" xml:space="preserve">
+    <value>Kann er reservieren</value>
+  </data>
+  <data name="DeleteQuestion" xml:space="preserve">
+    <value>Möchten Sie dies wirklich löschen?</value>
+  </data>
+  <data name="DeleteTitle" xml:space="preserve">
+    <value>Entfernung</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>Bearbeitung</value>
+  </data>
+  <data name="IsAdmin" xml:space="preserve">
+    <value>Ist er ein Administrator</value>
+  </data>
+  <data name="ContestID" xml:space="preserve">
+    <value>Ereignis-ID</value>
+  </data>
+  <data name="CyclicReservationID" xml:space="preserve">
+    <value>Zyklische Reservierung-ID</value>
+  </data>
+  <data name="DateCancel" xml:space="preserve">
+    <value>Datum der Stornierung</value>
+  </data>
+  <data name="DateEnd" xml:space="preserve">
+    <value>Enddatum</value>
+  </data>
+  <data name="DateInsert" xml:space="preserve">
+    <value>Datum der Reservierung</value>
+  </data>
+  <data name="DatePayment" xml:space="preserve">
+    <value>Datum der Zahlung</value>
+  </data>
+  <data name="DateStart" xml:space="preserve">
+    <value>Startdatum</value>
+  </data>
+  <data name="DayInterval" xml:space="preserve">
+    <value>Häufigkeit (wie viele Tage)</value>
+  </data>
+  <data name="DayOfMonth" xml:space="preserve">
+    <value>Tag des Monats</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="EnterDescription" xml:space="preserve">
+    <value>Beschreibung ist erforderlich</value>
+  </data>
+  <data name="GearAmount" xml:space="preserve">
+    <value>Die Menge an Sportgeräten</value>
+  </data>
+  <data name="GearID" xml:space="preserve">
+    <value>Sportausrüstung-ID</value>
+  </data>
+  <data name="IsExecuted" xml:space="preserve">
+    <value>Abgeschlossen haben</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>Benutzer-ID</value>
+  </data>
+  <data name="Weekend" xml:space="preserve">
+    <value>Wochenende</value>
   </data>
   <data name="WorkingDays" xml:space="preserve">
-    <value>Monday - Friday</value>
+    <value>Montag - Freitag</value>
+  </data>
+  <data name="ClientDiscount" xml:space="preserve">
+    <value>10% Rabatt auf jeden Preis</value>
+  </data>
+  <data name="AllGears" xml:space="preserve">
+    <value>Alle Sportgeräte</value>
+  </data>
+  <data name="AllCourts" xml:space="preserve">
+    <value>Alle Tennisplätze</value>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>Geben Sie Ihre E-Mail-Adresse ein</value>
+  </data>
+  <data name="EnterNewPassword" xml:space="preserve">
+    <value>Geben Sie das neue Passwort ein</value>
+  </data>
+  <data name="EnterOldPassword" xml:space="preserve">
+    <value>Geben Sie das alte Passwort ein</value>
+  </data>
+  <data name="RemindPassword" xml:space="preserve">
+    <value>Ich habe mein Passwort vergessen</value>
+  </data>
+  <data name="RepeatPassword" xml:space="preserve">
+    <value>Passwort wiederholen</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="CallCourtManagerNote" xml:space="preserve">
+    <value>Wenn Sie Fragen zu einem bestimmten Gericht haben, wenden Sie sich bitte zuerst an den Vorgesetzten (verfügbar unter &lt;a href="#"&gt; Tennisplätze &lt;/a&gt;).</value>
+  </data>
+  <data name="WinterSeasonBeginning" xml:space="preserve">
+    <value>Der Beginn der Wintersaison</value>
+  </data>
+  <data name="WinterSeasonEnding" xml:space="preserve">
+    <value>Das Ende der Wintersaison</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Vor- und Nachname</value>
   </data>
   <data name="DateOfInsert" xml:space="preserve">
-    <value>Date</value>
+    <value>Datum</value>
   </data>
   <data name="DescriptionDE" xml:space="preserve">
-    <value>Content DE</value>
+    <value>Inhaltsverzeichnis  DE</value>
   </data>
   <data name="DescriptionEN" xml:space="preserve">
-    <value>Content EN</value>
+    <value>Inhaltsverzeichnis  EN</value>
   </data>
   <data name="DescriptionPL" xml:space="preserve">
-    <value>Content PL</value>
+    <value>Inhaltsverzeichnis  PL</value>
+  </data>
+  <data name="PostID" xml:space="preserve">
+    <value>Post-ID</value>
   </data>
   <data name="TitleDE" xml:space="preserve">
-    <value>Title DE</value>
+    <value>Titel DE</value>
   </data>
   <data name="TitleEN" xml:space="preserve">
-    <value>Title EN</value>
+    <value>Titel EN</value>
   </data>
   <data name="TitlePL" xml:space="preserve">
-    <value>Title PL</value>
+    <value>Titel PL</value>
+  </data>
+  <data name="AddingPost" xml:space="preserve">
+    <value>Post hinzufügen</value>
   </data>
   <data name="Post" xml:space="preserve">
     <value>Post</value>
   </data>
   <data name="Posts" xml:space="preserve">
-    <value>Posts</value>
+    <value>Beiträge</value>
   </data>
-  <data name="AddingPost" xml:space="preserve">
-    <value>Adding Post</value>
+  <data name="CharRemainingContent" xml:space="preserve">
+    <value>300 Zeichen zu verwenden</value>
   </data>
-  <data name="CharsRemainingContent" xml:space="preserve">
-    <value>300 characters remaining</value>
-  </data>
-  <data name="CharsRemainingTitle" xml:space="preserve">
-    <value>50 characters remaining</value>
+  <data name="CharRemainingTitle" xml:space="preserve">
+    <value>50 Zeichen zu verwenden</value>
   </data>
   <data name="Publish" xml:space="preserve">
-    <value>Publish</value>
+    <value>Post</value>
   </data>
   <data name="AdvertisementName" xml:space="preserve">
-    <value>Advertisement name</value>
+    <value>Der Name der Anzeige</value>
   </data>
   <data name="Warning" xml:space="preserve">
-    <value>An attempt to delete an ad has been rejected! The advertisement has already been accepted by the administration.</value>
+    <value>Der Versuch, eine Anzeige zu löschen, wurde abgelehnt! Die Anzeige wurde bereits von der Verwaltung angenommen.</value>
   </data>
   <data name="CanReserve" xml:space="preserve">
-    <value>Can reserve</value>
+    <value>Kann er reservieren</value>
   </data>
   <data name="ContestName" xml:space="preserve">
-    <value>Contest name</value>
+    <value>Der Name des Turniers</value>
   </data>
   <data name="IsAccepted" xml:space="preserve">
-    <value>Is accepted</value>
+    <value>Wird akzeptiert</value>
   </data>
-  <data name="IsExecuted" xml:space="preserve">
-    <value>Is executed</value>
+  <data name="IsExecuted1" xml:space="preserve">
+    <value>Ist es implementiert</value>
   </data>
   <data name="ReservationName" xml:space="preserve">
-    <value>Reservated item</value>
+    <value>Reservierter Artikel</value>
   </data>
   <data name="PriceWeekendRatio" xml:space="preserve">
-    <value>Price weekend ratio</value>
+    <value>Preisverhältnis über das Wochenende</value>
   </data>
   <data name="PriceWinterRatio" xml:space="preserve">
-    <value>Price winter ratio</value>
+    <value>Preisverhältnis im Winter</value>
   </data>
   <data name="DeleteAccount" xml:space="preserve">
-    <value>Delete Account</value>
-  </data>
-  <data name="DateInsert" xml:space="preserve">
-    <value>Date</value>
+    <value>Konto löschen</value>
   </data>
   <data name="Organizer" xml:space="preserve">
-    <value>Organizer</value>
+    <value>Veranstalter</value>
   </data>
   <data name="Payment" xml:space="preserve">
-    <value>Payment</value>
+    <value>Ausgabe</value>
   </data>
   <data name="BackToList" xml:space="preserve">
-    <value>Back to list</value>
+    <value>Zurück zur Liste</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Stornieren</value>
   </data>
   <data name="CancelReservation" xml:space="preserve">
-    <value>Cancel reservation</value>
-  </data>
-  <data name="ContestID" xml:space="preserve">
-    <value>Event ID</value>
-  </data>
-  <data name="CyclicReservationID" xml:space="preserve">
-    <value>Cyclic Reservation ID</value>
+    <value>Reservierung stornieren</value>
   </data>
   <data name="MyReservations" xml:space="preserve">
-    <value>My reservations</value>
+    <value>Meine Reservierungen</value>
   </data>
   <data name="ShowMyReservations" xml:space="preserve">
-    <value>Show my reservations</value>
+    <value>Meine Reservierungen anzeigen</value>
   </data>
   <data name="CyclicReservationError" xml:space="preserve">
-    <value>Ups! Looks like this date has already been taken :(</value>
+    <value>Ups! Es scheint, dass dieses Datum bereits vergeben ist :(</value>
   </data>
   <data name="CyclicReservationForm" xml:space="preserve">
-    <value>Make a cyclic reservation order</value>
+    <value>Machen Sie eine zyklische Reservierung</value>
   </data>
   <data name="Confirm" xml:space="preserve">
-    <value>Confirm</value>
+    <value>Bestätigen</value>
   </data>
   <data name="IdTransaction" xml:space="preserve">
-    <value>ID transaction</value>
+    <value>Transaktion-ID</value>
   </data>
   <data name="Redeem" xml:space="preserve">
-    <value>Redeem</value>
+    <value>Einlösen</value>
   </data>
   <data name="Reminder" xml:space="preserve">
-    <value>The reservation must be paid at the cash desk no later than 10 minutes before the beginning of the booking. To cancel a reservation, contact</value>
+    <value>Die Reservierung muss spätestens 10 Minuten vor Buchungsbeginn an der Kasse bezahlt werden. Um eine Reservierung zu stornieren, wenden Sie sich an</value>
   </data>
   <data name="ReservationConfirmation" xml:space="preserve">
-    <value>Confirmation of reservation nr</value>
+    <value>Reservierungsbestätigung nr</value>
   </data>
   <data name="ThanksForReservation" xml:space="preserve">
-    <value>ThanksForReservation	Thank you for using the services of the Tennis Club Website. Below we send a summary of your booking transaction.</value>
+    <value>Vielen Dank, dass Sie die Dienste der Tennis Club-Website nutzen. Nachfolgend senden wir eine Zusammenfassung</value>
   </data>
   <data name="WaitingReservations" xml:space="preserve">
-    <value>Waiting Reservations</value>
+    <value>Ausstehende Reservierungen</value>
   </data>
   <data name="Withdraw" xml:space="preserve">
-    <value>Withdraw</value>
+    <value>Zurückziehen</value>
   </data>
   <data name="AmountAvailable" xml:space="preserve">
-    <value>Available amount</value>
+    <value>Verfügbare Menge</value>
   </data>
   <data name="FreeCourts" xml:space="preserve">
-    <value>Free Courts</value>
+    <value>Frei Tennisplätze</value>
   </data>
   <data name="NoSearchedCourts" xml:space="preserve">
-    <value>There are no searched courts for choosen dates</value>
+    <value>Keine freien Plätze zum angegebenen Datum</value>
   </data>
   <data name="Search" xml:space="preserve">
-    <value>Search</value>
+    <value>Suche</value>
   </data>
   <data name="Searcher" xml:space="preserve">
-    <value>Search for free courts</value>
+    <value>Suchmaschine für frei Tennisplätze</value>
   </data>
   <data name="SearchResults" xml:space="preserve">
-    <value>Search results</value>
+    <value>Suchergebnisse</value>
   </data>
   <data name="UpcomingTournaments" xml:space="preserve">
-    <value>Upcoming Tournaments</value>
+    <value>Kommende Turniere</value>
   </data>
   <data name="AmountOfHours" xml:space="preserve">
-    <value>Amount of hours</value>
+    <value>Anzahl der Stunden</value>
   </data>
   <data name="CyclicReservation" xml:space="preserve">
-    <value>Cyclic Reservation</value>
+    <value>Zyklische Reservierung</value>
   </data>
   <data name="Next" xml:space="preserve">
-    <value>Next</value>
+    <value>Nächste</value>
   </data>
   <data name="Previous" xml:space="preserve">
-    <value>Previous</value>
+    <value>Früher</value>
   </data>
   <data name="ReservationType" xml:space="preserve">
-    <value>Reservation Type</value>
+    <value>Art der Reservierung</value>
   </data>
   <data name="Reserve" xml:space="preserve">
-    <value>Reserve</value>
+    <value>Reserviere</value>
   </data>
   <data name="AvailableGear" xml:space="preserve">
-    <value>Available gear</value>
+    <value>Vorhandene Sportgeräte</value>
   </data>
   <data name="DifferentUsers" xml:space="preserve">
-    <value>Count of different users</value>
+    <value>Die Anzahl der eindeutigen Reservisten</value>
   </data>
   <data name="MonthList" xml:space="preserve">
-    <value>List of Months</value>
+    <value>Liste der Monate</value>
   </data>
   <data name="MonthName" xml:space="preserve">
-    <value>Month</value>
+    <value>Monat</value>
   </data>
   <data name="MonthRaport" xml:space="preserve">
-    <value>Monthly Raport</value>
+    <value>Monatsbericht</value>
   </data>
   <data name="MonthYear" xml:space="preserve">
-    <value>Year</value>
+    <value>Jahr</value>
   </data>
   <data name="Print" xml:space="preserve">
-    <value>Print</value>
+    <value>Drucken</value>
   </data>
   <data name="TotalGearCount" xml:space="preserve">
-    <value>Monthly Gear Count</value>
+    <value>Anzahl der gemieteten Sportgeräte</value>
   </data>
   <data name="TotalHireCount" xml:space="preserve">
-    <value>Monthly Hire Count</value>
+    <value>Anzahl der vorgenommenen Reservierungen</value>
   </data>
   <data name="TotalHireRevenue" xml:space="preserve">
-    <value>Monthly Revenue</value>
+    <value>Monatliches Einkommen</value>
   </data>
   <data name="Currency" xml:space="preserve">
-    <value>Currency</value>
+    <value>Währung</value>
   </data>
   <data name="CurrentCurrency" xml:space="preserve">
-    <value>Currently chosen currency:</value>
+    <value>Die aktuell ausgewählte Währung:</value>
   </data>
   <data name="About" xml:space="preserve">
-    <value>About the program</value>
+    <value>Über das Programm</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>FAQ</value>
   </data>
   <data name="FAQIntro" xml:space="preserve">
-    <value>Welcome to the &lt;strong&gt;F&lt;/strong&gt;requentry &lt;strong&gt;A&lt;/strong&gt;sked &lt;strong&gt;Q&lt;/strong&gt;uestions page! Here is the list containing important and common questions about this website. If you can't find an answer to your question, please contact with us at Contact page.</value>
+    <value>Willkommen auf der Seite mit den häufig gestellten Fragen (&lt;strong&gt;FAQ&lt;/strong&gt;)! Hier finden Sie eine Liste der wichtigsten und am häufigsten gestellten Fragen zu dieser Website. Wenn Sie keine Antwort auf Ihre Frage finden, kontaktieren Sie uns bitte über die Kontaktseite.</value>
   </data>
   <data name="Here" xml:space="preserve">
-    <value>Here</value>
+    <value>Hier</value>
   </data>
   <data name="ChangeLanguageAnswer" xml:space="preserve">
-    <value>To change language, head to the Navigation Bar. There you will find Language tab. Click it to choose one from the list.</value>
+    <value>Um die Sprache zu ändern, navigieren Sie zur Navigationsleiste. Dort finden Sie die Registerkarte Sprache. Klicken Sie darauf, um einen Eintrag aus der Liste auszuwählen.</value>
   </data>
   <data name="HowToChangeLanguage" xml:space="preserve">
-    <value>How to change language?</value>
+    <value>Wie ändere ich die Sprache?</value>
   </data>
   <data name="CommonQuestions" xml:space="preserve">
-    <value>Common Questions</value>
+    <value>Häufige Frage</value>
   </data>
   <data name="CyclicReservationAnswer" xml:space="preserve">
-    <value>Cyclic reservation allows user to reserve court every week at specified hour. Thanks to that user can train at the same hours every week without re-reserving his order. To use cyclic reservation, simply check checkbox when reserving court.</value>
+    <value>Mit der zyklischen Reservierung kann der Benutzer jede Woche zu einer bestimmten Stunde einen Platz reservieren. Dank dessen kann der Benutzer jede Woche zu denselben Stunden trainieren, ohne seine Bestellung erneut zu reservieren. Um die zyklische Reservierung zu verwenden, aktivieren Sie einfach das Kontrollkästchen bei der Reservierung Ihres Platzes.</value>
   </data>
   <data name="HowToRegisterAnswer" xml:space="preserve">
-    <value>It's very easy! First head to navigation bar and select Register tab on the right. You will be redirected to Registration page. Fill form with your credentials and press Register button. You should see a message about successfully created account. Now go to your email and open message from Twoje Korty Tenisowe. There you will find activation link. Click on it to activate your account. After that you have access to more website functionalities!</value>
+    <value>Es ist sehr leicht! Gehen Sie zuerst zur Navigationsleiste und wählen Sie die Registerkarte Registrieren auf der rechten Seite. Sie werden zur Registrierungsseite weitergeleitet. Füllen Sie das Formular mit Ihren Zugangsdaten aus und klicken Sie auf Registrieren. Sie sollten eine Nachricht über das erfolgreich erstellte Konto sehen. Gehen Sie jetzt zu Ihrer E-Mail und öffnen Sie die Nachricht von Twoje Korty Tenisowe. Dort finden Sie den Aktivierungslink. Klicken Sie darauf, um Ihr Konto zu aktivieren. Danach haben Sie Zugriff auf weitere Website-Funktionen!</value>
   </data>
   <data name="HowToRegisterQuestion" xml:space="preserve">
-    <value>How to register?</value>
+    <value>Wie man sich registriert?</value>
   </data>
   <data name="HowToReserveAnswer" xml:space="preserve">
-    <value>To reserve court, head to Calendar option at home page. Here choose day when you want to reserve court, then hold your left mouse button, select desired hours and release that button. A message will appear with reservation info. Click Save to make a reservation. Keep in mind that your reservation is not instant as administrator or court manager has to confirm. Pay for your order. When your reservation is accepted, you will get confirmation email.</value>
+    <value>Um einen Platz zu reservieren, gehen Sie zur Kalenderoption auf der Startseite. Wählen Sie hier den Tag aus, an dem Sie einen Platz reservieren möchten, halten Sie die linke Maustaste gedrückt, wählen Sie die gewünschten Stunden aus und lassen Sie die Taste los. Eine Nachricht mit Reservierungsinformationen wird angezeigt. Klicken Sie auf Speichern, um eine Reservierung vorzunehmen. Beachten Sie, dass Ihre Reservierung nicht sofort gültig ist, da der Administrator oder der Gerichtsmanager dies bestätigen muss. Zahlen Sie für Ihre Bestellung. Wenn Ihre Reservierung akzeptiert wird, erhalten Sie eine Bestätigungs-E-Mail.</value>
   </data>
   <data name="HowToReserveQuestion" xml:space="preserve">
-    <value>How to reserve court?</value>
+    <value>Wie reserviere ich einen Tennisplatz?</value>
   </data>
   <data name="Reservations" xml:space="preserve">
-    <value>Reservations</value>
+    <value>Reservierung</value>
   </data>
   <data name="TennisCourtSystemAnswer" xml:space="preserve">
-    <value>Tennis Court System is a website made for all tennis enthusiasts. You can here reserve courts for trainings, additional gear, and even organize a tournament. You can also easily participate in tournaments organized by others. We do hope our website will be helpful!</value>
+    <value>Tennisplatzsystem ist eine Website für alle Tennisbegeisterten. Sie können hier Plätze für Trainings und zusätzliche Ausrüstung reservieren und sogar ein Turnier organisieren. Sie können auch problemlos an von anderen organisierten Turnieren teilnehmen. Wir hoffen, dass unsere Website hilfreich sein wird!</value>
   </data>
   <data name="WhatIsCyclicReservation" xml:space="preserve">
-    <value>What is cyclic reservation?</value>
+    <value>Was ist eine zyklische Reservierung?</value>
   </data>
   <data name="WhatIsTennisCourtSystem" xml:space="preserve">
-    <value>What is Tennis Court System?</value>
-  </data>
+    <value>Was ist ein Tennisplatzsystem?</value>
+   </data>
   <data name="All" xml:space="preserve">
-    <value>All</value>
+    <value>Alle</value>
   </data>
 </root>
