@@ -876,4 +876,7 @@
   <data name="All" xml:space="preserve">
     <value>Wszystko</value>
   </data>
+  <data name="GeneratePDF" xml:space="preserve">
+    <value>Generuj PDF</value>
+  </data>
 </root>

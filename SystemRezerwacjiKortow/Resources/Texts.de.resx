@@ -872,8 +872,11 @@
   </data>
   <data name="WhatIsTennisCourtSystem" xml:space="preserve">
     <value>Was ist ein Tennisplatzsystem?</value>
-   </data>
+  </data>
   <data name="All" xml:space="preserve">
     <value>Alle</value>
+  </data>
+  <data name="GeneratePDF" xml:space="preserve">
+    <value>PDF generieren</value>
   </data>
 </root>
