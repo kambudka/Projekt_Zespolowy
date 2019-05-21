@@ -542,6 +542,8 @@
     <Content Include="Views\Statistics\MakePDF.cshtml" />
     <Content Include="Views\Statistics\MonthList.cshtml" />
     <Content Include="Views\Currency\Index.cshtml" />
+    <Content Include="Views\Statistics\MonthRevenue.cshtml" />
+    <Content Include="Views\Statistics\MonthGear.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
