@@ -6,6 +6,7 @@
 
 <h2>@SystemRezerwacjiKortow.Resources.Texts.MonthList</h2>
 @Html.Partial("_AdminPartial")
+<div>@Html.Partial("_StatisticsPartial")</div>
 <table class="table">
     <tr>
         <th>
@@ -51,7 +52,7 @@
                     @Html.DisplayFor(modelItem => item.DifferenUsers)
                 </td>*@
             <td>
-                @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.Print, "PrintPDF", item)
+                @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.Print, "MakePDF", item)
             </td>
         </tr>
     }
