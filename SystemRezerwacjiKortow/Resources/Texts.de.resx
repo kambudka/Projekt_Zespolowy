@@ -825,6 +825,54 @@
   <data name="CurrentCurrency" xml:space="preserve">
     <value>Die aktuell ausgewählte Währung:</value>
   </data>
+  <data name="About" xml:space="preserve">
+    <value>Über das Programm</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="FAQIntro" xml:space="preserve">
+    <value>Willkommen auf der Seite mit den häufig gestellten Fragen (&lt;strong&gt;FAQ&lt;/strong&gt;)! Hier finden Sie eine Liste der wichtigsten und am häufigsten gestellten Fragen zu dieser Website. Wenn Sie keine Antwort auf Ihre Frage finden, kontaktieren Sie uns bitte über die Kontaktseite.</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>Hier</value>
+  </data>
+  <data name="ChangeLanguageAnswer" xml:space="preserve">
+    <value>Um die Sprache zu ändern, navigieren Sie zur Navigationsleiste. Dort finden Sie die Registerkarte Sprache. Klicken Sie darauf, um einen Eintrag aus der Liste auszuwählen.</value>
+  </data>
+  <data name="HowToChangeLanguage" xml:space="preserve">
+    <value>Wie ändere ich die Sprache?</value>
+  </data>
+  <data name="CommonQuestions" xml:space="preserve">
+    <value>Häufige Frage</value>
+  </data>
+  <data name="CyclicReservationAnswer" xml:space="preserve">
+    <value>Mit der zyklischen Reservierung kann der Benutzer jede Woche zu einer bestimmten Stunde einen Platz reservieren. Dank dessen kann der Benutzer jede Woche zu denselben Stunden trainieren, ohne seine Bestellung erneut zu reservieren. Um die zyklische Reservierung zu verwenden, aktivieren Sie einfach das Kontrollkästchen bei der Reservierung Ihres Platzes.</value>
+  </data>
+  <data name="HowToRegisterAnswer" xml:space="preserve">
+    <value>Es ist sehr leicht! Gehen Sie zuerst zur Navigationsleiste und wählen Sie die Registerkarte Registrieren auf der rechten Seite. Sie werden zur Registrierungsseite weitergeleitet. Füllen Sie das Formular mit Ihren Zugangsdaten aus und klicken Sie auf Registrieren. Sie sollten eine Nachricht über das erfolgreich erstellte Konto sehen. Gehen Sie jetzt zu Ihrer E-Mail und öffnen Sie die Nachricht von Twoje Korty Tenisowe. Dort finden Sie den Aktivierungslink. Klicken Sie darauf, um Ihr Konto zu aktivieren. Danach haben Sie Zugriff auf weitere Website-Funktionen!</value>
+  </data>
+  <data name="HowToRegisterQuestion" xml:space="preserve">
+    <value>Wie man sich registriert?</value>
+  </data>
+  <data name="HowToReserveAnswer" xml:space="preserve">
+    <value>Um einen Platz zu reservieren, gehen Sie zur Kalenderoption auf der Startseite. Wählen Sie hier den Tag aus, an dem Sie einen Platz reservieren möchten, halten Sie die linke Maustaste gedrückt, wählen Sie die gewünschten Stunden aus und lassen Sie die Taste los. Eine Nachricht mit Reservierungsinformationen wird angezeigt. Klicken Sie auf Speichern, um eine Reservierung vorzunehmen. Beachten Sie, dass Ihre Reservierung nicht sofort gültig ist, da der Administrator oder der Gerichtsmanager dies bestätigen muss. Zahlen Sie für Ihre Bestellung. Wenn Ihre Reservierung akzeptiert wird, erhalten Sie eine Bestätigungs-E-Mail.</value>
+  </data>
+  <data name="HowToReserveQuestion" xml:space="preserve">
+    <value>Wie reserviere ich einen Tennisplatz?</value>
+  </data>
+  <data name="Reservations" xml:space="preserve">
+    <value>Reservierung</value>
+  </data>
+  <data name="TennisCourtSystemAnswer" xml:space="preserve">
+    <value>Tennisplatzsystem ist eine Website für alle Tennisbegeisterten. Sie können hier Plätze für Trainings und zusätzliche Ausrüstung reservieren und sogar ein Turnier organisieren. Sie können auch problemlos an von anderen organisierten Turnieren teilnehmen. Wir hoffen, dass unsere Website hilfreich sein wird!</value>
+  </data>
+  <data name="WhatIsCyclicReservation" xml:space="preserve">
+    <value>Was ist eine zyklische Reservierung?</value>
+  </data>
+  <data name="WhatIsTennisCourtSystem" xml:space="preserve">
+    <value>Was ist ein Tennisplatzsystem?</value>
+   </data>
   <data name="All" xml:space="preserve">
     <value>Alle</value>
   </data>

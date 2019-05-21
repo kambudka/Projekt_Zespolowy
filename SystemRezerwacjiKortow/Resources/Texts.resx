@@ -822,6 +822,54 @@
   <data name="CurrentCurrency" xml:space="preserve">
     <value>Currently chosen currency:</value>
   </data>
+  <data name="About" xml:space="preserve">
+    <value>About the program</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="FAQIntro" xml:space="preserve">
+    <value>Welcome to the &lt;strong&gt;F&lt;/strong&gt;requentry &lt;strong&gt;A&lt;/strong&gt;sked &lt;strong&gt;Q&lt;/strong&gt;uestions page! Here is the list containing important and common questions about this website. If you can't find an answer to your question, please contact with us at Contact page.</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>Here</value>
+  </data>
+  <data name="ChangeLanguageAnswer" xml:space="preserve">
+    <value>To change language, head to the Navigation Bar. There you will find Language tab. Click it to choose one from the list.</value>
+  </data>
+  <data name="HowToChangeLanguage" xml:space="preserve">
+    <value>How to change language?</value>
+  </data>
+  <data name="CommonQuestions" xml:space="preserve">
+    <value>Common Questions</value>
+  </data>
+  <data name="CyclicReservationAnswer" xml:space="preserve">
+    <value>Cyclic reservation allows user to reserve court every week at specified hour. Thanks to that user can train at the same hours every week without re-reserving his order. To use cyclic reservation, simply check checkbox when reserving court.</value>
+  </data>
+  <data name="HowToRegisterAnswer" xml:space="preserve">
+    <value>It's very easy! First head to navigation bar and select Register tab on the right. You will be redirected to Registration page. Fill form with your credentials and press Register button. You should see a message about successfully created account. Now go to your email and open message from Twoje Korty Tenisowe. There you will find activation link. Click on it to activate your account. After that you have access to more website functionalities!</value>
+  </data>
+  <data name="HowToRegisterQuestion" xml:space="preserve">
+    <value>How to register?</value>
+  </data>
+  <data name="HowToReserveAnswer" xml:space="preserve">
+    <value>To reserve court, head to Calendar option at home page. Here choose day when you want to reserve court, then hold your left mouse button, select desired hours and release that button. A message will appear with reservation info. Click Save to make a reservation. Keep in mind that your reservation is not instant as administrator or court manager has to confirm. Pay for your order. When your reservation is accepted, you will get confirmation email.</value>
+  </data>
+  <data name="HowToReserveQuestion" xml:space="preserve">
+    <value>How to reserve court?</value>
+  </data>
+  <data name="Reservations" xml:space="preserve">
+    <value>Reservations</value>
+  </data>
+  <data name="TennisCourtSystemAnswer" xml:space="preserve">
+    <value>Tennis Court System is a website made for all tennis enthusiasts. You can here reserve courts for trainings, additional gear, and even organize a tournament. You can also easily participate in tournaments organized by others. We do hope our website will be helpful!</value>
+  </data>
+  <data name="WhatIsCyclicReservation" xml:space="preserve">
+    <value>What is cyclic reservation?</value>
+  </data>
+  <data name="WhatIsTennisCourtSystem" xml:space="preserve">
+    <value>What is Tennis Court System?</value>
+  </data>
   <data name="All" xml:space="preserve">
     <value>All</value>
   </data>
