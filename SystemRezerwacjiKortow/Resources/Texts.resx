@@ -882,4 +882,7 @@
   <data name="Revenue" xml:space="preserve">
     <value>Revenue</value>
   </data>
+  <data name="GeneratePDF" xml:space="preserve">
+    <value>Generate PDF</value>
+  </data>
 </root>

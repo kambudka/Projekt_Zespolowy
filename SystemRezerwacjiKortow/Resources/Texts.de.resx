@@ -885,4 +885,7 @@
   <data name="Revenue" xml:space="preserve">
     <value>Einkommen</value>
   </data>
+  <data name="GeneratePDF" xml:space="preserve">
+    <value>PDF generieren</value>
+  </data>
 </root>
