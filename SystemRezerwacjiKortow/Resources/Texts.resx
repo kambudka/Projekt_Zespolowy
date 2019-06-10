@@ -873,6 +873,15 @@
   <data name="All" xml:space="preserve">
     <value>All</value>
   </data>
+  <data name="Gears" xml:space="preserve">
+    <value>Gears</value>
+  </data>
+  <data name="Reservation" xml:space="preserve">
+    <value>Reservation</value>
+  </data>
+  <data name="Revenue" xml:space="preserve">
+    <value>Revenue</value>
+  </data>
   <data name="GeneratePDF" xml:space="preserve">
     <value>Generate PDF</value>
   </data>

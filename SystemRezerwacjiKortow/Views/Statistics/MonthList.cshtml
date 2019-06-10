@@ -5,7 +5,8 @@
 }
 
 <h2>@SystemRezerwacjiKortow.Resources.Texts.MonthList</h2>
-
+@Html.Partial("_AdminPartial")
+<div>@Html.Partial("_StatisticsPartial")</div>
 <table class="table">
     <tr>
         <th>
@@ -24,35 +25,36 @@
             @Html.DisplayNameFor(model => model.TotalGearCount)
         </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.DifferenUsers)
-        </th>*@
+                @Html.DisplayNameFor(model => model.DifferenUsers)
+            </th>*@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MonthName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MonthYear)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalHireCount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalHireRevenue)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalGearCount)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.DifferenUsers)
-        </td>*@
-        <td>
-            @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.Print, "PrintPDF", item)
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalHireCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalHireRevenue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalGearCount)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.DifferenUsers)
+                </td>*@
+            <td>
+                @Html.ActionLink(@SystemRezerwacjiKortow.Resources.Texts.Print, "MakePDF", item)
+            </td>
+        </tr>
+    }
 
 </table>

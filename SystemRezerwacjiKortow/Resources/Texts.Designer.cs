@@ -1204,6 +1204,16 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Gears.
+        /// </summary>
+        public static string Gears {
+            get {
+                return ResourceManager.GetString("Gears", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu General.
         ///   Looks up a localized string similar to General.
         /// </summary>
         public static string General {
@@ -1853,6 +1863,16 @@ namespace SystemRezerwacjiKortow.Resources {
         
         /// <summary>
         ///   Looks up a localized string similar to Confirmation of reservation nr.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Reservation.
+        /// </summary>
+        public static string Reservation {
+            get {
+                return ResourceManager.GetString("Reservation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Confirmation of reservation nr.
         /// </summary>
         public static string ReservationConfirmation {
             get {
@@ -1915,6 +1935,16 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Revenue.
+        /// </summary>
+        public static string Revenue {
+            get {
+                return ResourceManager.GetString("Revenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Role ID.
         ///   Looks up a localized string similar to Role ID.
         /// </summary>
         public static string RoleID {
