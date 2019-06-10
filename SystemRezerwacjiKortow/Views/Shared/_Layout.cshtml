@@ -24,7 +24,6 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.HomePage, "Index", "Home")</li>
                     <li>@Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.FAQ, "Index", "FAQ")</li>
-                    <li>@Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.About, "About", "Home")</li>
                     <li>@Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Contact, "Contact", "Home")</li>
                     @if (User.Identity.IsAuthenticated)
                     {
@@ -51,6 +50,7 @@
                             <li>@Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Advertisements, "AdsForUsers", "Advertisement")</li>
                         }
                     }
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

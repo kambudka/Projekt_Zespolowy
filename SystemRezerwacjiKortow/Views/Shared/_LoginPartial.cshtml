@@ -6,7 +6,7 @@
     {
         @Html.AntiForgeryToken()
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
             <li>
                 @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Welcome+" " + User.Identity.Name + "!", "Profile", "User", routeValues: null, htmlAttributes: new { title = "Manage" })
             </li>

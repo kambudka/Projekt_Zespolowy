@@ -6,11 +6,13 @@ using System.Net;
 using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
+using SystemRezerwacjiKortow.AuthData;
 using SystemRezerwacjiKortow.Database;
 using SystemRezerwacjiKortow.Models;
 using SystemRezerwacjiKortow.ViewModels;
 namespace SystemRezerwacjiKortow.Controllers
 {
+    [AdminAuth]
     public class AdminController : Controller
     {
         // GET: Admin
