@@ -75,11 +75,33 @@ namespace SystemRezerwacjiKortow.Controllers
         public JsonResult GetHours(string paramstart, string paramend)
         {
             HoursList = new List<OpeningHours>();
+            List<businessHour> listaout = new List<businessHour>();
             HoursList = SqlCompany.GetOpeningHours();
+            businessHour obiekt;
             //list = new List<Event>();
-
-            var hours = HoursList.ToArray();
+            foreach (var item in HoursList)
+            {
+                obiekt = new businessHour();
+                obiekt.dow.Add(item.DayOfWeek);
+                obiekt.startTime = item.TimeFrom.ToString();
+                obiekt.endTime = item.TimeTo.ToString();
+            }
+            var hours = listaout.ToArray();
             return new JsonResult { Data = hours, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
+
+        [HttpGet]
+        public int GetMaxCourts()
+        {
+            List<Court> listacortow = new List<Court>();
+            listacortow = SqlCourt.GetCourts();
+            int ile = 0;
+            //list = new List<Event>();
+            foreach (var item in listacortow)
+            {
+                ile++;
+            }
+            return ile;
         }
 
         [HttpGet]

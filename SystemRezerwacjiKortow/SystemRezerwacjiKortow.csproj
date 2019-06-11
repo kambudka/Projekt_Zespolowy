@@ -201,6 +201,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Advertisement.cs" />
+    <Compile Include="Models\businessHour.cs" />
     <Compile Include="Models\ComplexCourt.cs" />
     <Compile Include="Models\Contest.cs" />
     <Compile Include="Models\Court.cs" />
