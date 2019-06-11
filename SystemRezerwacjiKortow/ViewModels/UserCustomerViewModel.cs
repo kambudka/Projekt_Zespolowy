@@ -33,6 +33,8 @@ namespace SystemRezerwacjiKortow.ViewModels
 
         [Display(Name = "Discount", ResourceType = typeof(Texts))]
         //[DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:0}", ApplyFormatInEditMode = true)]
+        [Range(0, 100, ErrorMessageResourceType = typeof(Texts), ErrorMessageResourceName="MaxDiscountValue")]
         public decimal DiscountValue { get; set; }
 
         [Display(Name = "CanReserve", ResourceType = typeof(Texts))]

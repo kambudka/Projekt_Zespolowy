@@ -70,6 +70,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adding court.
         /// </summary>
         public static string AddingCourt {
@@ -282,6 +291,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string CharsRemainingTitle {
             get {
                 return ResourceManager.GetString("CharsRemainingTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a Day.
+        /// </summary>
+        public static string ChooseDay {
+            get {
+                return ResourceManager.GetString("ChooseDay", resourceCulture);
             }
         }
         
@@ -1168,6 +1186,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Friday.
+        /// </summary>
+        public static string Friday {
+            get {
+                return ResourceManager.GetString("Friday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gear.
         /// </summary>
         public static string Gear {
@@ -1204,7 +1231,7 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Gears.
+        ///   Looks up a localized string similar to Gears.
         /// </summary>
         public static string Gears {
             get {
@@ -1213,7 +1240,6 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu General.
         ///   Looks up a localized string similar to General.
         /// </summary>
         public static string General {
@@ -1507,6 +1533,24 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string LogoutSuccessful {
             get {
                 return ResourceManager.GetString("LogoutSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The maximum value of the discount is 100 (the given value is in percent).
+        /// </summary>
+        public static string MaxDiscountValue {
+            get {
+                return ResourceManager.GetString("MaxDiscountValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monday.
+        /// </summary>
+        public static string Monday {
+            get {
+                return ResourceManager.GetString("Monday", resourceCulture);
             }
         }
         
@@ -1862,8 +1906,7 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Confirmation of reservation nr.
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Reservation.
+        ///   Looks up a localized string similar to Reservation.
         /// </summary>
         public static string Reservation {
             get {
@@ -1872,7 +1915,7 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Confirmation of reservation nr.
+        ///   Looks up a localized string similar to Confirmation of reservation nr.
         /// </summary>
         public static string ReservationConfirmation {
             get {
@@ -1935,7 +1978,7 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Revenue.
+        ///   Looks up a localized string similar to Revenue.
         /// </summary>
         public static string Revenue {
             get {
@@ -1944,7 +1987,6 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Role ID.
         ///   Looks up a localized string similar to Role ID.
         /// </summary>
         public static string RoleID {
@@ -1959,6 +2001,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string RoleName {
             get {
                 return ResourceManager.GetString("RoleName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saturday.
+        /// </summary>
+        public static string Saturday {
+            get {
+                return ResourceManager.GetString("Saturday", resourceCulture);
             }
         }
         
@@ -2071,6 +2122,15 @@ namespace SystemRezerwacjiKortow.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sunday.
+        /// </summary>
+        public static string Sunday {
+            get {
+                return ResourceManager.GetString("Sunday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Surface type.
         /// </summary>
         public static string SurfaceType {
@@ -2103,6 +2163,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string ThanksForReservation {
             get {
                 return ResourceManager.GetString("ThanksForReservation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thursday.
+        /// </summary>
+        public static string Thursday {
+            get {
+                return ResourceManager.GetString("Thursday", resourceCulture);
             }
         }
         
@@ -2175,6 +2244,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string TotalHireRevenue {
             get {
                 return ResourceManager.GetString("TotalHireRevenue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tuesday.
+        /// </summary>
+        public static string Tuesday {
+            get {
+                return ResourceManager.GetString("Tuesday", resourceCulture);
             }
         }
         
@@ -2274,6 +2352,15 @@ namespace SystemRezerwacjiKortow.Resources {
         public static string Warning {
             get {
                 return ResourceManager.GetString("Warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wednesday.
+        /// </summary>
+        public static string Wednesday {
+            get {
+                return ResourceManager.GetString("Wednesday", resourceCulture);
             }
         }
         

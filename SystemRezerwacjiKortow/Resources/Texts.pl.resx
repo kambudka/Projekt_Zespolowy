@@ -888,4 +888,34 @@
   <data name="GeneratePDF" xml:space="preserve">
     <value>Generuj PDF</value>
   </data>
+  <data name="MaxDiscountValue" xml:space="preserve">
+    <value>Maksymalna wartość zniżki do 100 (podana wartość jest w procentach)</value>
+  </data>
+  <data name="ChooseDay" xml:space="preserve">
+    <value>Wybierz dzień</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Piątek</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Poniedziałek</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Sobota</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Niedziela</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Czwartek</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Wtorek</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Środa</value>
+  </data>
 </root>

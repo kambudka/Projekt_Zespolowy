@@ -200,6 +200,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DeyOfWeek.cs" />
     <Compile Include="Models\Advertisement.cs" />
     <Compile Include="Models\ComplexCourt.cs" />
     <Compile Include="Models\Contest.cs" />
@@ -238,6 +239,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Texts.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\NewOpeningHours.cs" />
     <Compile Include="ViewModels\UserCustomerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -567,6 +569,7 @@
     <Content Include="Views\Statistics\MonthRevenue.cshtml" />
     <Content Include="Views\Statistics\MonthGear.cshtml" />
     <Content Include="Views\Shared\_StatisticsPartial.cshtml" />
+    <Content Include="Views\Admin\AddHours.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
