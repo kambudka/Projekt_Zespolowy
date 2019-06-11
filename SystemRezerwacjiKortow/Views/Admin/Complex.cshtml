@@ -11,6 +11,9 @@
 <div class="form-horizontal">
     <div>
         <h2>@SystemRezerwacjiKortow.Resources.Texts.OpeningHours</h2>
+        <p>
+            @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Add, "AddHours")
+        </p>
         <table class="table">
             <tr>
                 <th>
@@ -45,7 +48,7 @@
                     </td>
                     <td>
                         @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Edit, "EditHours", new { dayOfWeek = item.DayOfWeek }) |
-                        @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "DeleteHours",  item )
+                        @Html.ActionLink(SystemRezerwacjiKortow.Resources.Texts.Delete, "DeleteHours", item)
                     </td>
                 </tr>
             }

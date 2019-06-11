@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Resources;
 using System.Web;
 using System.Web.Mvc;
 using SystemRezerwacjiKortow.AuthData;
 using SystemRezerwacjiKortow.Database;
 using SystemRezerwacjiKortow.Models;
+using SystemRezerwacjiKortow.Resources;
 using SystemRezerwacjiKortow.ViewModels;
 namespace SystemRezerwacjiKortow.Controllers
 {
@@ -192,6 +194,34 @@ namespace SystemRezerwacjiKortow.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult AddHours()
+        {
+            var model = new NewOpeningHours();
+            var openingHours = SqlCompany.GetOpeningHours();
+            List<DayOfWeek> freeDays= Enum.GetValues(typeof(DayOfWeek)).Cast<DayOfWeek>().Where(x=>!openingHours.Select(y => y.DayOfWeek).Contains((int)x+1)).ToList();
+
+            ResourceManager rm = Texts.ResourceManager;
+            string someString = rm.GetString("Sunday");
+            model.FreeDays = freeDays.Select(x => new SelectListItem
+            {
+                Value = ((int)x+1).ToString(),
+                Text = rm.GetString(Enum.GetName(typeof(DayOfWeek), x))
+            });
+            ViewBag.isNewHours = true;
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult AddHours(NewOpeningHours model)
+        {
+            OpeningHours openingHours = new OpeningHours();
+            openingHours.DayOfWeek = model.SelectedDay;
+            openingHours.TimeFrom = model.TimeFrom;
+            openingHours.TimeTo = model.TimeTo;
+            SqlCompany.AddModifyOpeningHours(openingHours);
+            return RedirectToAction("Complex");
         }
 
         public ActionResult DeleteUser(int id)

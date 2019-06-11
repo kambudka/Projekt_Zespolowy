@@ -885,4 +885,34 @@
   <data name="GeneratePDF" xml:space="preserve">
     <value>Generate PDF</value>
   </data>
+  <data name="MaxDiscountValue" xml:space="preserve">
+    <value>The maximum value of the discount is 100 (the given value is in percent)</value>
+  </data>
+  <data name="ChooseDay" xml:space="preserve">
+    <value>Choose a Day</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
 </root>
