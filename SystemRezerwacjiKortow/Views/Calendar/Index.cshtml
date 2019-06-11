@@ -17,19 +17,27 @@
             var selectedEvent = null;
             var g_BusinessHours = [];
             var court;
+            var maxcourt;
             FetchBusinessHours();
-         //   ShowHours();
             Setnumber();
+            GetMaxCourt();
             GenerateCalender();
 
-           // function ShowHours() {
-           //     window.alert("Pokazuje");
-           //     $.each(g_BusinessHours, function (index, value) {
-           //         window.alert(index + ":" + value.daynumber +":" + value.start.Hours);
-           //     })
-            // }
             function Setnumber(){
                 court = 1;
+            }
+
+            function GetMaxCourt() {
+                $.ajax({
+                    type: "GET",
+                    url: '@Url.Action("GetMaxCourts", "Calendar")',
+                    success: function (data) {
+                        maxcourt = data;
+                    },
+                    error: function (error) {
+                        //alert('Nie udało się pobrać godzin otwarcia');
+                    }
+                })
             }
 
             function GetCalendarStartDate() {
@@ -47,10 +55,6 @@
                 return end;
             }
 
-            function GetCourt() {
-                return court;
-            }
-
             
             function FetchBusinessHours() {
                 $.ajax({
@@ -59,17 +63,25 @@
                     success: function (data) {
                         $.each(data, function (i, v) {
                             g_BusinessHours.push({
-                                daynumber: v.DayOfWeek,
-                                start: v.TimeFrom,
-                                end: v.TimeTo
+                                dow: v.dow,
+                                startTime: v.startTime,
+                                endTime: v.endTime
                             });
                         })
-                   //     window.alert("Pomyślnie pobrano godziny");
+                        //alert(JSON.stringify(g_BusinessHours));
                     },
                     error: function (error) {
-                        alert('Nie udało się pobrać godzin otwarcia');
+                        //alert('Nie udało się pobrać godzin otwarcia');
                     }
                 })
+            }
+
+            function getBusinessHours() {
+                return g_BusinessHours;
+            }
+
+            function getBusinessHours() {
+                return g_BusinessHours;
             }
 
 
@@ -80,6 +92,7 @@
                 $('#calendar').fullCalendar('destroy');
                 $('#calender').fullCalendar('refetchEvents');
                 $('#calender').fullCalendar('rerenderEvents');
+                alert(JSON.stringify(g_BusinessHours));
                 GenerateCalender();
                // GenerateCalender()
             }
@@ -91,7 +104,7 @@
                         addcourt: {
                             text: '@SystemRezerwacjiKortow.Resources.Texts.Next',
                             click: function () {
-                                if (court != 2)
+                                if (court != maxcourt)
                                     court = court + 1;
                                 Refech();
                             }
@@ -155,18 +168,18 @@
                     },
                     aspectRatio: 2,
                     timeFormat: 'H(:mm)',
-                    businessHours:
+                    businessHours: 
                         [ // specify an array instead
-                        //{
-                        //    dow: [0], // Niedziela
-                        //    start: '12:00', // 8am
-                        //    end: '15:00' // 6pm
-                        //},
-                        //{
-                        //    dow: [1], // Poniedziałek
-                        //    start: '10:00', // 10am
-                        //    end: '18:00' // 4pm
-                        //},
+                    //    //{
+                    //    //    dow: [0], // Niedziela
+                    //    //    start: '12:00', // 8am
+                    //    //    end: '15:00' // 6pm
+                    //    //},
+                    //    //{
+                    //    //    dow: [1], // Poniedziałek
+                    //    //    start: '10:00', // 10am
+                    //    //    end: '18:00' // 4pm
+                    //    //},
                         {
                             dow: [2], // Wtorek
                             start: '10:00', // 10am
@@ -187,11 +200,11 @@
                             start: '09:00', // 10am
                             end: '23:00' // 4pm
                         },
-                       // {
-                        //    dow: [6], //  Sobota
-                        //    start: '09:00',
-                        //    end: '23:00'
-                       // },
+                    //   // {
+                    //    //    dow: [6], //  Sobota
+                    //    //    start: '09:00',
+                    //    //    end: '23:00'
+                    //   // },
                     ],
                     selectConstraint: "businessHours",
                     defaultDate: $('#calendar').fullCalendar('today'),
@@ -321,7 +334,7 @@
 
                             },
                             error: function (error) {
-                                alert('Nie udalo się pobrac dostepnosci dnia');
+                               // alert('Nie udalo się pobrac dostepnosci dnia');
                             }
                         });
 

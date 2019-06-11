@@ -202,6 +202,7 @@
     </Compile>
     <Compile Include="Helpers\DeyOfWeek.cs" />
     <Compile Include="Models\Advertisement.cs" />
+    <Compile Include="Models\businessHour.cs" />
     <Compile Include="Models\ComplexCourt.cs" />
     <Compile Include="Models\Contest.cs" />
     <Compile Include="Models\Court.cs" />
