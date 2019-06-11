@@ -915,4 +915,7 @@
   <data name="Wednesday" xml:space="preserve">
     <value>Mittwoch</value>
   </data>
+  <data name="CheckAvailability" xml:space="preserve">
+    <value>Verfügbarkeit prüfen</value>
+  </data>
 </root>
