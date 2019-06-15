@@ -339,6 +339,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Image\background.jpg" />
+    <Content Include="Content\Image\background1.png" />
     <Content Include="Content\Image\FAQ\how_to_change_language.png" />
     <Content Include="Content\Image\FAQ\how_to_register.PNG" />
     <Content Include="Content\Image\FAQ\how_to_register_2.PNG" />

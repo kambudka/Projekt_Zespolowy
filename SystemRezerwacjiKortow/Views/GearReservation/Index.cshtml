@@ -9,7 +9,7 @@
 <p>
     @using (Html.BeginForm("GetAvailableGears", "GearReservation"))
     {
-       @Html.Label("Check availability to:") <input type="text" name="year" placeholder="Year" value="@ViewBag.Year" /> <input type="text" name="month" placeholder="Month" value="@ViewBag.Month" /> <input type="text" name="day" placeholder="Day" value="@ViewBag.Day"/> <input type="submit" value="Check" class="btn btn-primary" />
+       @Html.Label(SystemRezerwacjiKortow.Resources.Texts.CheckAvailability) <input type="text" name="year" placeholder="Year" value="@ViewBag.Year" /> <input type="text" name="month" placeholder="Month" value="@ViewBag.Month" /> <input type="text" name="day" placeholder="Day" value="@ViewBag.Day"/> <input type="submit" value="Check" class="btn btn-primary" />
     }
 </p>
 

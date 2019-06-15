@@ -296,6 +296,16 @@ namespace SystemRezerwacjiKortow.Resources {
         
         /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Choose a Day.
+        ///   Looks up a localized string similar to Check availability to.
+        /// </summary>
+        public static string CheckAvailability {
+            get {
+                return ResourceManager.GetString("CheckAvailability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose a Day.
         /// </summary>
         public static string ChooseDay {
             get {
