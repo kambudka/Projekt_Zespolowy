@@ -915,4 +915,7 @@
   <data name="Wednesday" xml:space="preserve">
     <value>Mittwoch</value>
   </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Ereignisse werden geladen</value>
+  </data>
 </root>

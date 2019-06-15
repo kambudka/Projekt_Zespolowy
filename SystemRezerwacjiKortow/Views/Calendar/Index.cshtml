@@ -159,6 +159,12 @@
                         },
 
                     },
+                    loading: function (bool) {
+                        $('#loading').modal('show'); // Add your script to show loading
+                    },
+                    eventAfterAllRender: function (view) {
+                        $('#loading').modal('hide'); // remove your loading 
+                    },
 
                     header: {
                         left: 'prev,next today subcourt courtnumber addcourt cyclic search',
@@ -688,5 +694,16 @@
         </div>
     }
 </div>
+
+<div id="loading" class="modal fade" role="dialog" style="text-align:center">
+    <div class="modal-dialog" >
+        <div class="modal-content">
+            <h2> @SystemRezerwacjiKortow.Resources.Texts.Loading </h2>
+            <img id="loading-image" src="~/Resources/91.gif" alt="Loading..." />
+        </div>
+    </div>
+    
+</div>
+
 
 
